@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="36909da96253eea34742d9f0d0b0c9f544ba6c1d">
+        <dex dex="C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_087add0828d50602c035f21c0f4efc73c28228ba\classes.dex" />
+    </item>
+    <item
+        jar="C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.1.1_4d2786efc38c1973be58dc8bd40d9e9b5d023a6d\classes.dex" />
+    </item>
+    <item
+        jar="C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.1.1_12fe91e61d6ee0e77b9ded3db9e65f969dcb3303\classes.dex" />
+    </item>
+    <item
+        jar="C:\devBeacon\skcc_gimbal_jeju_pro\app\libs\libDaumMapAndroid.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="a2ca14c67023cf9dfb7f79261593e4c014675ac6">
+        <dex dex="C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\transforms\dex\debug\folders\1000\2\libDaumMapAndroid_a41f12edcd399763ab233c286bc9b1d554b646fc\classes.dex" />
+    </item>
+    <item
+        jar="C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="04de44f90606c77f3b28cf44861f306290505aac">
+        <dex dex="C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-maps-8.4.0_c55a76f0e5caa29e8f3631bdd262f22ba1c7ec15\classes.dex" />
+    </item>
+    <item
+        jar="C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-8.4.0_a5e80de7f68ec098d0f40af8ff746472b6c6c330\classes.dex" />
+    </item>
+    <item
+        jar="C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.1.1_dfacd7fec7a045467d8daa2faae7bf69fd56bdd3\classes.dex" />
+    </item>
+    <item
+        jar="C:\devBeacon\skcc_gimbal_jeju_pro\app\libs\gimbal.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="749b98cfb397a5a750daa027965c687631a10c8b">
+        <dex dex="C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\transforms\dex\debug\folders\1000\2\gimbal_379722ce4776d368f2f4c1de4ac1f8bc8e053743\classes.dex" />
+    </item>
+    <item
+        jar="C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="d7c5368284b8e1f861d17906407a8d79ff114c05">
+        <dex dex="C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_27ae6ecb0977a5349aeaa47e4878c1073d697b38\classes.dex" />
+    </item>
+    <item
+        jar="C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-8.4.0_dd7ecd98f0952b3642c0759a64826f663d13d67a\classes.dex" />
+    </item>
+    <item
+        jar="C:\devBeacon\skcc_gimbal_jeju_pro\app\libs\gimbal-slf4j-impl.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="1944098d44d42534dbcf9bf364777b1dc9473ec4">
+        <dex dex="C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\transforms\dex\debug\folders\1000\2\gimbal-slf4j-impl_42449282d78226955e74b800aa9c9a55df1e14e8\classes.dex" />
+    </item>
+    <item
+        jar="C:\devBeacon\skcc_gimbal_jeju_pro\app\libs\slf4j-api.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="562424e36df3d2327e8e9301a76027fca17d54ea">
+        <dex dex="C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\transforms\dex\debug\folders\1000\2\slf4j-api_b7cc64250840c42895b29d27b2d93f8271b136af\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\min\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.1_b36e11df038a82b7ba7f583cd50cefe0ed3f907a\classes.dex" />
+    </item>
+
+</items>

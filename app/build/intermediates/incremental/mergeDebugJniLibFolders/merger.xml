@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\jniLibs"><file name="armeabi/libDaumMapEngineApi.so" path="C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\jniLibs\armeabi\libDaumMapEngineApi.so"/><file name="armeabi-v7a/libDaumMapEngineApi.so" path="C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\jniLibs\armeabi-v7a\libDaumMapEngineApi.so"/></source></dataSet><dataSet config="debug"><source path="C:\devBeacon\skcc_gimbal_jeju_pro\app\src\debug\jniLibs"/></dataSet></merger>
