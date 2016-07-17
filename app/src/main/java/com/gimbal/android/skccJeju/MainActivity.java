@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
@@ -69,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
     public void onStartBtnClick(View view){
         Toast.makeText(getApplicationContext(), "제주동문시장 관광 도우미.",
                 Toast.LENGTH_SHORT).show();
-        Intent  intent = new Intent(this, TableActivity.class);
+        Intent  intent = new Intent(this, BeaconMapActivity.class);
         startActivity(intent);
     }
 

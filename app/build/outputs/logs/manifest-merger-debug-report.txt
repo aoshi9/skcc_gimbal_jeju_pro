@@ -162,10 +162,10 @@ ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:86
 		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:88:19-62
 	android:name
 		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:87:19-78
-activity#com.gimbal.android.skccJeju.TableActivity
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:91:15-84
+activity#com.gimbal.android.skccJeju.BeaconMapActivity
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:91:15-88
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:91:26-82
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:91:26-86
 activity#com.gimbal.android.skccJeju.PlaceDetailActivity
 ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:92:15-90
 	android:name

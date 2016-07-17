@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import net.daum.mf.map.api.MapCurrentLocationMarker;
 import net.daum.mf.map.api.MapPOIItem;
 import net.daum.mf.map.api.MapView;
 import net.daum.mf.map.api.MapPoint;
@@ -20,7 +19,7 @@ import net.daum.mf.map.api.MapPoint;
 /**
  * Created by min on 2016-05-05.
  */
-public class TableActivity extends AppCompatActivity {
+public class BeaconMapActivity extends AppCompatActivity {
     ImageView imageView;
     Integer i=0;
     private MapView mMapView;
@@ -31,7 +30,7 @@ public class TableActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_table);
+        setContentView(R.layout.activity_beacon_map);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -58,7 +57,7 @@ public class TableActivity extends AppCompatActivity {
         marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.scale(false);
 
 
-        Log.v("tempLog  :  ", "TableActivity start:  "  + JejubeaconGvar.getLatitude());
+        Log.v("tempLog  :  ", "BeaconMapActivity start:  "  + JejubeaconGvar.getLatitude());
 
         if(JejubeaconGvar.getLatitude() != 0.0) {
 

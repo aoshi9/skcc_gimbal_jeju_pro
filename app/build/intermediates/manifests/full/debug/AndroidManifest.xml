@@ -90,7 +90,7 @@
             android:name="com.gimbal.android.skccJeju.SettingsActivity"
             android:icon="@drawable/ic_action_settings"
             android:label="@string/action_settings" />
-        <activity android:name="com.gimbal.android.skccJeju.TableActivity" />
+        <activity android:name="com.gimbal.android.skccJeju.BeaconMapActivity" />
         <activity android:name="com.gimbal.android.skccJeju.PlaceDetailActivity" />
 
         <service

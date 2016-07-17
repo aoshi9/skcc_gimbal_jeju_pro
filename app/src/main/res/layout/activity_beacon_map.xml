@@ -12,7 +12,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         />
-s
+
     <FrameLayout
         android:layout_height="240dp"
         android:layout_width="match_parent">

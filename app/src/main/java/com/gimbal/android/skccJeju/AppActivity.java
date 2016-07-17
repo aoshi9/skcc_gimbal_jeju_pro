@@ -80,6 +80,7 @@ public class AppActivity extends AppCompatActivity{
 
         adapter = new GimbalEventListAdapter(this);
 
+
         ListView listView = (ListView) findViewById(R.id.listview);
         listView.setAdapter(adapter);
 

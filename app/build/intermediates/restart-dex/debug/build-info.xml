@@ -4,27 +4,27 @@
     api-level="21"
     density="xxxhdpi"
     format="7"
-    timestamp="1115338760049102"
+    timestamp="154810767491270"
     token="-2311381201130010510" >
 
     <task
         name="javac"
-        duration="397" />
+        duration="1278" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="640" />
+        duration="552" />
     <task
         name="verifier"
-        duration="162" />
+        duration="209" />
 
     <artifact
         location="C:\devBeacon\skcc_gimbal_jeju_pro\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
-    <build timestamp="1115338760049102" >
+    <build timestamp="154810767491270" >
         <artifact
             location="C:\devBeacon\skcc_gimbal_jeju_pro\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
