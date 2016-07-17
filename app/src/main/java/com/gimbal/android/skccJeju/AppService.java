@@ -85,6 +85,7 @@ public class AppService extends Service {
 //                Log.v("tempLog  :  ", "onVisitStart getName:  "  +visitPlace);
 //                Log.v("tempLog  :  ", "onVisitStart visitUrl:  "  +visitUrl);
 //                Log.v("tempLog  :  ", "onVisitStart visitLit :  "  +visitLit);
+//                Log.v("tempLog  :  ", "onVisitStart visitLong:  "  +visitLong);
 //                Log.v("tempLog  :  ", "onVisitStart visitEvent:  "  +visitEvent);
                 addEvent(new GimbalEvent(TYPE.PLACE_ENTER, visitPlace + " : " + visitEvent, new Date(visit.getArrivalTimeInMillis()+visit.getDwellTimeInMillis()),visitUrl,visitLit, visitLong, visitBeaconNo,visitPlace,visitEvent));
             }
