@@ -37,7 +37,7 @@ public class BeaconMapActivity extends AppCompatActivity {
 
 
 
-
+        //
 
         imageView = (ImageView) findViewById(R.id.dongmoon);
 
