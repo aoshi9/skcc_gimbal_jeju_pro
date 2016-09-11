@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
@@ -29,6 +30,19 @@ public class MainActivity extends AppCompatActivity {
         GimbalDAO.setOptInShown(getApplicationContext());
         enablePlaceMonitoring();
         enableCommunications();
+
+        //상단알림 클릭시 화면 이동
+        //비콘별 이동 화면을 다르게 갖어 갈 수 있음(Attributes 활용(communication)
+        Intent intent_noti = getIntent();
+        String strAction = intent_noti.getStringExtra("strAction");
+        Log.v("tempLog  :  ", "strAction.intent_noti_strAction :  "  +strAction);
+        if(strAction != null && strAction.equals("NotificationClicked")){
+            Intent  intent_move = new Intent(this, PlaceDetailActivity.class);
+            intent_move.putExtra("strBeaconNo",  intent_noti.getStringExtra("strBeaconNo"));
+            startActivity(intent_move);
+        }
+
+
 
 
         final ImageButton imgbtn1 = (ImageButton) findViewById(R.id.mainImg1);
