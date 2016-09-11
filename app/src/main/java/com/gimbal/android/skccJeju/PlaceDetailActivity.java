@@ -39,24 +39,28 @@ public class PlaceDetailActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
 
+
         Intent intent = getIntent();
-        String type = intent.getStringExtra("strType");
-        String title = intent.getStringExtra("strTitle");
-        URL = intent.getStringExtra("strUrl");
-        dLatitude = Double.parseDouble(intent.getStringExtra("strLatitude"));
-        dLongitude = Double.parseDouble(intent.getStringExtra("strLongitude"));
         String beaconNo = intent.getStringExtra("strBeaconNo");
-        String place = intent.getStringExtra("strPlace");
-        String placeEvent = intent.getStringExtra("strPlaceEvent");
+         Log.v("tempLog : strBeaconNo ", beaconNo);
 
 
+        //TODO :DB조회 변경으로 코딩 필요
+//        String type = intent.getStringExtra("strType");
+//        String title = intent.getStringExtra("strTitle");
+//        URL = intent.getStringExtra("strUrl");
+//        dLatitude = Double.parseDouble(intent.getStringExtra("strLatitude"));
+//        dLongitude = Double.parseDouble(intent.getStringExtra("strLongitude"));
+//        String place = intent.getStringExtra("strPlace");
+//        String placeEvent = intent.getStringExtra("strPlaceEvent");
 
-        Log.v("tempLog : strBeaconNo ", beaconNo);
-        Log.v("tempLog :  strType ", type );
-        Log.v("tempLog :  strTitle ", title);
-        Log.v("tempLog :  strUrl ", URL);
-        Log.v("tempLog : strPlace ", place);
-        Log.v("tempLog : strPlaceEvnet", placeEvent);
+        //TODO : remove  DB조회 처리 후 삭제
+        String title = "제주동문시장 [TEST4] : event";
+        URL = "http://blog.naver.com/dudtns620/220730664693";
+        dLatitude = 33.511573;
+        dLongitude = 126.526101;
+        String place = "제주동문시장";
+        String placeEvent = "[TEST4]";
 
         TextView placeName = (TextView) findViewById(R.id.placeName);
         placeName.setText(place);
