@@ -72,7 +72,7 @@ public class AppActivity extends AppCompatActivity{
 //
       startService(new Intent(this, AppService.class));
 
-//        if (GimbalDAO.showOptIn(getApplicationContext())) {
+//        if (GimbalDAO.showOptIn(getApplicationContext())) test{
 //            startActivity(new Intent(this, OptInActivity.class));
 //        }
         Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);

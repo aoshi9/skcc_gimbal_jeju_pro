@@ -62,7 +62,7 @@ public class PlaceDetailActivity extends AppCompatActivity {
         placeName.setText(place);
 
         TextView placeEventText = (TextView) findViewById(R.id.placeEvent);
-        placeEventText.setText("진행중인 이벤트 : " + placeEvent);
+        placeEventText.setText("진행중 이벤트 : " + placeEvent);
 
         ImageView eventImg = (ImageView) findViewById(R.id.eventImg);
 
