@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         enableCommunications();
 
         //상단알림 클릭시 화면 이동
-        //비콘별 이동 화면을 다르게 갖어 갈 수 있음(Attributes 활용(communication)
+        //비콘별 이동 화면을 다르게 갖어 갈 수 있음(Attributes 활용(Communication )
         Intent intent_noti = getIntent();
         String strAction = intent_noti.getStringExtra("strAction");
         Log.v("tempLog  :  ", "strAction.intent_noti_strAction :  "  +strAction);
