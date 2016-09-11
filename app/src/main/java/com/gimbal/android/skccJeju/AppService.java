@@ -223,7 +223,7 @@ public class AppService extends Service {
 //                        Log.v("tempLog  :  ", "onNotificationClicked.getURL :  "  +communication.getURL());
 //                        Log.v("tempLog  :  ", "onNotificationClicked.beacon_no :  "  +communication.getAttributes().getValue("beacon_no"));
 
-                        //Communication Attributes 에 등록 .(현재 비콘 4만 등록...오류시 개별 등록 필요
+                        //TODO : Communication Attributes 에 등록 (추가 설정 필요)  -- 060911
                         String strBeaconNo = communication.getAttributes().getValue("beacon_no");
                         //앱실행 후 main이동(MainActivity 에 상세 화면 이동하도록 구현됨)
                         Intent intent = new Intent(AppService.this, MainActivity.class);
