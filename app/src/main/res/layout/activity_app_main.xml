@@ -58,8 +58,7 @@
                 android:src="@drawable/jeju_main2"
                 android:visibility="invisible"
                 android:layout_gravity="right|center_vertical" />
-        </FrameLayout
->
+        </FrameLayout>
 
 
     <Button
