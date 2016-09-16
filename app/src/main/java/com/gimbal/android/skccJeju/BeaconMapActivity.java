@@ -2,6 +2,7 @@ package com.gimbal.android.skccJeju;
 
 import static com.gimbal.android.skccJeju.Constant.FIRST_COLUMN;
 import static com.gimbal.android.skccJeju.Constant.SECOND_COLUMN;
+import static com.gimbal.android.skccJeju.Constant.SEVENTH_COLUMN;
 import static com.gimbal.android.skccJeju.Constant.THIRD_COLUMN;
 import static com.gimbal.android.skccJeju.Constant.FOURTH_COLUMN;
 import static com.gimbal.android.skccJeju.Constant.FIFTH_COLUMN;
@@ -137,26 +138,37 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
 
         Log.v("HoyoungLog  :  ", "Data : " + 2);
         //세 개의 가게에 각각 하나의 아이템들이 있다고 가정을 합시다.
-        dbHelper.SotBeaconInfoInsert("00001", "1", "G마켓", 37.163351, 127.081862, "http://www.11st.co.kr/", "미친세일", "미친세일중.jpg", "010-2450-5037", "충남 쥐마켓 본사", "1");
-        dbHelper.SotBeaconInfoInsert("00002", "1", "11번가", 39.163351, 127.081862, "http://www.gmarket.co.kr/", "돌은세일", "돌은세일중.jpg", "010-1111-1111", "서울 11번가 본사", "1");
-        dbHelper.SotBeaconInfoInsert("00003", "1", "쿠퐝", 40.163351, 127.081862, "http://www.coupang.com/", "망할세일", "망할세일중.jpg", "010-9898-9898", "경기 쿠퐝 본사", "1");
-        dbHelper.SotBeaconInfoItemInsert("0001", "00001", "쥐고기", 1000, "itemDiscount", "1+1");
-        dbHelper.SotBeaconInfoItemInsert("0002", "00002", "11번뇌봉", 2000, "itemDiscount", "2+1");
-        dbHelper.SotBeaconInfoItemInsert("0003", "00003", "쿠퐝쿠폰", 3000, "itemDiscount", "3+1");
+        long result1 = dbHelper.SotBeaconInfoInsert("00001", "1", "G마켓", 37.163351, 127.081862, "http://www.gmarket.co.kr/", "미친세일", "미친세일중.jpg", "010-2450-5037", "충남 쥐마켓 본사", "1");
+        long result2 = dbHelper.SotBeaconInfoInsert("00002", "1", "11번가", 39.163351, 127.081862, "http://www.11st.co.kr/", "돌은세일", "돌은세일중.jpg", "010-1111-1111", "서울 11번가 본사", "1");
+        long result3 = dbHelper.SotBeaconInfoInsert("00003", "1", "쿠퐝", 40.163351, 127.081862, "http://www.coupang.com/", "망할세일", "망할세일중.jpg", "010-9898-9898", "경기 쿠퐝 본사", "1");
+        long result4 = dbHelper.SotBeaconInfoItemInsert("00001", "00001", "쥐고기", 1000, "itemDiscount", "1+1");
+        long result5 = dbHelper.SotBeaconInfoItemInsert("00002", "00002", "11번뇌봉", 2000, "itemDiscount", "2+1");
+        long result6 = dbHelper.SotBeaconInfoItemInsert("00003", "00003", "쿠퐝쿠폰", 3000, "itemDiscount", "3+1");
 
-        Log.v("HoyoungLog  :  ", "Data : " + 3);
+        /* insert문제없음을 확인
+        Log.v("HoyoungLog  :  ", "Result1 : " + result1);
+        Log.v("HoyoungLog  :  ", "Result2 : " + result2);
+        Log.v("HoyoungLog  :  ", "Result3 : " + result3);
+        Log.v("HoyoungLog  :  ", "Result4 : " + result4);
+        Log.v("HoyoungLog  :  ", "Result5 : " + result5);
+        Log.v("HoyoungLog  :  ", "Result6 : " + result6);
+        */
+
         String resultString = dbHelper.shopItemSelectByPlaceSeCd("1"); //이전의 intent에서 넘어와야 되지만 일단은 하드코딩
-        String[] resultArray = resultString.split(":");
-        Log.v("HoyoungLog  :  ", "SelectResult : " + resultString);
+        String[] resultArray = resultString.split("!");
 
-        for(int i=0; i<resultArray.length/6; i++) {
+        Log.v("HoyoungLog  :  ", "Data : " + resultArray[0] + ", " + resultArray[1] + ", " + resultArray[2] + ", " + resultArray[3] + ", " + resultArray[4] + ", " + resultArray[5]);
+        Log.v("HoyoungLog  :  ", "Data : " + resultArray[6] + ", " + resultArray[7] + ", " + resultArray[8] + ", " + resultArray[9] + ", " + resultArray[10] + ", " + resultArray[11]);
+        //BC_NO, BC_PLACE_NM, LATITUDE, LONGITUDE, URL, ITEM_NM, ITEM_PRICE
+        for(int i=0; i<resultArray.length/7; i++) {
             HashMap<String,String> temp = new HashMap<String, String>();
-            temp.put(FIRST_COLUMN, resultArray[6*i]);
-            temp.put(SECOND_COLUMN, resultArray[6*i+1]);
-            temp.put(THIRD_COLUMN, resultArray[6*i+2]);
-            temp.put(FOURTH_COLUMN, resultArray[6*i+3]);
-            temp.put(FIFTH_COLUMN, resultArray[6*i+4]);
-            temp.put(SIXTH_COLUMN, resultArray[6*i+5]);
+            temp.put(FIRST_COLUMN, resultArray[7*i]);
+            temp.put(SECOND_COLUMN, resultArray[7*i+1]);
+            temp.put(THIRD_COLUMN, resultArray[7*i+2]);
+            temp.put(FOURTH_COLUMN, resultArray[7*i+3]);
+            temp.put(FIFTH_COLUMN, resultArray[7*i+4]);
+            temp.put(SIXTH_COLUMN, resultArray[7*i+5]);
+            temp.put(SEVENTH_COLUMN, resultArray[7*i+6]);
             list.add(temp);
         }
 
@@ -168,11 +180,12 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
             @Override
             public void onItemClick(AdapterView<?> parent, final View view, int position, long id)
             {
+                //pos는 list 시퀀스로 0부터 시작한다.
                 int pos=position+1;
-                //Toast.makeText(BeaconMapActivity.this, Integer.toString(pos)+" Clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(BeaconMapActivity.this, Integer.toString(pos)+" Clicked", Toast.LENGTH_SHORT).show();
             }
         });
-
+        //리스트 클릭된 녀석들에 대해 BC_NO, item_nm 정보를 저장하고 있다가, 이 버튼을 누르면, 기존 ITEM테이블의 BASKET_YN 모두 N으로 바꾸고, 저장된 BC_NO에 대해 BASKET_YN Y로 변경
         /* Button Part */
         Button  wishListBtn = (Button) findViewById(R.id.goToWishList);
         wishListBtn.setOnClickListener(new View.OnClickListener() {

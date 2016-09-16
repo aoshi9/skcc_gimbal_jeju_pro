@@ -23,6 +23,7 @@ import static com.gimbal.android.skccJeju.Constant.THIRD_COLUMN;
 import static com.gimbal.android.skccJeju.Constant.FOURTH_COLUMN;
 import static com.gimbal.android.skccJeju.Constant.FIFTH_COLUMN;
 import static com.gimbal.android.skccJeju.Constant.SIXTH_COLUMN;
+import static com.gimbal.android.skccJeju.Constant.SEVENTH_COLUMN;
 
 import java.util.ArrayList;
 import android.app.Activity;
@@ -55,6 +56,7 @@ public class ItemListAdapter extends BaseAdapter {
     TextView url;
     TextView itemName;
     TextView itemPrice;
+    TextView bcNo;
 
     public ItemListAdapter(Activity activity, ArrayList<HashMap<String, String>> list) {
         super();
@@ -78,6 +80,7 @@ public class ItemListAdapter extends BaseAdapter {
         if(convertView == null) {
             convertView = inflater.inflate(R.layout.item_info_list, null);
 
+            bcNo = (TextView) convertView.findViewById((R.id.bc_no));
             placeName = (TextView) convertView.findViewById(R.id.placeName);
             latitude = (TextView) convertView.findViewById(R.id.latitude);
             longitude = (TextView) convertView.findViewById(R.id.longitude);
@@ -87,12 +90,13 @@ public class ItemListAdapter extends BaseAdapter {
         }
 
         HashMap<String, String> map = list.get(position);
-        placeName.setText(map.get(FIRST_COLUMN));
-        latitude.setText(map.get(SECOND_COLUMN));
-        longitude.setText(map.get(THIRD_COLUMN));
-        url.setText(map.get(FOURTH_COLUMN));
-        itemName.setText(map.get(FIFTH_COLUMN));
-        itemPrice.setText(map.get(SIXTH_COLUMN));
+        bcNo.setText(map.get(FIRST_COLUMN));
+        placeName.setText(map.get(SECOND_COLUMN));
+        latitude.setText(map.get(THIRD_COLUMN));
+        longitude.setText(map.get(FOURTH_COLUMN));
+        url.setText(map.get(FIFTH_COLUMN));
+        itemName.setText(map.get(SIXTH_COLUMN));
+        itemPrice.setText(map.get(SEVENTH_COLUMN));
 
         return convertView;
     }

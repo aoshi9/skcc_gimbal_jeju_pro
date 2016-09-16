@@ -83,38 +83,43 @@ public class DBHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = getReadableDatabase();
         String result = "";
 
-        Cursor cursor = db.rawQuery("SELECT B.BC_PLACE_NM, B.LATITUDE, B.LONGITUDE, B.URL, I.ITEM_NM, I.ITEM_PRICE " +
-                " FROM SOT_BEACON_INFO AS B INNER JOIN SOT_BEACON_INFO_ITEM AS I " +
+        /*String myQuery = "SELECT B.BC_PLACE_NM, B.LATITUDE, B.LONGITUDE, B.URL, I.ITEM_NM, I.ITEM_PRICE " +
+                " FROM SOT_BEACON_INFO B INNER JOIN SOT_BEACON_INFO_ITEM I " +
+                " ON B.BC_NO = I.BC_NO " +
+                " WHERE B.PLACE_SE_CD = ? ;";
+        Cursor cursor = db.rawQuery(myQuery, new String[] {"1"});*/
+
+        Cursor cursor = db.rawQuery("SELECT B.BC_NO, BC_PLACE_NM, LATITUDE, LONGITUDE, URL, ITEM_NM, ITEM_PRICE " +
+                " FROM SOT_BEACON_INFO B INNER JOIN SOT_BEACON_INFO_ITEM I " +
                 " ON B.BC_NO = I.BC_NO " +
                 " WHERE B.PLACE_SE_CD = '" + placeCode + "'; " , null);
 
         //inside Cursor 아예 실행이 안됨
-        Log.v("HoyoungLog  :  ", "Before Cursor : " + cursor.getCount());
         if(cursor.getCount()!=0) {
             if(cursor.moveToFirst()){
                 do{
-                    result += cursor.getString(0)
-                            + ":"
-                            + cursor.getDouble(1)
-                            + ":"
-                            + cursor.getDouble(2)
-                            + ":"
-                            + cursor.getString(3)
-                            + ":"
-                            + cursor.getString(4)
-                            + ":"
-                            + cursor.getInt(5)
-                            + ":";
-                    Log.v("HoyoungLog  :  ", "Inside Cursor : " + result);
+                    result += cursor.getString(cursor.getColumnIndex("BC_NO"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("BC_PLACE_NM"))
+                            + "!"
+                            + cursor.getDouble(cursor.getColumnIndex("LATITUDE"))
+                            + "!"
+                            + cursor.getDouble(cursor.getColumnIndex("LONGITUDE"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("URL"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("ITEM_NM"))
+                            + "!"
+                            + cursor.getInt(cursor.getColumnIndex("ITEM_PRICE"))
+                            + "!";
                 }while(cursor.moveToNext());
             }
         }
-        Log.v("HoyoungLog  :  ", "After Cursor : " + result);
         return result;
     }
 
     //SOT_BEACON_INFO 테이블 INSERT문
-    public void SotBeaconInfoInsert(String beaconNumber, String marketCode, String shopName, double latitude, double longitude, String url, String event, String eventImg, String phoneNumber, String address, String version) {
+    public long SotBeaconInfoInsert(String beaconNumber, String marketCode, String shopName, double latitude, double longitude, String url, String event, String eventImg, String phoneNumber, String address, String version) {
         // 읽고 쓰기가 가능하게 DB 열기
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -129,7 +134,7 @@ public class DBHelper extends SQLiteOpenHelper {
         values.put("TEL_NO", phoneNumber);
         values.put("ADDR", address);
         values.put("VERSION", version);
-        db.insert("SOT_BEACON_INFO", null, values);
+        return db.insert("SOT_BEACON_INFO", null, values);
 
         /*  db.execSQL("INSERT INTO SOT_BEACON_INFO (BC_NO, PLACE_SE_CD, BC_PLACE_NM, LATITUDE, LONGITUDE, URL, EVENT, EVENT_IMG, TEL_NO, ADDR, VERSION) " +
                 "VALUES ('" + beaconNumber + "', '" + marketCode + "', '" + shopName + "', " + latitude + ", " + longitude + ", '" + url +
@@ -138,12 +143,23 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     //SOT_BEACON_INFO_ITEM 테이블 INSERT문 & BasketYN은 Default로 N
-    public void SotBeaconInfoItemInsert(String beaconNumber, String itemNumber, String itemName, int itemPrice, String itemDiscount, String itemEvent) {
+    public long SotBeaconInfoItemInsert(String beaconNumber, String itemNumber, String itemName, int itemPrice, String itemDiscount, String itemEvent) {
         // 읽고 쓰기가 가능하게 DB 열기
         SQLiteDatabase db = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("BC_NO", beaconNumber);
+        values.put("ITEM_NO", itemNumber);
+        values.put("ITEM_NM", itemName) ;
+        values.put("ITEM_PRICE", itemPrice);
+        values.put("ITEM_DESC", itemDiscount);
+        values.put("BASKET_YN", "N");
+        values.put("ITEM_EVENT", itemEvent);
+        return db.insert("SOT_BEACON_INFO_ITEM", null, values);
+
+       /*
         db.execSQL("INSERT INTO SOT_BEACON_INFO_ITEM (BC_NO, ITEM_NO, ITEM_NM, ITEM_PRICE, ITEM_DESC, BASKET_YN, ITEM_EVENT) " +
                    " VALUES ('" + beaconNumber + "', '" + itemNumber + "', '" + itemName + "', " + itemPrice + ", '" + itemDiscount + "', 'N', '" + itemEvent + "' );");
-        //db.close();
+        db.close();*/
     }
 
     // SOT_BEACON_INFO_ITEM 테이블의 BASKET_YN -> Y
