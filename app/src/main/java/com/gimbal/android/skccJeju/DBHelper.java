@@ -90,7 +90,7 @@ public class DBHelper extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery(myQuery, new String[] {"1"});*/
 
         Cursor cursor = db.rawQuery("SELECT B.BC_NO, BC_PLACE_NM, LATITUDE, LONGITUDE, URL, ITEM_NM, ITEM_PRICE " +
-                " FROM SOT_BEACON_INFO B INNER JOIN SOT_BEACON_INFO_ITEM I " +
+                " FROM SOT_BEACON_INFO B LEFT JOIN SOT_BEACON_INFO_ITEM I " +
                 " ON B.BC_NO = I.BC_NO " +
                 " WHERE B.PLACE_SE_CD = '" + placeCode + "'; " , null);
 
@@ -173,6 +173,14 @@ public class DBHelper extends SQLiteOpenHelper {
     public void SotBeaconInfoItemBasketN(String beaconNumber, String itemName) {
         SQLiteDatabase db = getWritableDatabase();
         db.execSQL("UPDATE SOT_BEACON_INFO_ITEM SET BASKET_YN= 'N' WHERE BC_NO = '" + beaconNumber + "' AND ITEN_NM = '" + itemName + "';");
+        db.close();
+    }
+
+    // 생성된 테이블의 delete 작업 함수
+    public void DELETE() {
+        SQLiteDatabase db = getWritableDatabase();
+        db.execSQL("DELETE FROM SOT_BEACON_INFO;");
+        db.execSQL("DELETE FROM SOT_BEACON_INFO_ITEM;");
         db.close();
     }
 

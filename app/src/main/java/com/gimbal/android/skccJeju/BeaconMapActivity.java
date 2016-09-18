@@ -1,12 +1,12 @@
 package com.gimbal.android.skccJeju;
 
-import static com.gimbal.android.skccJeju.Constant.FIRST_COLUMN;
-import static com.gimbal.android.skccJeju.Constant.SECOND_COLUMN;
-import static com.gimbal.android.skccJeju.Constant.SEVENTH_COLUMN;
-import static com.gimbal.android.skccJeju.Constant.THIRD_COLUMN;
-import static com.gimbal.android.skccJeju.Constant.FOURTH_COLUMN;
-import static com.gimbal.android.skccJeju.Constant.FIFTH_COLUMN;
-import static com.gimbal.android.skccJeju.Constant.SIXTH_COLUMN;
+import static com.gimbal.android.skccJeju.Constant.FIRST_COLUMN;    //BC_NO
+import static com.gimbal.android.skccJeju.Constant.SECOND_COLUMN;   //BC_PLACE_NAME
+import static com.gimbal.android.skccJeju.Constant.THIRD_COLUMN;    //LATITUDE
+import static com.gimbal.android.skccJeju.Constant.FOURTH_COLUMN;   //LONGITUDE
+import static com.gimbal.android.skccJeju.Constant.FIFTH_COLUMN;    //URL
+import static com.gimbal.android.skccJeju.Constant.SIXTH_COLUMN;    //ITEM_NM
+import static com.gimbal.android.skccJeju.Constant.SEVENTH_COLUMN;  //ITEM_PRICE
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -56,7 +56,8 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
         //다음이 제공하는 MapView객체 생성 및 API Key 설정
         mMapView = new MapView(this);
         mMapView.setDaumMapApiKey("9d207c0434c4d2684359d20cc8e87556");
-        mMapView.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(37.550834, 126.993057), true);
+        //지도의 중심은 동문시장 좌표로!
+        mMapView.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(33.5119828, 126.5282266), true);
         //xml에 선언된 map_view 레이아웃을 찾아온 후, 생성한 MapView객체 추가
         RelativeLayout container = (RelativeLayout) findViewById(R.id.map_view);
 
@@ -64,79 +65,18 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
         mMapView.setPOIItemEventListener(this);
         container.addView(mMapView);
 
-        ArrayList<MapPOIItem> markers = new ArrayList<MapPOIItem>();
 
-        MapPOIItem marker1 = new MapPOIItem();
-        marker1.setItemName("별시작 1");
-        marker1.setTag(0);
-        marker1.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
-        marker1.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.scale(false);
-        MARKER_POINT= MapPoint.mapPointWithGeoCoord(37.554974, 127.003744);
-        marker1.setMapPoint(MARKER_POINT);
-        markers.add(marker1);
+       // Log.v("HoyoungLog  :  ", "Data : " + 1);
 
-        MapPOIItem marker2 = new MapPOIItem();
-        marker2.setItemName("별시작 2");
-        marker2.setTag(0);
-        marker2.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
-        marker2.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.scale(false);
-        MARKER_POINT= MapPoint.mapPointWithGeoCoord(37.554974, 126.983177);
-        marker2.setMapPoint(MARKER_POINT);
-        markers.add(marker2);
-
-        MapPOIItem marker3 = new MapPOIItem();
-        marker3.setItemName("별시작 3");
-        marker3.setTag(0);
-        marker3.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
-        marker3.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.scale(false);
-        MARKER_POINT= MapPoint.mapPointWithGeoCoord(37.547500, 126.998851);
-        marker3.setMapPoint(MARKER_POINT);
-        markers.add(marker3);
-
-        MapPOIItem marker4 = new MapPOIItem();
-        marker4.setItemName("별시작 4");
-        marker4.setTag(0);
-        marker4.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
-        marker4.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.scale(false);
-        MARKER_POINT= MapPoint.mapPointWithGeoCoord(37.559918, 126.992628);
-        marker4.setMapPoint(MARKER_POINT);
-        markers.add(marker4);
-
-        MapPOIItem marker5 = new MapPOIItem();
-        marker5.setItemName("별시작 5");
-        marker5.setTag(0);
-        marker5.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
-        marker5.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.scale(false);
-        MARKER_POINT= MapPoint.mapPointWithGeoCoord(37.544914, 126.989367);
-        marker5.setMapPoint(MARKER_POINT);
-        markers.add(marker5);
-
-        for(int i=0; i<markers.size(); i++) {
-            mMapView.addPOIItem(markers.get(i));
-        }
-
-        MapPolyline polyline = new MapPolyline();
-        polyline.setTag(1000);
-        polyline.setLineColor(Color.argb(128, 255, 51, 0));
-
-        // PolyLine 좌표지정
-        for(int i=0; i<markers.size(); i++) {
-            polyline.addPoint(markers.get(i).getMapPoint());
-        }
-        polyline.addPoint(markers.get(0).getMapPoint());
-
-        // PolyLine 지도에 올리기
-        mMapView.addPolyline(polyline);
-
-        Log.v("HoyoungLog  :  ", "Data : " + 1);
         /* ListView part */
         ListView listView=(ListView)findViewById(R.id.listView1);
-        list=new ArrayList<HashMap<String,String>>();
+        list = new ArrayList<HashMap<String,String>>();
 
         /* DataBase Part */
         dbHelper = new DBHelper(this.getApplicationContext(), "Gimbal.db", null, 1);
 
-        Log.v("HoyoungLog  :  ", "Data : " + 2);
+        dbHelper.DELETE();
+        //Log.v("HoyoungLog  :  ", "Data : " + 2);
         //세 개의 가게에 각각 하나의 아이템들이 있다고 가정을 합시다.
         long result1 = dbHelper.SotBeaconInfoInsert("00001", "1", "G마켓", 37.163351, 127.081862, "http://www.gmarket.co.kr/", "미친세일", "미친세일중.jpg", "010-2450-5037", "충남 쥐마켓 본사", "1");
         long result2 = dbHelper.SotBeaconInfoInsert("00002", "1", "11번가", 39.163351, 127.081862, "http://www.11st.co.kr/", "돌은세일", "돌은세일중.jpg", "010-1111-1111", "서울 11번가 본사", "1");
@@ -157,21 +97,22 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
         String resultString = dbHelper.shopItemSelectByPlaceSeCd("1"); //이전의 intent에서 넘어와야 되지만 일단은 하드코딩
         String[] resultArray = resultString.split("!");
 
-        Log.v("HoyoungLog  :  ", "Data : " + resultArray[0] + ", " + resultArray[1] + ", " + resultArray[2] + ", " + resultArray[3] + ", " + resultArray[4] + ", " + resultArray[5]);
-        Log.v("HoyoungLog  :  ", "Data : " + resultArray[6] + ", " + resultArray[7] + ", " + resultArray[8] + ", " + resultArray[9] + ", " + resultArray[10] + ", " + resultArray[11]);
+        //Log.v("HoyoungLog  :  ", "Data : " + resultArray[0] + ", " + resultArray[1] + ", " + resultArray[2] + ", " + resultArray[3] + ", " + resultArray[4] + ", " + resultArray[5]);
+        //Log.v("HoyoungLog  :  ", "Data : " + resultArray[6] + ", " + resultArray[7] + ", " + resultArray[8] + ", " + resultArray[9] + ", " + resultArray[10] + ", " + resultArray[11]);
         //BC_NO, BC_PLACE_NM, LATITUDE, LONGITUDE, URL, ITEM_NM, ITEM_PRICE
         for(int i=0; i<resultArray.length/7; i++) {
-            HashMap<String,String> temp = new HashMap<String, String>();
-            temp.put(FIRST_COLUMN, resultArray[7*i]);
-            temp.put(SECOND_COLUMN, resultArray[7*i+1]);
-            temp.put(THIRD_COLUMN, resultArray[7*i+2]);
-            temp.put(FOURTH_COLUMN, resultArray[7*i+3]);
-            temp.put(FIFTH_COLUMN, resultArray[7*i+4]);
-            temp.put(SIXTH_COLUMN, resultArray[7*i+5]);
-            temp.put(SEVENTH_COLUMN, resultArray[7*i+6]);
-            list.add(temp);
+            HashMap<String,String> dataMap = new HashMap<String, String>();
+            dataMap.put(FIRST_COLUMN, resultArray[7*i]);
+            dataMap.put(SECOND_COLUMN, resultArray[7*i+1]);
+            dataMap.put(THIRD_COLUMN, resultArray[7*i+2]);
+            dataMap.put(FOURTH_COLUMN, resultArray[7*i+3]);
+            dataMap.put(FIFTH_COLUMN, resultArray[7*i+4]);
+            dataMap.put(SIXTH_COLUMN, resultArray[7*i+5]);
+            dataMap.put(SEVENTH_COLUMN, resultArray[7*i+6]);
+            list.add(dataMap);
         }
 
+        //Log.v("HoyoungLog  :  ", "List Size : " + list.size());
         ItemListAdapter adapter = new ItemListAdapter(this, list);
         listView.setAdapter(adapter);
 
@@ -185,6 +126,35 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
                 Toast.makeText(BeaconMapActivity.this, Integer.toString(pos)+" Clicked", Toast.LENGTH_SHORT).show();
             }
         });
+
+        /* MapView에 ListView Item 올리기 */
+        ArrayList<MapPOIItem> markers = new ArrayList<MapPOIItem>();
+        MapPOIItem marker = new MapPOIItem();
+
+        // MapPOIItem형 ArrayList를 ListView item의 item갯수에 맞추어 채우기
+        for(int i=0; i<list.size(); i++) {
+            markers.add(new MapPOIItem());
+        }
+
+        Log.v("HoyoungLog  :  ", "위도경도 : " + list.get(0).get(THIRD_COLUMN) + ", " + list.get(0).get(FOURTH_COLUMN));
+        // MapPOIItem형의 ArrayList 구성객체들에 데이터를 넣어주기 -> 현재 심각한 결함은 가게단위가 아니라 아이템 단위로 보여주기에 동일위치에 여러 마커 겹쳐 존재
+        for(int i=0; i<list.size(); i++) {
+            marker = markers.get(i);
+            marker.setItemName(list.get(i).get(SECOND_COLUMN));
+            marker.setTag(1); //이전의 intent에서 넘어와야 되지만 일단은 하드코딩
+            marker.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
+            marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.scale(false);
+            MARKER_POINT= MapPoint.mapPointWithGeoCoord(Double.valueOf(list.get(i).get(THIRD_COLUMN)), Double.valueOf(list.get(i).get(FOURTH_COLUMN)));
+            marker.setMapPoint(MARKER_POINT);
+            marker.setUserObject(i); // marker마다 list번호 정보를 달아둔다.
+            markers.add(marker);
+        }
+
+        //marker들을 지도에 올린다.
+        for(int i=0; i<markers.size(); i++) {
+            mMapView.addPOIItem(markers.get(i));
+        }
+
         //리스트 클릭된 녀석들에 대해 BC_NO, item_nm 정보를 저장하고 있다가, 이 버튼을 누르면, 기존 ITEM테이블의 BASKET_YN 모두 N으로 바꾸고, 저장된 BC_NO에 대해 BASKET_YN Y로 변경
         /* Button Part */
         Button  wishListBtn = (Button) findViewById(R.id.goToWishList);
@@ -199,12 +169,16 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
     /* POI EventListener Method */
     @Override
     public void onPOIItemSelected(MapView mapView, MapPOIItem mapPOIItem) {
-
+        //눌렸을때 발생되는 기본적인 동작
     }
 
     @Override
     public void onCalloutBalloonOfPOIItemTouched(MapView mapView, MapPOIItem mapPOIItem) {
-
+        //말풍선 클릭하였을 시의 상황
+        Intent  intent = new Intent(this, MainActivity.class); //나중에 추가되면 변경할 것
+        //intent.putExtra("BC_NO",list.get((Integer)mapPOIItem.getUserObject()).get("FIRST_COLUMN"));
+        //가게 상세 페이지로의 전환을 위해, BC_NO 정보를 intent에 담아서 보낸다.
+        startActivity(intent);
     }
 
     @Override
