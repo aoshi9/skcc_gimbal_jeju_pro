@@ -82,7 +82,7 @@
             android:textSize="0sp"
             android:textStyle="bold"
             android:singleLine="true"
-            android:visibility="invisible" />
+            android:visibility="invisible"/>
 
 </LinearLayout>
 
