@@ -7,6 +7,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 /**
  * Created by 준형 on 2016-09-07.
  */
@@ -182,6 +185,86 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("DELETE FROM SOT_BEACON_INFO;");
         db.execSQL("DELETE FROM SOT_BEACON_INFO_ITEM;");
         db.close();
+    }
+
+    //0920 - ccy
+    //시장 번호에 따른 필요 디테일 정보를 불러오는 select함수
+    public String shopItemSelectByBeaconNo(String bcNo) {
+        SQLiteDatabase db = getReadableDatabase();
+        String result = "";
+
+        Cursor cursor = db.rawQuery("SELECT B.BC_NO, BC_PLACE_NM, LATITUDE, LONGITUDE, URL, EVENT, EVENT_IMG, ITEM_NM, TEL_NO, ADDR, ITEM_PRICE, ITEM_EVENT " +
+                " FROM SOT_BEACON_INFO B INNER JOIN SOT_BEACON_INFO_ITEM I " +
+                " ON B.BC_NO = I.BC_NO " +
+                " WHERE B.BC_NO = '" + bcNo + "'; " , null);
+
+        if(cursor.getCount()!=0) {
+            if(cursor.moveToFirst()){
+                do{
+                    result += cursor.getString(cursor.getColumnIndex("BC_NO"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("BC_PLACE_NM"))
+                            + "!"
+                            + cursor.getDouble(cursor.getColumnIndex("LATITUDE"))
+                            + "!"
+                            + cursor.getDouble(cursor.getColumnIndex("LONGITUDE"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("URL"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("EVENT"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("EVENT_IMG"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("TEL_NO"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("ADDR"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("ITEM_NM"))
+                            + "!"
+                            + cursor.getInt(cursor.getColumnIndex("ITEM_PRICE"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("ITEM_EVENT"))
+                            + "!";
+                }while(cursor.moveToNext());
+            }
+        }
+        return result;
+    }
+
+    // SOT_BEACON_INFO 테이블의 select 작업 함수
+    public ArrayList<HashMap<String,String>> placeItemInfoSelect(String bcNo) {
+        // 읽고 쓰기가 가능하게 DB 열기
+        SQLiteDatabase db = getReadableDatabase();
+        String result = "";
+
+        ArrayList<HashMap<String, String>> itemList;
+        itemList = new ArrayList<HashMap<String,String>>();
+
+        // DB에 있는 데이터를 쉽게 처리하기 위해 Cursor를 사용하여 테이블에 있는 모든 데이터 출력
+        Cursor cursor = db.rawQuery("SELECT * FROM SOT_BEACON_INFO_ITEM"+
+                " WHERE BC_NO = '" + bcNo + "'; " , null);
+        if(cursor.getCount()!=0) {
+            if(cursor.moveToFirst()){
+                do{
+                    //테이블에서 두개의 컬럼값을 가져와서
+                    String Name = cursor.getString(cursor.getColumnIndex("ITEM_NM"));
+                    String Price = cursor.getString(cursor.getColumnIndex("ITEM_PRICE"));
+
+                    //HashMap에 넣
+                    HashMap<String,String> items = new HashMap<String,String>();
+
+                    items.put("NAME",Name);
+                    items.put("PRICE",Price);
+
+                    //ArrayList에 추가합니다..
+                    itemList.add(items);
+
+                }while(cursor.moveToNext());
+            }
+
+        }
+        return itemList;
+
     }
 
 }

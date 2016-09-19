@@ -85,6 +85,11 @@ public class MainActivity extends AppCompatActivity {
         Intent  intent = new Intent(this, BeaconMapActivity.class);
         startActivity(intent);
     }
-
+    public void onDetailBtnClick(View view){
+        Toast.makeText(getApplicationContext(), "상세",
+                Toast.LENGTH_SHORT).show();
+        Intent  intent = new Intent(this, PlaceDetailActivity.class);
+        startActivity(intent);
+    }
 
 }
