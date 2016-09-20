@@ -308,5 +308,38 @@ public class DBHelper extends SQLiteOpenHelper {
         return result;
     }
 
+    //09201635 WishList.class를 위한 추가
+    public String selectedItemInfo(String bcNo) {
+        SQLiteDatabase db = getReadableDatabase();
+        String result = "";
+        Cursor cursor = db.rawQuery("SELECT B.BC_NO, BC_PLACE_NM, LATITUDE, LONGITUDE, URL, ITEM_NO, ITEM_NM, ITEM_PRICE " +
+                " FROM SOT_BEACON_INFO B INNER JOIN SOT_BEACON_INFO_ITEM I " +
+                " ON B.BC_NO = I.BC_NO " +
+                " WHERE B.BC_NO = '" + bcNo + "'" +
+                " AND I.BASKET_YN = 'Y'; " , null);
 
+        if(cursor.getCount()!=0) {
+            if(cursor.moveToFirst()){
+                do{
+                    result += cursor.getString(cursor.getColumnIndex("BC_NO"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("BC_PLACE_NM"))
+                            + "!"
+                            + cursor.getDouble(cursor.getColumnIndex("LATITUDE"))
+                            + "!"
+                            + cursor.getDouble(cursor.getColumnIndex("LONGITUDE"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("URL"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("ITEM_NM"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("ITEM_PRICE"))
+                            + "!"
+                            + cursor.getInt(cursor.getColumnIndex("ITEM_NO"))
+                            + "!";
+                }while(cursor.moveToNext());
+            }
+        }
+        return result;
+    }
 }
