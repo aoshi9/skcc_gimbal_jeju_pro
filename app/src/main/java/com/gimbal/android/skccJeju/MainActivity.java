@@ -18,31 +18,43 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        System.out.println("on Create MainActivity");
-        Log.v("onCreate","MainActivity");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app_main);
 
-//        startService(new Intent(this, AppService.class));
+        Gimbal.setApiKey(this.getApplication(), "8cbce2c7-6e27-419c-9be1-7b01f1d990e4");
+        startService(new Intent(this, AppService.class));
 
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
 
 //        GimbalDAO.setOptInShown(getApplicationContext());
-//        enablePlaceMonitoring();
-//        enableCommunications();
+        enablePlaceMonitoring();
+        enableCommunications();
 
-//
+        //상단알림 클릭시 화면 이동
+        //TODO :비콘별 이동 화면을 다르게 갖어 갈 수 있음(Attributes 활용(Communication )
+        Intent intent_noti = getIntent();
+        String strAction = intent_noti.getStringExtra("strAction");
+        Log.v("tempLog  :  ", "strAction.intent_noti_strAction :  "  +strAction);
+        if(strAction != null && strAction.equals("NotificationClicked")){
+            Intent  intent_move = new Intent(this, PlaceDetailActivity.class);
+            intent_move.putExtra("strBeaconNo",  intent_noti.getStringExtra("strBeaconNo"));
+            startActivity(intent_move);
+        }
+
+
+
+
 //        final ImageButton imgbtn1 = (ImageButton) findViewById(R.id.mainImg1);
 //        final ImageButton imgbtn2 = (ImageButton) findViewById(R.id.mainImg2);
 //
 //        imgbtn1.setOnTouchListener(new View.OnTouchListener() {
 //            @Override
 //            public boolean onTouch(View v, MotionEvent event) {
-//                if (event.getAction() == MotionEvent.ACTION_BUTTON_PRESS) {
+//                if(event.getAction()== MotionEvent.ACTION_BUTTON_PRESS){
 //                    imgbtn1.setVisibility(View.INVISIBLE);
 //                    imgbtn2.setVisibility(View.VISIBLE);
-//                } else if (event.getAction() == MotionEvent.ACTION_BUTTON_PRESS) {
+//                }else if(event.getAction()== MotionEvent.ACTION_BUTTON_PRESS){
 //                    imgbtn1.setVisibility(View.VISIBLE);
 //                    imgbtn2.setVisibility(View.INVISIBLE);
 //                }
