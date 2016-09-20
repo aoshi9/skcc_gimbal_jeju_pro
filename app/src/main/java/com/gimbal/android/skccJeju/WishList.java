@@ -45,6 +45,8 @@ public class WishList extends AppCompatActivity implements MapView.POIItemEventL
     private ArrayList<HashMap<String, String>> list;
     private DBHelper dbHelper;
     private  MapPoint MyLocation = MapPoint.mapPointWithGeoCoord(33.5129772790485, 126.52796675053673); // GPS에서 받아와야 정상이지만, 제주도이므로 하드코딩
+    private ArrayList<MapPOIItem> markers = new ArrayList<MapPOIItem>();
+
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
@@ -97,36 +99,8 @@ public class WishList extends AppCompatActivity implements MapView.POIItemEventL
         ItemListAdapter adapter = new ItemListAdapter(this, list);
         listView.setAdapter(adapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
-        {
-            @Override
-            public void onItemClick(AdapterView<?> parent, final View view, int position, long id)
-            {
-                /*//position은 sequence로서 0부터 시작한다.
-                String placeName = list.get(position).get(SECOND_COLUMN);
-                if(placeName.equals())
-                mMapView.selectPOIItem();
-*/
-                // 선택된 item이 click 되어 있는 상태인지 체크하는 부분 (최준형)
-                Log.v("HoyoungLog  :  ", "isEnabled : " + parent.getChildAt(position).isEnabled());
-                if(parent.getChildAt(position).isEnabled()) {
-                    view.setBackgroundColor(Color.GRAY);             // 선택했을 때, 회색으로 하이라이트
-                ;    parent.getChildAt(position).setEnabled(false);
-                    dbHelper.SotBeaconInfoItemBasketY(list.get(position).get(FIRST_COLUMN), list.get(position).get(EIGHTH_COLUMN));     // DB BASKET_YN 컬럼 update
-                    Log.v("HoyoungLog  :  ", "basketYShopItemSelect : " + dbHelper.basketYShopItemSelect());
-                } else {
-                    view.setBackgroundColor(Color.TRANSPARENT);     // 취소했을 때, 원상복구
-                    parent.getChildAt(position).setEnabled(true);
-                    dbHelper.SotBeaconInfoItemBasketN(list.get(position).get(FIRST_COLUMN), list.get(position).get(EIGHTH_COLUMN));     // DB BASKET_YN 컬럼 update
-                    Log.v("HoyoungLog  :  ", "basketYShopItemSelect : " + dbHelper.basketYShopItemSelect());
-                }
-
-                //Toast.makeText(BeaconMapActivity.this, Integer.toString(pos)+" Clicked" + id + ", " + list.get(position).get(SECOND_COLUMN) + list.get(position).get(SIXTH_COLUMN), Toast.LENGTH_SHORT).show();
-            }
-        });
 
         /* MapView에 ListView Item 올리기 */
-        ArrayList<MapPOIItem> markers = new ArrayList<MapPOIItem>();
         MapPOIItem marker = new MapPOIItem();
 
         // MapPOIItem형 ArrayList를 ListView 가게갯수에 맞추어 채우기
@@ -171,6 +145,21 @@ public class WishList extends AppCompatActivity implements MapView.POIItemEventL
             mMapView.addPOIItem(markers.get(i));
         }
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            @Override
+            public void onItemClick(AdapterView<?> parent, final View view, int position, long id)
+            {
+                //position은 sequence로서 0부터 시작한다.
+                //아이템 단위의 리스트를 클릭했을경우, 가게이름이 같은 마커를 select한 효과주기
+                String placeName = list.get(position).get(SECOND_COLUMN);
+                for(i=0; i<markers.size(); i++) {
+                    if(placeName.equals(markers.get(i).getItemName()))
+                        mMapView.selectPOIItem(markers.get(i), true);
+                }
+            }
+        });
+
         /* MapView에 PolyLine을 통해 경로 표시 */
         MapPolyline polyline = new MapPolyline();
         polyline.setTag(1000);
@@ -178,6 +167,67 @@ public class WishList extends AppCompatActivity implements MapView.POIItemEventL
 
         /* PolyLine을 통한 경로 설정 */
         polyline.addPoint(Mymarker.getMapPoint()); //내 위치가 시작점
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //내 위치에서 가장 가까운곳, 그곳에서 가장 가까운 곳 순으로 그려가자
+        ArrayList<MapPOIItem> unsortedMarkers = new ArrayList<MapPOIItem>();
+        ArrayList<MapPOIItem> sortedMarkers = new ArrayList<MapPOIItem>();
+
+        //시작점이 내 위치인 temp_markers
+        unsortedMarkers.add(Mymarker);
+        for(int i=0; i<markers.size(); i++) {
+            unsortedMarkers.add(markers.get(i));
+        }
+
+        //double latitude = markers.get(0).getMapPoint().getMapPointGeoCoord().latitude;
+        //double longitude = markers.get(0).getMapPoint().getMapPointGeoCoord().longitude;
+
+        //계산에 쓰일 변수
+        double latitude;
+        double longitude;
+        double anotherLatitude;
+        double anotherLongitude;
+        double min = Double.MAX_VALUE;
+        int minMarkerIndex = 0;
+        double dis = 0.0;
+
+        sortedMarkers.add(Mymarker);
+        //position 세팅
+        for(int i=0; i<unsortedMarkers.size(); i++) {
+            latitude = sortedMarkers.get(i).getMapPoint().getMapPointGeoCoord().latitude;
+            longitude = sortedMarkers.get(i).getMapPoint().getMapPointGeoCoord().longitude;
+
+            for(int j=0; j<unsortedMarkers.size(); j++) {
+                anotherLatitude = unsortedMarkers.get(j).getMapPoint().getMapPointGeoCoord().latitude;
+                anotherLongitude = unsortedMarkers.get(j).getMapPoint().getMapPointGeoCoord().longitude;
+                dis = distance(latitude, longitude, anotherLatitude, anotherLongitude);
+                if(dis != 0) {
+                    if(dis < min) {
+                        min = dis;
+                        minMarkerIndex = j;
+                    }
+                }
+
+            }
+
+        }
+
+
+
+
+
 
         for(int i=0; i<markers.size(); i++) {
             polyline.addPoint(markers.get(i).getMapPoint());
@@ -213,4 +263,7 @@ public class WishList extends AppCompatActivity implements MapView.POIItemEventL
     }
     /* POI EventListener Method */
 
+    public double distance(double fromX, double fromY, double toX, double toY) {
+        return Math.sqrt((fromX - toX)*(fromX - toX) + (fromY - toY)*(fromY - toY));
+    }
 }
