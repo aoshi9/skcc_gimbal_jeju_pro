@@ -100,7 +100,8 @@ public class PlaceDetailActivity extends AppCompatActivity {
         String telNo = resultArray[7];
         String addr = resultArray[8];
 
-        ArrayList resultArray2 = dbHelper.placeItemInfoSelect("beaconNo");
+        ArrayList resultArray2 = dbHelper.placeItemInfoSelect(beaconNo
+        );
 
         //새로운 apapter를 생성하여 데이터를 넣은 후..
         adapter = new SimpleAdapter(

@@ -81,7 +81,7 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-    //시장 번호에 따른 필요 정보를 불러오는 select함수
+    //시장 번호에 따른 요 정보를 불러오는 select함수
     public String shopItemSelectByPlaceSeCd(String placeCode) {
         SQLiteDatabase db = getReadableDatabase();
         String result = "";
@@ -92,7 +92,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 " WHERE B.PLACE_SE_CD = ? ;";
         Cursor cursor = db.rawQuery(myQuery, new String[] {"1"});*/
 
-        Cursor cursor = db.rawQuery("SELECT B.BC_NO, BC_PLACE_NM, LATITUDE, LONGITUDE, URL, ITEM_NM, ITEM_PRICE " +
+        Cursor cursor = db.rawQuery("SELECT B.BC_NO, BC_PLACE_NM, LATITUDE, LONGITUDE, URL, ITEM_NO, ITEM_NM, ITEM_PRICE " +
                 " FROM SOT_BEACON_INFO B LEFT JOIN SOT_BEACON_INFO_ITEM I " +
                 " ON B.BC_NO = I.BC_NO " +
                 " WHERE B.PLACE_SE_CD = '" + placeCode + "'; " , null);
@@ -114,6 +114,8 @@ public class DBHelper extends SQLiteOpenHelper {
                             + cursor.getString(cursor.getColumnIndex("ITEM_NM"))
                             + "!"
                             + cursor.getInt(cursor.getColumnIndex("ITEM_PRICE"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("ITEM_NO"))
                             + "!";
                 }while(cursor.moveToNext());
             }
@@ -166,16 +168,18 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     // SOT_BEACON_INFO_ITEM 테이블의 BASKET_YN -> Y
-    public void SotBeaconInfoItemBasketY(String beaconNumber, String itemName) {
+    public void SotBeaconInfoItemBasketY(String beaconNumber, String itemNo) {
         SQLiteDatabase db = getWritableDatabase();
-        db.execSQL("UPDATE SOT_BEACON_INFO_ITEM SET BASKET_YN= 'Y' WHERE BC_NO = '" + beaconNumber + "' AND ITEN_NM = '" + itemName + "';");
+        db.execSQL("UPDATE SOT_BEACON_INFO_ITEM SET BASKET_YN='Y' WHERE BC_NO='" + beaconNumber + "' AND ITEM_NO='" + itemNo + "';");
+        Log.v("HoyoungLog  :  ", "update3 : " + "UPDATE SOT_BEACON_INFO_ITEM SET BASKET_YN= 'Y' WHERE BC_NO = '" + beaconNumber + "' AND ITEM_NO = '" + itemNo + "';");
         db.close();
     }
 
     // SOT_BEACON_INFO_ITEM 테이블의 BASKET_YN -> N
-    public void SotBeaconInfoItemBasketN(String beaconNumber, String itemName) {
+    public void SotBeaconInfoItemBasketN(String beaconNumber, String itemNo) {
         SQLiteDatabase db = getWritableDatabase();
-        db.execSQL("UPDATE SOT_BEACON_INFO_ITEM SET BASKET_YN= 'N' WHERE BC_NO = '" + beaconNumber + "' AND ITEN_NM = '" + itemName + "';");
+        db.execSQL("UPDATE SOT_BEACON_INFO_ITEM SET BASKET_YN= 'N' WHERE BC_NO = '" + beaconNumber + "' AND ITEM_NO = '" + itemNo + "';");
+        Log.v("HoyoungLog  :  ", "update : " + "UPDATE SOT_BEACON_INFO_ITEM SET BASKET_YN= 'N' WHERE BC_NO = '" + beaconNumber + "' AND ITEM_NO = '" + itemNo + "';");
         db.close();
     }
 
@@ -266,5 +270,43 @@ public class DBHelper extends SQLiteOpenHelper {
         return itemList;
 
     }
+
+    //장바구니에 담긴 정보를 불러오는 select함수
+    public String basketYShopItemSelect() {
+        SQLiteDatabase db = getReadableDatabase();
+        String result = "";
+
+        /*String myQuery = "SELECT B.BC_PLACE_NM, B.LATITUDE, B.LONGITUDE, B.URL, I.ITEM_NM, I.ITEM_PRICE " +
+                " FROM SOT_BEACON_INFO B INNER JOIN SOT_BEACON_INFO_ITEM I " +
+                " ON B.BC_NO = I.BC_NO " +
+                " WHERE B.PLACE_SE_CD = ? ;";
+        Cursor cursor = db.rawQuery(myQuery, new String[] {"1"});*/
+
+        Cursor cursor = db.rawQuery("SELECT * FROM SOT_BEACON_INFO_ITEM WHERE BASKET_YN= 'Y'" , null);
+
+        //inside Cursor 아예 실행이 안됨
+        if(cursor.getCount()!=0) {
+            if(cursor.moveToFirst()){
+                do{
+                    result += cursor.getString(cursor.getColumnIndex("BC_NO"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("ITEM_NO"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("ITEM_NM"))
+                            + "!"
+                            + cursor.getDouble(cursor.getColumnIndex("ITEM_PRICE"))
+                            + "!"
+                            + cursor.getDouble(cursor.getColumnIndex("ITEM_DESC"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("BASKET_YN"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("ITEM_EVENT"))
+                            + "!";
+                }while(cursor.moveToNext());
+            }
+        }
+        return result;
+    }
+
 
 }

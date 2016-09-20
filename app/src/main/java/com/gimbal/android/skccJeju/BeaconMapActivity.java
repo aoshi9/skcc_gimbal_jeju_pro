@@ -7,6 +7,7 @@ import static com.gimbal.android.skccJeju.Constant.FOURTH_COLUMN;   //LONGITUDE
 import static com.gimbal.android.skccJeju.Constant.FIFTH_COLUMN;    //URL
 import static com.gimbal.android.skccJeju.Constant.SIXTH_COLUMN;    //ITEM_NM
 import static com.gimbal.android.skccJeju.Constant.SEVENTH_COLUMN;  //ITEM_PRICE
+import static com.gimbal.android.skccJeju.Constant.EIGHTH_COLUMN;  //ITEM_NO
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -66,7 +67,7 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
         container.addView(mMapView);
 
 
-       // Log.v("HoyoungLog  :  ", "Data : " + 1);
+        // Log.v("HoyoungLog  :  ", "Data : " + 1);
 
         /* ListView part */
         ListView listView=(ListView)findViewById(R.id.listView1);
@@ -75,15 +76,15 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
         /* DataBase Part */
         dbHelper = new DBHelper(this.getApplicationContext(), "Gimbal.db", null, 1);
 
-        dbHelper.DELETE();
+//        dbHelper.DELETE();
         //Log.v("HoyoungLog  :  ", "Data : " + 2);
         //세 개의 가게에 각각 하나의 아이템들이 있다고 가정을 합시다.
         long result1 = dbHelper.SotBeaconInfoInsert("00001", "1", "G마켓", 37.163351, 127.081862, "http://www.gmarket.co.kr/", "미친세일", "미친세일중.jpg", "010-2450-5037", "충남 쥐마켓 본사", "1");
         long result2 = dbHelper.SotBeaconInfoInsert("00002", "1", "11번가", 39.163351, 127.081862, "http://www.11st.co.kr/", "돌은세일", "돌은세일중.jpg", "010-1111-1111", "서울 11번가 본사", "1");
         long result3 = dbHelper.SotBeaconInfoInsert("00003", "1", "쿠퐝", 40.163351, 127.081862, "http://www.coupang.com/", "망할세일", "망할세일중.jpg", "010-9898-9898", "경기 쿠퐝 본사", "1");
-        long result4 = dbHelper.SotBeaconInfoItemInsert("00001", "00001", "쥐고기", 1000, "itemDiscount", "1+1");
-        long result5 = dbHelper.SotBeaconInfoItemInsert("00002", "00002", "11번뇌봉", 2000, "itemDiscount", "2+1");
-        long result6 = dbHelper.SotBeaconInfoItemInsert("00003", "00003", "쿠퐝쿠폰", 3000, "itemDiscount", "3+1");
+        long result4 = dbHelper.SotBeaconInfoItemInsert("00001", "12", "쥐고기", 1000, "itemDiscount", "1+1");
+        long result5 = dbHelper.SotBeaconInfoItemInsert("00002", "13", "11번뇌봉", 2000, "itemDiscount", "2+1");
+        long result6 = dbHelper.SotBeaconInfoItemInsert("00003", "14", "쿠퐝쿠폰", 3000, "itemDiscount", "3+1");
 
         /* insert문제없음을 확인
         Log.v("HoyoungLog  :  ", "Result1 : " + result1);
@@ -99,16 +100,17 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
 
         //Log.v("HoyoungLog  :  ", "Data : " + resultArray[0] + ", " + resultArray[1] + ", " + resultArray[2] + ", " + resultArray[3] + ", " + resultArray[4] + ", " + resultArray[5]);
         //Log.v("HoyoungLog  :  ", "Data : " + resultArray[6] + ", " + resultArray[7] + ", " + resultArray[8] + ", " + resultArray[9] + ", " + resultArray[10] + ", " + resultArray[11]);
-        //BC_NO, BC_PLACE_NM, LATITUDE, LONGITUDE, URL, ITEM_NM, ITEM_PRICE
-        for(int i=0; i<resultArray.length/7; i++) {
+        //BC_NO, BC_PLACE_NM, LATITUDE, LONGITUDE, URL, ITEM_NM, ITEM_PRICE, ITEM_NO
+        for(int i=0; i<resultArray.length/8; i++) {
             HashMap<String,String> dataMap = new HashMap<String, String>();
-            dataMap.put(FIRST_COLUMN, resultArray[7*i]);
-            dataMap.put(SECOND_COLUMN, resultArray[7*i+1]);
-            dataMap.put(THIRD_COLUMN, resultArray[7*i+2]);
-            dataMap.put(FOURTH_COLUMN, resultArray[7*i+3]);
-            dataMap.put(FIFTH_COLUMN, resultArray[7*i+4]);
-            dataMap.put(SIXTH_COLUMN, resultArray[7*i+5]);
-            dataMap.put(SEVENTH_COLUMN, resultArray[7*i+6]);
+            dataMap.put(FIRST_COLUMN, resultArray[8*i]);
+            dataMap.put(SECOND_COLUMN, resultArray[8*i+1]);
+            dataMap.put(THIRD_COLUMN, resultArray[8*i+2]);
+            dataMap.put(FOURTH_COLUMN, resultArray[8*i+3]);
+            dataMap.put(FIFTH_COLUMN, resultArray[8*i+4]);
+            dataMap.put(SIXTH_COLUMN, resultArray[8*i+5]);
+            dataMap.put(SEVENTH_COLUMN, resultArray[8*i+6]);
+            dataMap.put(EIGHTH_COLUMN, resultArray[8*i+7]);
             list.add(dataMap);
         }
 
@@ -123,7 +125,21 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
             {
                 //pos는 list 시퀀스로 0부터 시작한다.
                 int pos=position+1;
-                Toast.makeText(BeaconMapActivity.this, Integer.toString(pos)+" Clicked", Toast.LENGTH_SHORT).show();
+                // 선택된 item이 click 되어 있는 상태인지 체크하는 부분 (최준형)
+                Log.v("HoyoungLog  :  ", "isEnabled : " + parent.getChildAt(position).isEnabled());
+                if(parent.getChildAt(position).isEnabled()) {
+                    view.setBackgroundColor(Color.GRAY);             // 선택했을 때, 회색으로 하이라이트
+                    parent.getChildAt(position).setEnabled(false);
+                    dbHelper.SotBeaconInfoItemBasketY(list.get(position).get(FIRST_COLUMN), list.get(position).get(EIGHTH_COLUMN));     // DB BASKET_YN 컬럼 update
+                    Log.v("HoyoungLog  :  ", "basketYShopItemSelect : " + dbHelper.basketYShopItemSelect());
+                } else {
+                    view.setBackgroundColor(Color.TRANSPARENT);     // 취소했을 때, 원상복구
+                    parent.getChildAt(position).setEnabled(true);
+                    dbHelper.SotBeaconInfoItemBasketN(list.get(position).get(FIRST_COLUMN), list.get(position).get(EIGHTH_COLUMN));     // DB BASKET_YN 컬럼 update
+                    Log.v("HoyoungLog  :  ", "basketYShopItemSelect : " + dbHelper.basketYShopItemSelect());
+                }
+
+                Toast.makeText(BeaconMapActivity.this, Integer.toString(pos)+" Clicked" + id + ", " + list.get(position).get(SECOND_COLUMN) + list.get(position).get(SIXTH_COLUMN), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -161,7 +177,7 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
         wishListBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                // 장바구니 화면 intent 연결
             }
         });
     }
