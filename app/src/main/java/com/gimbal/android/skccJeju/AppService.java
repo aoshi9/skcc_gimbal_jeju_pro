@@ -100,7 +100,7 @@ public class AppService extends Service {
                     //        Log.v("tempLog  :  ", "onBeaconSighting visit1:  "  + visit1.toString());
                      //       Log.v("tempLog  :  ", "onBeaconSighting getDwellTimeInMillis:  "  + visit1.getDwellTimeInMillis());
 
-                            if(visit1.getDwellTimeInMillis() > intNo*400000){
+                            if(visit1.getDwellTimeInMillis() > intNo*40000000){
                                 intNo ++;
                                 //Log.v("tempLog  :  ", "onBeaconSighting getDwellTimeInMillis: over then  " + intNo*400000);
                                // addEvent(new GimbalEvent(TYPE.PLACE_ENTER, visit1.getPlace().getName(), new Date(visit1.getArrivalTimeInMillis()+visit1.getDwellTimeInMillis())));
@@ -132,7 +132,7 @@ public class AppService extends Service {
                     mapURL = "daummaps://look?p="+location.getLatitude()+","+location.getLongitude();
                     addEvent(new GimbalEvent(TYPE.COMMUNICATION_INSTANT_PUSH, "현재위치 : 위도 : "+ latit+" , 경도 : "+loanit, new Date(System.currentTimeMillis()),mapURL,latit,loanit,"","","" ));
                 }
-                else if(locationCnt > 500){
+                else if(locationCnt > 50000){
                     locationCnt = 1;
 
                     mapURL = "daummaps://look?p="+location.getLatitude()+","+location.getLongitude();
@@ -145,7 +145,7 @@ public class AppService extends Service {
             @Override
             public void onVisitEnd(Visit visit) {
                 //TODO: removc
-                Log.v("tempLog  :  ", "onVisitEnd :  "  +visit.getPlace().getName());
+               // Log.v("tempLog  :  ", "onVisitEnd :  "  +visit.getPlace().getName());
                 addEvent(new GimbalEvent(TYPE.PLACE_EXIT, visit.getPlace().getName() +" - exit", new Date(visit.getDepartureTimeInMillis()),"","","","","",""));
 
             }
@@ -167,14 +167,14 @@ public class AppService extends Service {
 
                 }
 
-                String visitPlace = visit.getPlace().getName();
-                String visitUrl = visit.getPlace().getAttributes().getValue("URL");
-                String visitLit = visit.getPlace().getAttributes().getValue("LITITUDE");
-                String visitLong = visit.getPlace().getAttributes().getValue("LONGITUDE");
-                String visitEvent= visit.getPlace().getAttributes().getValue("event");
-                String visitBeaconNo= visit.getPlace().getAttributes().getValue("BEACON_NO");
+//                String visitPlace = visit.getPlace().getName();
+//                String visitUrl = visit.getPlace().getAttributes().getValue("URL");
+//                String visitLit = visit.getPlace().getAttributes().getValue("LITITUDE");
+//                String visitLong = visit.getPlace().getAttributes().getValue("LONGITUDE");
+//                String visitEvent= visit.getPlace().getAttributes().getValue("event");
+//                String visitBeaconNo= visit.getPlace().getAttributes().getValue("BEACON_NO");
 
-//
+
 //                Log.v("tempLog  :  ", "onVisitStart visitBeaconNo:  "  +visitBeaconNo);
 //                Log.v("tempLog  :  ", "onVisitStart getName:  "  +visitPlace);
 //                Log.v("tempLog  :  ", "onVisitStart visitUrl:  "  +visitUrl);
@@ -185,11 +185,11 @@ public class AppService extends Service {
                 //addEvent(new GimbalEvent(TYPE.COMMUNICATION_PRESENTED, visitPlace + " (URL 연결) " , new Date(visit.getArrivalTimeInMillis()+visit.getDwellTimeInMillis()),visitUrl,visitLit, visitLong, visitBeaconNo,visitPlace,visitEvent));
 
 
-                Toast.makeText(
-                        getApplicationContext(),
-                        "operation : URL 연결" ,
-                        Toast.LENGTH_SHORT
-                ).show();
+//                Toast.makeText(
+//                        getApplicationContext(),
+//                        "operation : URL 연결" ,
+//                        Toast.LENGTH_SHORT
+//                ).show();
 
                 return communications;
             }
@@ -205,11 +205,11 @@ public class AppService extends Service {
                 }
 //                Log.v("tempLog  :  ", "presentNotificationForCommunications(push):  "  + push.toString());
 
-                Toast.makeText(
-                        getApplicationContext(),
-                        "operation : Communications, push" ,
-                        Toast.LENGTH_SHORT
-                ).show();
+//                Toast.makeText(
+//                        getApplicationContext(),
+//                        "operation : Communications, push" ,
+//                        Toast.LENGTH_SHORT
+//                ).show();
                 return communications;
             }
 
@@ -218,22 +218,29 @@ public class AppService extends Service {
                 for (Communication communication : communications) {
                     if(communication != null) {
                         //TODO: removc
-//                        Log.v("tempLog  :  ", "communication.getTitle :  "  +communication.getTitle());
-//                        Log.v("tempLog  :  ", "communication.getDescription :  "  +communication.getDescription());
-//                        Log.v("tempLog  :  ", "communication.getURL :  "  +communication.getURL());
-                        String strURL = communication.getURL();
-                        Toast.makeText(
-                                getApplicationContext(),
-                                " event site 이동",
-                                Toast.LENGTH_SHORT
-                        ).show();
+//                        Log.v("tempLog  :  ", "onNotificationClicked.getTitle :  "  +communication.getTitle());
+//                        Log.v("tempLog  :  ", "onNotificationClicked.getDescription :  "  +communication.getDescription());
+//                        Log.v("tempLog  :  ", "onNotificationClicked.getURL :  "  +communication.getURL());
+//                        Log.v("tempLog  :  ", "onNotificationClicked.beacon_no :  "  +communication.getAttributes().getValue("beacon_no"));
+
+                        //TODO : Communication Attributes 에 등록 (추가 설정 필요)  -- 060911
+                        String strBeaconNo = communication.getAttributes().getValue("beacon_no");
+                        //앱실행 후 main이동(MainActivity 에 상세 화면 이동하도록 구현됨)
+                        Intent intent = new Intent(AppService.this, MainActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        intent.putExtra("strBeaconNo",  strBeaconNo);
+                        intent.putExtra("strAction", "NotificationClicked" );
+                        startActivity(intent);
 
                        // addEvent(new GimbalEvent(TYPE.NOTIFICATION_CLICKED, communication.getTitle() + " , "+communication.getDescription(), new Date()));
 
-                        Intent intent = new Intent(Intent.ACTION_VIEW,
-                                Uri.parse(strURL));
-                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(intent);
+                        //상단바 클릭시 URL로 웹 페이지 호출 시 활용
+ //                       String strURL = communication.getURL();
+//
+//                        Intent intent = new Intent(Intent.ACTION_VIEW,
+//                                Uri.parse(strURL));
+//                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                        startActivity(intent);
                     }
                 }
 

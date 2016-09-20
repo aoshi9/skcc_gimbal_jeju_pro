@@ -1,31 +1,49 @@
 package com.gimbal.android.skccJeju;
 
+import static com.gimbal.android.skccJeju.Constant.FIRST_COLUMN;    //BC_NO
+import static com.gimbal.android.skccJeju.Constant.SECOND_COLUMN;   //BC_PLACE_NAME
+import static com.gimbal.android.skccJeju.Constant.THIRD_COLUMN;    //LATITUDE
+import static com.gimbal.android.skccJeju.Constant.FOURTH_COLUMN;   //LONGITUDE
+import static com.gimbal.android.skccJeju.Constant.FIFTH_COLUMN;    //URL
+import static com.gimbal.android.skccJeju.Constant.SIXTH_COLUMN;    //ITEM_NM
+import static com.gimbal.android.skccJeju.Constant.SEVENTH_COLUMN;  //ITEM_PRICE
+import static com.gimbal.android.skccJeju.Constant.EIGHTH_COLUMN;  //ITEM_NO
+
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import net.daum.mf.map.api.MapPOIItem;
+import net.daum.mf.map.api.MapPolyline;
 import net.daum.mf.map.api.MapView;
 import net.daum.mf.map.api.MapPoint;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 
 /**
  * Created by min on 2016-05-05.
  */
-public class BeaconMapActivity extends AppCompatActivity {
-    ImageView imageView;
+public class BeaconMapActivity extends AppCompatActivity implements MapView.POIItemEventListener {
     Integer i=0;
     private MapView mMapView;
     private String URL;
     private MapPOIItem marker;
     private MapPoint MARKER_POINT;
+    private ArrayList<HashMap<String, String>> list;
+    private DBHelper dbHelper;
 
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -35,77 +53,159 @@ public class BeaconMapActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
-
-
-
-        imageView = (ImageView) findViewById(R.id.dongmoon);
-
+        /*  Map Part */
         //다음이 제공하는 MapView객체 생성 및 API Key 설정
         mMapView = new MapView(this);
         mMapView.setDaumMapApiKey("9d207c0434c4d2684359d20cc8e87556");
-
+        //지도의 중심은 동문시장 좌표로!
+        mMapView.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(33.5119828, 126.5282266), true);
         //xml에 선언된 map_view 레이아웃을 찾아온 후, 생성한 MapView객체 추가
         RelativeLayout container = (RelativeLayout) findViewById(R.id.map_view);
 
+        //MapView에 POIItemEventListener 등록
+        mMapView.setPOIItemEventListener(this);
         container.addView(mMapView);
 
-        marker = new MapPOIItem();
-        marker.setItemName("동문시장 : 이벤트장소 첫번째집");
-        marker.setTag(0);
-        marker.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
-        marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.scale(false);
 
+        // Log.v("HoyoungLog  :  ", "Data : " + 1);
 
-        Log.v("tempLog  :  ", "BeaconMapActivity start:  "  + JejubeaconGvar.getLatitude());
+        /* ListView part */
+        ListView listView=(ListView)findViewById(R.id.listView1);
+        list = new ArrayList<HashMap<String,String>>();
 
-        if(JejubeaconGvar.getLatitude() != 0.0) {
+        /* DataBase Part */
+        dbHelper = new DBHelper(this.getApplicationContext(), "Gimbal.db", null, 1);
 
-            mMapView.setMapCenterPointAndZoomLevel(MapPoint.mapPointWithGeoCoord(JejubeaconGvar.getLatitude(), JejubeaconGvar.getLongitude()), 1, true);
+//        dbHelper.DELETE();
+        //Log.v("HoyoungLog  :  ", "Data : " + 2);
+        //세 개의 가게에 각각 하나의 아이템들이 있다고 가정을 합시다.
+        long result1 = dbHelper.SotBeaconInfoInsert("00001", "1", "G마켓", 37.163351, 127.081862, "http://www.gmarket.co.kr/", "미친세일", "미친세일중.jpg", "010-2450-5037", "충남 쥐마켓 본사", "1");
+        long result2 = dbHelper.SotBeaconInfoInsert("00002", "1", "11번가", 39.163351, 127.081862, "http://www.11st.co.kr/", "돌은세일", "돌은세일중.jpg", "010-1111-1111", "서울 11번가 본사", "1");
+        long result3 = dbHelper.SotBeaconInfoInsert("00003", "1", "쿠퐝", 40.163351, 127.081862, "http://www.coupang.com/", "망할세일", "망할세일중.jpg", "010-9898-9898", "경기 쿠퐝 본사", "1");
+        long result4 = dbHelper.SotBeaconInfoItemInsert("00001", "12", "쥐고기", 1000, "itemDiscount", "1+1");
+        long result5 = dbHelper.SotBeaconInfoItemInsert("00002", "13", "11번뇌봉", 2000, "itemDiscount", "2+1");
+        long result6 = dbHelper.SotBeaconInfoItemInsert("00003", "14", "쿠퐝쿠폰", 3000, "itemDiscount", "3+1");
 
-            MARKER_POINT= MapPoint.mapPointWithGeoCoord(JejubeaconGvar.getLatitude(), JejubeaconGvar.getLongitude());
-            marker.setMapPoint(MARKER_POINT);
-            mMapView.addPOIItem(marker);
+        /* insert문제없음을 확인
+        Log.v("HoyoungLog  :  ", "Result1 : " + result1);
+        Log.v("HoyoungLog  :  ", "Result2 : " + result2);
+        Log.v("HoyoungLog  :  ", "Result3 : " + result3);
+        Log.v("HoyoungLog  :  ", "Result4 : " + result4);
+        Log.v("HoyoungLog  :  ", "Result5 : " + result5);
+        Log.v("HoyoungLog  :  ", "Result6 : " + result6);
+        */
 
+        String resultString = dbHelper.shopItemSelectByPlaceSeCd("1"); //이전의 intent에서 넘어와야 되지만 일단은 하드코딩
+        String[] resultArray = resultString.split("!");
+
+        //Log.v("HoyoungLog  :  ", "Data : " + resultArray[0] + ", " + resultArray[1] + ", " + resultArray[2] + ", " + resultArray[3] + ", " + resultArray[4] + ", " + resultArray[5]);
+        //Log.v("HoyoungLog  :  ", "Data : " + resultArray[6] + ", " + resultArray[7] + ", " + resultArray[8] + ", " + resultArray[9] + ", " + resultArray[10] + ", " + resultArray[11]);
+        //BC_NO, BC_PLACE_NM, LATITUDE, LONGITUDE, URL, ITEM_NM, ITEM_PRICE, ITEM_NO
+        for(int i=0; i<resultArray.length/8; i++) {
+            HashMap<String,String> dataMap = new HashMap<String, String>();
+            dataMap.put(FIRST_COLUMN, resultArray[8*i]);
+            dataMap.put(SECOND_COLUMN, resultArray[8*i+1]);
+            dataMap.put(THIRD_COLUMN, resultArray[8*i+2]);
+            dataMap.put(FOURTH_COLUMN, resultArray[8*i+3]);
+            dataMap.put(FIFTH_COLUMN, resultArray[8*i+4]);
+            dataMap.put(SIXTH_COLUMN, resultArray[8*i+5]);
+            dataMap.put(SEVENTH_COLUMN, resultArray[8*i+6]);
+            dataMap.put(EIGHTH_COLUMN, resultArray[8*i+7]);
+            list.add(dataMap);
         }
 
+        //Log.v("HoyoungLog  :  ", "List Size : " + list.size());
+        ItemListAdapter adapter = new ItemListAdapter(this, list);
+        listView.setAdapter(adapter);
 
-
-        Button  gotoMapBtn = (Button) findViewById(R.id.gotoMapBtn);
-        gotoMapBtn.setOnClickListener(new View.OnClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
             @Override
-            public void onClick(View view) {
-
-
-                URL = "daummaps://look?p="+JejubeaconGvar.getLatitude()+","+JejubeaconGvar.getLongitude();
-                Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(URL));
-                startActivity(intent);
-
-            }
-        });
-
-        Button  locationRfBtn = (Button) findViewById(R.id.locationRfBtn);
-        locationRfBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if(JejubeaconGvar.getLatitude() != 0.0) {
-
-                    mMapView.setMapCenterPointAndZoomLevel(MapPoint.mapPointWithGeoCoord(JejubeaconGvar.getLatitude(), JejubeaconGvar.getLongitude()), 1, true);
-
-                    MARKER_POINT= MapPoint.mapPointWithGeoCoord(JejubeaconGvar.getLatitude(), JejubeaconGvar.getLongitude());
-                    marker.setMapPoint(MARKER_POINT);
-                    mMapView.addPOIItem(marker);
-
+            public void onItemClick(AdapterView<?> parent, final View view, int position, long id)
+            {
+                //pos는 list 시퀀스로 0부터 시작한다.
+                int pos=position+1;
+                // 선택된 item이 click 되어 있는 상태인지 체크하는 부분 (최준형)
+                Log.v("HoyoungLog  :  ", "isEnabled : " + parent.getChildAt(position).isEnabled());
+                if(parent.getChildAt(position).isEnabled()) {
+                    view.setBackgroundColor(Color.GRAY);             // 선택했을 때, 회색으로 하이라이트
+                    parent.getChildAt(position).setEnabled(false);
+                    dbHelper.SotBeaconInfoItemBasketY(list.get(position).get(FIRST_COLUMN), list.get(position).get(EIGHTH_COLUMN));     // DB BASKET_YN 컬럼 update
+                    Log.v("HoyoungLog  :  ", "basketYShopItemSelect : " + dbHelper.basketYShopItemSelect());
+                } else {
+                    view.setBackgroundColor(Color.TRANSPARENT);     // 취소했을 때, 원상복구
+                    parent.getChildAt(position).setEnabled(true);
+                    dbHelper.SotBeaconInfoItemBasketN(list.get(position).get(FIRST_COLUMN), list.get(position).get(EIGHTH_COLUMN));     // DB BASKET_YN 컬럼 update
+                    Log.v("HoyoungLog  :  ", "basketYShopItemSelect : " + dbHelper.basketYShopItemSelect());
                 }
 
+                Toast.makeText(BeaconMapActivity.this, Integer.toString(pos)+" Clicked" + id + ", " + list.get(position).get(SECOND_COLUMN) + list.get(position).get(SIXTH_COLUMN), Toast.LENGTH_SHORT).show();
             }
         });
 
+        /* MapView에 ListView Item 올리기 */
+        ArrayList<MapPOIItem> markers = new ArrayList<MapPOIItem>();
+        MapPOIItem marker = new MapPOIItem();
 
+        // MapPOIItem형 ArrayList를 ListView item의 item갯수에 맞추어 채우기
+        for(int i=0; i<list.size(); i++) {
+            markers.add(new MapPOIItem());
+        }
+
+        Log.v("HoyoungLog  :  ", "위도경도 : " + list.get(0).get(THIRD_COLUMN) + ", " + list.get(0).get(FOURTH_COLUMN));
+        // MapPOIItem형의 ArrayList 구성객체들에 데이터를 넣어주기 -> 현재 심각한 결함은 가게단위가 아니라 아이템 단위로 보여주기에 동일위치에 여러 마커 겹쳐 존재
+        for(int i=0; i<list.size(); i++) {
+            marker = markers.get(i);
+            marker.setItemName(list.get(i).get(SECOND_COLUMN));
+            marker.setTag(1); //이전의 intent에서 넘어와야 되지만 일단은 하드코딩
+            marker.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
+            marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.scale(false);
+            MARKER_POINT= MapPoint.mapPointWithGeoCoord(Double.valueOf(list.get(i).get(THIRD_COLUMN)), Double.valueOf(list.get(i).get(FOURTH_COLUMN)));
+            marker.setMapPoint(MARKER_POINT);
+            marker.setUserObject(i); // marker마다 list번호 정보를 달아둔다.
+            markers.add(marker);
+        }
+
+        //marker들을 지도에 올린다.
+        for(int i=0; i<markers.size(); i++) {
+            mMapView.addPOIItem(markers.get(i));
+        }
+
+        //리스트 클릭된 녀석들에 대해 BC_NO, item_nm 정보를 저장하고 있다가, 이 버튼을 누르면, 기존 ITEM테이블의 BASKET_YN 모두 N으로 바꾸고, 저장된 BC_NO에 대해 BASKET_YN Y로 변경
+        /* Button Part */
+        Button  wishListBtn = (Button) findViewById(R.id.goToWishList);
+        wishListBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // 장바구니 화면 intent 연결
+            }
+        });
+    }
+
+    /* POI EventListener Method */
+    @Override
+    public void onPOIItemSelected(MapView mapView, MapPOIItem mapPOIItem) {
+        //눌렸을때 발생되는 기본적인 동작
+    }
+
+    @Override
+    public void onCalloutBalloonOfPOIItemTouched(MapView mapView, MapPOIItem mapPOIItem) {
+        //말풍선 클릭하였을 시의 상황
+        Intent  intent = new Intent(this, MainActivity.class); //나중에 추가되면 변경할 것
+        //intent.putExtra("BC_NO",list.get((Integer)mapPOIItem.getUserObject()).get("FIRST_COLUMN"));
+        //가게 상세 페이지로의 전환을 위해, BC_NO 정보를 intent에 담아서 보낸다.
+        startActivity(intent);
+    }
+
+    @Override
+    public void onCalloutBalloonOfPOIItemTouched(MapView mapView, MapPOIItem mapPOIItem, MapPOIItem.CalloutBalloonButtonType calloutBalloonButtonType) {
 
     }
 
+    @Override
+    public void onDraggablePOIItemMoved(MapView mapView, MapPOIItem mapPOIItem, MapPoint mapPoint) {
 
+    }
+    /* POI EventListener Method */
 
 }
