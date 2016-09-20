@@ -28,10 +28,10 @@ public class DBHelper extends SQLiteOpenHelper {
         //db.execSQL("CREATE TABLE SHOP_ITEM (SHOP_ID TEXT, ITEM TEXT, PRICE INTEGER);");
         db.execSQL("CREATE TABLE SOT_BEACON_INFO (BC_NO TEXT, PLACE_SE_CD TEXT, BC_PLACE_NM TEXT, LATITUDE DOUBLE, " +
                  "LONGITUDE DOUBLE, URL TEXT, EVENT TEXT, EVENT_IMG TEXT, TEL_NO TEXT, ADDR TEXT, VERSION TEXT);");
-        db.execSQL("CREATE TABLE SOT_BEACON_INFO_ITEM (BC_NO TEXT, ITEM_NO TEXT, ITEM_NM TEXT, ITEM_PRICE INTEGER, ITEM_DESC TEXT, BASKET_YN TEXT, ITEM_EVENT TEXT);");
+        db.execSQL("CREATE TABLE SOT_BEACON_INFO_ITEM (BC_NO TEXT, ITEM_NO TEXT, ITEM_NM TEXT, ITEM_PRICE TEXT, ITEM_DESC TEXT, BASKET_YN TEXT, ITEM_EVENT TEXT);");
     }
 
-    // DB 업그레이드를 위해 버전이 변경될 때 호출되는 함수
+    // DB 업그레이드를 위해 버전이 변경될 때 호출되는 함수f
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
@@ -113,7 +113,7 @@ public class DBHelper extends SQLiteOpenHelper {
                             + "!"
                             + cursor.getString(cursor.getColumnIndex("ITEM_NM"))
                             + "!"
-                            + cursor.getInt(cursor.getColumnIndex("ITEM_PRICE"))
+                            + cursor.getString(cursor.getColumnIndex("ITEM_PRICE"))
                             + "!"
                             + cursor.getString(cursor.getColumnIndex("ITEM_NO"))
                             + "!";
@@ -148,7 +148,7 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     //SOT_BEACON_INFO_ITEM 테이블 INSERT문 & BasketYN은 Default로 N
-    public long SotBeaconInfoItemInsert(String beaconNumber, String itemNumber, String itemName, int itemPrice, String itemDiscount, String itemEvent) {
+    public long SotBeaconInfoItemInsert(String beaconNumber, String itemNumber, String itemName, String itemPrice, String itemDiscount, String itemEvent) {
         // 읽고 쓰기가 가능하게 DB 열기
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -225,7 +225,7 @@ public class DBHelper extends SQLiteOpenHelper {
                             + "!"
                             + cursor.getString(cursor.getColumnIndex("ITEM_NM"))
                             + "!"
-                            + cursor.getInt(cursor.getColumnIndex("ITEM_PRICE"))
+                            + cursor.getString(cursor.getColumnIndex("ITEM_PRICE"))
                             + "!"
                             + cursor.getString(cursor.getColumnIndex("ITEM_EVENT"))
                             + "!";
@@ -294,9 +294,9 @@ public class DBHelper extends SQLiteOpenHelper {
                             + "!"
                             + cursor.getString(cursor.getColumnIndex("ITEM_NM"))
                             + "!"
-                            + cursor.getDouble(cursor.getColumnIndex("ITEM_PRICE"))
+                            + cursor.getString(cursor.getColumnIndex("ITEM_PRICE"))
                             + "!"
-                            + cursor.getDouble(cursor.getColumnIndex("ITEM_DESC"))
+                            + cursor.getString(cursor.getColumnIndex("ITEM_DESC"))
                             + "!"
                             + cursor.getString(cursor.getColumnIndex("BASKET_YN"))
                             + "!"
@@ -335,7 +335,7 @@ public class DBHelper extends SQLiteOpenHelper {
                             + "!"
                             + cursor.getString(cursor.getColumnIndex("ITEM_PRICE"))
                             + "!"
-                            + cursor.getInt(cursor.getColumnIndex("ITEM_NO"))
+                            + cursor.getString(cursor.getColumnIndex("ITEM_NO"))
                             + "!";
                 }while(cursor.moveToNext());
             }

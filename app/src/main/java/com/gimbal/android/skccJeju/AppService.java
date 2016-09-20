@@ -56,6 +56,7 @@ public class AppService extends Service {
     private CommunicationListener communicationListener;
     private ExperienceListener experienceListener;
     private String mapURL;
+    private DBHelper dbHelper;
     int intNo = 1;
     int locationCnt = 0;
     @Override
@@ -63,8 +64,7 @@ public class AppService extends Service {
         events = new LinkedList<GimbalEvent>(GimbalDAO.getEvents(getApplicationContext()));
 
         Gimbal.setApiKey(this.getApplication(), "8cbce2c7-6e27-419c-9be1-7b01f1d990e4");
-
-
+        dbHelper = new DBHelper(this.getApplicationContext(), "Gimbal.db", null, 1);
 
         placeEventListener = new PlaceEventListener() {
 
@@ -73,41 +73,44 @@ public class AppService extends Service {
                 //TODO: removc
                 intNo = 1;
                 locationCnt = 0;
-                String visitPlace = visit.getPlace().getName();
-                String visitUrl = visit.getPlace().getAttributes().getValue("URL");
-                String visitLit = visit.getPlace().getAttributes().getValue("LITITUDE");
-                String visitLong = visit.getPlace().getAttributes().getValue("LONGITUDE");
-                String visitEvent= visit.getPlace().getAttributes().getValue("event");
-                String visitBeaconNo= visit.getPlace().getAttributes().getValue("BEACON_NO");
 
-//
-//                Log.v("tempLog  :  ", "onVisitStart visitBeaconNo:  "  +visitBeaconNo);
-//                Log.v("tempLog  :  ", "onVisitStart getName:  "  +visitPlace);
-//                Log.v("tempLog  :  ", "onVisitStart visitUrl:  "  +visitUrl);
-//                Log.v("tempLog  :  ", "onVisitStart visitLit :  "  +visitLit);
-//                Log.v("tempLog  :  ", "onVisitStart visitLong:  "  +visitLong);
-//                Log.v("tempLog  :  ", "onVisitStart visitEvent:  "  +visitEvent);
-                addEvent(new GimbalEvent(TYPE.PLACE_ENTER, visitPlace + " : " + visitEvent, new Date(visit.getArrivalTimeInMillis()+visit.getDwellTimeInMillis()),visitUrl,visitLit, visitLong, visitBeaconNo,visitPlace,visitEvent));
+                String visitPlace = visit.getPlace().getName();
+                String visitBeaconNo= visit.getPlace().getAttributes().getValue("BC_NO");
+                String visitPlaceSeqCd = visit.getPlace().getAttributes().getValue("PLACE_SE_CD");
+                String visitBeaconPlaceName = visit.getPlace().getAttributes().getValue("BC_PLACE_NM");
+                Double visitLit = Double.parseDouble(visit.getPlace().getAttributes().getValue("LITITUDE"));
+                Double visitLong = Double.parseDouble(visit.getPlace().getAttributes().getValue("LONGITUDE"));
+                String visitUrl = visit.getPlace().getAttributes().getValue("URL");
+                String visitEvent= visit.getPlace().getAttributes().getValue("EVENT");
+                String visitEventImg= visit.getPlace().getAttributes().getValue("EVENT_IMG");
+                String visitTelNo= visit.getPlace().getAttributes().getValue("TEL_NO");
+                String visitAddr= visit.getPlace().getAttributes().getValue("ADDR");
+                String visitVersion= visit.getPlace().getAttributes().getValue("VERSION");
+                String visitItem1 = visit.getPlace().getAttributes().getValue("ITEM1");
+                String visitItem2 = visit.getPlace().getAttributes().getValue("ITEM2");
+
+                Log.v("tempLog  :  ", "onVisitStart substring:  "  +visitPlace.substring(0, 2));
+                if( visitPlace.substring(0, 2).equals("DB")  ) {
+                    Log.v("tempLog  :  ", "onVisitStart visitBeaconNo:  " + visitPlace + ", " + visitBeaconNo + ", " + visitPlaceSeqCd + ", " + visitBeaconPlaceName + ", " + visitLit + ", " +
+                            visitLong + ", " + visitUrl + ", " + visitEvent + ", " + visitEventImg + ", " + visitTelNo + ", " + visitAddr + ", " + visitVersion + ", " + visitItem1 + ", " + visitItem2);
+                    String[] resultItemArray1 = visitItem1.split("|");
+                    String[] resultItemArray2 = visitItem2.split("|");
+
+                    dbHelper.SotBeaconInfoInsert(visitBeaconNo, visitPlaceSeqCd, visitBeaconPlaceName, visitLit, visitLong, visitUrl, visitEvent, visitEventImg, visitTelNo, visitAddr, visitVersion);
+                    dbHelper.SotBeaconInfoItemInsert(visitBeaconNo, resultItemArray1[0], resultItemArray1[1], resultItemArray1[2], resultItemArray1[3], resultItemArray1[4]);
+
+                }
+
+
+                addEvent(new GimbalEvent(TYPE.PLACE_ENTER, visitPlace + " : " + visitEvent, new Date(visit.getArrivalTimeInMillis()+visit.getDwellTimeInMillis()),visitUrl,visitLit.toString(), visitLong.toString(), visitBeaconNo,visitPlace,visitEvent));
             }
             @Override
             public void onBeaconSighting(BeaconSighting bs, List<Visit> visit) {
-                //TODO: removc
-           //     Log.v("tempLog  :  ", "onBeaconSighting Beacon Name:  "  +bs.getBeacon().getName());
-           //     Log.v("tempLog  :  ", "onBeaconSighting getRSSI:  "  +bs.getRSSI().doubleValue());
 
                     for (Visit visit1 : visit) {
                         if(visit1 != null) {
-                    //        Log.v("tempLog  :  ", "onBeaconSighting visit1:  "  + visit1.toString());
-                     //       Log.v("tempLog  :  ", "onBeaconSighting getDwellTimeInMillis:  "  + visit1.getDwellTimeInMillis());
-
-                            if(visit1.getDwellTimeInMillis() > intNo*40000000){
-                                intNo ++;
-                                //Log.v("tempLog  :  ", "onBeaconSighting getDwellTimeInMillis: over then  " + intNo*400000);
-                               // addEvent(new GimbalEvent(TYPE.PLACE_ENTER, visit1.getPlace().getName(), new Date(visit1.getArrivalTimeInMillis()+visit1.getDwellTimeInMillis())));
-                            }
                         }
                      }
-                //addEvent(new GimbalEvent(TYPE.PLACE_ENTER, visit.getPlace().getName(), new Date(visit.getArrivalTimeInMillis())));
             }
 
             @Override
@@ -115,11 +118,7 @@ public class AppService extends Service {
 
                 locationCnt ++;
                 //TODO: removc
-//                Log.v("tempLog  :  ", "locationDetected getProvider:  "+  locationCnt + " , " +location.getAltitude());
-                // Log.v("tempLog  :  ", "locationDetected getBearing:  "  +location.getLatitude());
-                // Log.v("tempLog  :  ", "locationDetected getLongitude:  "  +location.getLongitude());
-                //Log.v("tempLog  :  ", "locationDetected getBearing:  "  +location.getBearing());
-                //  addEvent(new GimbalEvent(TYPE.COMMUNICATION_INSTANT_PUSH, "Latitude : "+ location.getLatitude()+" , Longitude : "+location.getLongitude() , new Date(location.getTime())));
+
 
                 JejubeaconGvar.setLatitude(location.getLatitude());
                 JejubeaconGvar.setLongitude(location.getLongitude());
@@ -160,36 +159,8 @@ public class AppService extends Service {
             public Collection<Communication> presentNotificationForCommunications(Collection<Communication> communications, Visit visit) {
 
                 for (Communication communication : communications) {
-                    //TODO: removc
-//                    Log.v("tempLog  :  ", "presentNotificationForCommunications(toString) :  "  +communication.toString());
-//                    Log.v("tempLog  :  ", "presentNotificationForCommunications(URL) :  "  +communication.getURL());
-//                    Log.v("tempLog  :  ", "presentNotificationForCommunications(Identifie):  "  +communication.getIdentifier());
 
                 }
-
-//                String visitPlace = visit.getPlace().getName();
-//                String visitUrl = visit.getPlace().getAttributes().getValue("URL");
-//                String visitLit = visit.getPlace().getAttributes().getValue("LITITUDE");
-//                String visitLong = visit.getPlace().getAttributes().getValue("LONGITUDE");
-//                String visitEvent= visit.getPlace().getAttributes().getValue("event");
-//                String visitBeaconNo= visit.getPlace().getAttributes().getValue("BEACON_NO");
-
-
-//                Log.v("tempLog  :  ", "onVisitStart visitBeaconNo:  "  +visitBeaconNo);
-//                Log.v("tempLog  :  ", "onVisitStart getName:  "  +visitPlace);
-//                Log.v("tempLog  :  ", "onVisitStart visitUrl:  "  +visitUrl);
-//                Log.v("tempLog  :  ", "onVisitStart visitLit :  "  +visitLit);
-//                Log.v("tempLog  :  ", "onVisitStart visitLong:  "  +visitLong);
-//                Log.v("tempLog  :  ", "onVisitStart visitEvent:  "  +visitEvent);
-
-                //addEvent(new GimbalEvent(TYPE.COMMUNICATION_PRESENTED, visitPlace + " (URL 연결) " , new Date(visit.getArrivalTimeInMillis()+visit.getDwellTimeInMillis()),visitUrl,visitLit, visitLong, visitBeaconNo,visitPlace,visitEvent));
-
-
-//                Toast.makeText(
-//                        getApplicationContext(),
-//                        "operation : URL 연결" ,
-//                        Toast.LENGTH_SHORT
-//                ).show();
 
                 return communications;
             }
@@ -198,18 +169,7 @@ public class AppService extends Service {
             public Collection<Communication> presentNotificationForCommunications(Collection<Communication> communications, Push push) {
 
                 for (Communication communication : communications) {
-                    //TODO: removc
-//                    Log.v("tempLog  :  ", "presentNotificationForCommunications(URL) :  "  +communication.getURL());
-//                    Log.v("tempLog  :  ", "presentNotificationForCommunications(Identifie):  "  +communication.getIdentifier());
-                    //addEvent(new GimbalEvent(TYPE.COMMUNICATION_INSTANT_PUSH, communication.getTitle() + ":  CONTENT_도착", new Date()));
                 }
-//                Log.v("tempLog  :  ", "presentNotificationForCommunications(push):  "  + push.toString());
-
-//                Toast.makeText(
-//                        getApplicationContext(),
-//                        "operation : Communications, push" ,
-//                        Toast.LENGTH_SHORT
-//                ).show();
                 return communications;
             }
 
@@ -217,11 +177,6 @@ public class AppService extends Service {
             public void onNotificationClicked(List<Communication> communications) {
                 for (Communication communication : communications) {
                     if(communication != null) {
-                        //TODO: removc
-//                        Log.v("tempLog  :  ", "onNotificationClicked.getTitle :  "  +communication.getTitle());
-//                        Log.v("tempLog  :  ", "onNotificationClicked.getDescription :  "  +communication.getDescription());
-//                        Log.v("tempLog  :  ", "onNotificationClicked.getURL :  "  +communication.getURL());
-//                        Log.v("tempLog  :  ", "onNotificationClicked.beacon_no :  "  +communication.getAttributes().getValue("beacon_no"));
 
                         //TODO : Communication Attributes 에 등록 (추가 설정 필요)  -- 060911
                         String strBeaconNo = communication.getAttributes().getValue("beacon_no");
@@ -232,15 +187,6 @@ public class AppService extends Service {
                         intent.putExtra("strAction", "NotificationClicked" );
                         startActivity(intent);
 
-                       // addEvent(new GimbalEvent(TYPE.NOTIFICATION_CLICKED, communication.getTitle() + " , "+communication.getDescription(), new Date()));
-
-                        //상단바 클릭시 URL로 웹 페이지 호출 시 활용
- //                       String strURL = communication.getURL();
-//
-//                        Intent intent = new Intent(Intent.ACTION_VIEW,
-//                                Uri.parse(strURL));
-//                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                        startActivity(intent);
                     }
                 }
 
