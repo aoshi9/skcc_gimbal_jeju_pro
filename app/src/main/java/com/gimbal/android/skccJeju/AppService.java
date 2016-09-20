@@ -55,10 +55,7 @@ public class AppService extends Service {
     private PlaceEventListener placeEventListener;
     private CommunicationListener communicationListener;
     private ExperienceListener experienceListener;
-    private String mapURL;
     private DBHelper dbHelper;
-    int intNo = 1;
-    int locationCnt = 0;
     @Override
     public void onCreate() {
         events = new LinkedList<GimbalEvent>(GimbalDAO.getEvents(getApplicationContext()));
@@ -70,9 +67,6 @@ public class AppService extends Service {
 
             @Override
             public void onVisitStart(Visit visit) {
-                //TODO: removc
-                intNo = 1;
-                locationCnt = 0;
 
                 String visitPlace = visit.getPlace().getName();
 
@@ -82,10 +76,8 @@ public class AppService extends Service {
                 Double visitLong = Double.parseDouble(visit.getPlace().getAttributes().getValue("LONGITUDE"));
                 String visitUrl = visit.getPlace().getAttributes().getValue("URL");
 
+                 Log.v("tempLog  :  ", "onVisitStart Place :  "  +visitPlace);
 
-
-
-                Log.v("tempLog  :  ", "onVisitStart substring:  "  +visitPlace.substring(0, 2));
                 if( visitPlace.substring(0, 2).equals("DB")  ) {
                     //DB 용이 아닌 PLACE에는 없는 속성이라 IF 문 안으로 변경 --구민규
                     String visitPlaceSeqCd = visit.getPlace().getAttributes().getValue("PLACE_SE_CD");
@@ -97,13 +89,17 @@ public class AppService extends Service {
                     String visitItem1 = visit.getPlace().getAttributes().getValue("ITEM1");
                     String visitItem2 = visit.getPlace().getAttributes().getValue("ITEM2");
 
-                    Log.v("tempLog  :  ", "onVisitStart visitBeaconNo:  " + visitPlace + ", " + visitBeaconNo + ", " + visitPlaceSeqCd + ", " + visitBeaconPlaceName + ", " + visitLit + ", " +
+                    Log.v("tempLog  :  ", "onVisitStart visitBeacon:  " + visitPlace + ", " + visitBeaconNo + ", " + visitPlaceSeqCd + ", " + visitBeaconPlaceName + ", " + visitLit + ", " +
                             visitLong + ", " + visitUrl + ", " + visitEvent + ", " + visitEventImg + ", " + visitTelNo + ", " + visitAddr + ", " + visitVersion + ", " + visitItem1 + ", " + visitItem2);
-                    String[] resultItemArray1 = visitItem1.split("|");
-                    String[] resultItemArray2 = visitItem2.split("|");
+                    //split \\ 추가와 resultItemArray2 추가
+                    String[] resultItemArray1 = visitItem1.split("\\|");
+                    String[] resultItemArray2 = visitItem2.split("\\|");
 
+                    Log.v("tempLog  :  ", "onVisitStart resultItemArray1:  " + resultItemArray1[0] + ", " + resultItemArray1[1] + ", " + resultItemArray1[2] + ", " + resultItemArray1[3] + ", " + resultItemArray1[4]);
+                    Log.v("tempLog  :  ", "onVisitStart resultItemArray2:  " + resultItemArray2[0] + ", " + resultItemArray2[1] + ", " + resultItemArray2[2] + ", " + resultItemArray2[3] + ", " + resultItemArray2[4]);
                     dbHelper.SotBeaconInfoInsert(visitBeaconNo, visitPlaceSeqCd, visitBeaconPlaceName, visitLit, visitLong, visitUrl, visitEvent, visitEventImg, visitTelNo, visitAddr, visitVersion);
                     dbHelper.SotBeaconInfoItemInsert(visitBeaconNo, resultItemArray1[0], resultItemArray1[1], resultItemArray1[2], resultItemArray1[3], resultItemArray1[4]);
+                    dbHelper.SotBeaconInfoItemInsert(visitBeaconNo, resultItemArray2[0], resultItemArray2[1], resultItemArray2[2], resultItemArray2[3], resultItemArray2[4]);
 
                 }
 
@@ -122,35 +118,15 @@ public class AppService extends Service {
             @Override
             public void locationDetected(Location location) {
 
-                locationCnt ++;
-                //TODO: removc
-
-
                 JejubeaconGvar.setLatitude(location.getLatitude());
                 JejubeaconGvar.setLongitude(location.getLongitude());
-
-                String latit = String.valueOf(location.getLatitude());
-                String loanit = String.valueOf(location.getLongitude());
-
-                if(locationCnt == 1){
-                    String aqa   = String.valueOf(location.getLatitude());
-                    mapURL = "daummaps://look?p="+location.getLatitude()+","+location.getLongitude();
-                    addEvent(new GimbalEvent(TYPE.COMMUNICATION_INSTANT_PUSH, "현재위치 : 위도 : "+ latit+" , 경도 : "+loanit, new Date(System.currentTimeMillis()),mapURL,latit,loanit,"","","" ));
-                }
-                else if(locationCnt > 50000){
-                    locationCnt = 1;
-
-                    mapURL = "daummaps://look?p="+location.getLatitude()+","+location.getLongitude();
-                    addEvent(new GimbalEvent(TYPE.COMMUNICATION_INSTANT_PUSH, "현재위치2: 위도 : "+ latit+" , 경도 : "+loanit, new Date(System.currentTimeMillis()),mapURL,latit,loanit,"","","" ));
-                }
-
 
             }
 
             @Override
             public void onVisitEnd(Visit visit) {
                 //TODO: removc
-               // Log.v("tempLog  :  ", "onVisitEnd :  "  +visit.getPlace().getName());
+                Log.v("tempLog  :  ", "onVisitEnd :  "  +visit.getPlace().getName());
                 addEvent(new GimbalEvent(TYPE.PLACE_EXIT, visit.getPlace().getName() +" - exit", new Date(visit.getDepartureTimeInMillis()),"","","","","",""));
 
             }
@@ -166,6 +142,7 @@ public class AppService extends Service {
 
                 for (Communication communication : communications) {
 
+                    Log.v("tempLog  :  ", "presentNotificationForCommunications :  "  + communication.getTitle() + " , " + communication.getAttributes().getValue("beacon_no"));
                 }
 
                 return communications;
@@ -183,7 +160,7 @@ public class AppService extends Service {
             public void onNotificationClicked(List<Communication> communications) {
                 for (Communication communication : communications) {
                     if(communication != null) {
-
+                        Log.v("tempLog  :  ", "onNotificationClicked :  "  + communication.getTitle() + " , " + communication.getAttributes().getValue("beacon_no"));
                         //TODO : Communication Attributes 에 등록 (추가 설정 필요)  -- 060911
                         String strBeaconNo = communication.getAttributes().getValue("beacon_no");
                         //앱실행 후 main이동(MainActivity 에 상세 화면 이동하도록 구현됨)
