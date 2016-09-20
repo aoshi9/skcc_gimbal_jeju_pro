@@ -75,22 +75,28 @@ public class AppService extends Service {
                 locationCnt = 0;
 
                 String visitPlace = visit.getPlace().getName();
+
                 String visitBeaconNo= visit.getPlace().getAttributes().getValue("BC_NO");
-                String visitPlaceSeqCd = visit.getPlace().getAttributes().getValue("PLACE_SE_CD");
-                String visitBeaconPlaceName = visit.getPlace().getAttributes().getValue("BC_PLACE_NM");
+                String visitEvent= visit.getPlace().getAttributes().getValue("EVENT");
                 Double visitLit = Double.parseDouble(visit.getPlace().getAttributes().getValue("LITITUDE"));
                 Double visitLong = Double.parseDouble(visit.getPlace().getAttributes().getValue("LONGITUDE"));
                 String visitUrl = visit.getPlace().getAttributes().getValue("URL");
-                String visitEvent= visit.getPlace().getAttributes().getValue("EVENT");
-                String visitEventImg= visit.getPlace().getAttributes().getValue("EVENT_IMG");
-                String visitTelNo= visit.getPlace().getAttributes().getValue("TEL_NO");
-                String visitAddr= visit.getPlace().getAttributes().getValue("ADDR");
-                String visitVersion= visit.getPlace().getAttributes().getValue("VERSION");
-                String visitItem1 = visit.getPlace().getAttributes().getValue("ITEM1");
-                String visitItem2 = visit.getPlace().getAttributes().getValue("ITEM2");
+
+
+
 
                 Log.v("tempLog  :  ", "onVisitStart substring:  "  +visitPlace.substring(0, 2));
                 if( visitPlace.substring(0, 2).equals("DB")  ) {
+                    //DB 용이 아닌 PLACE에는 없는 속성이라 IF 문 안으로 변경 --구민규
+                    String visitPlaceSeqCd = visit.getPlace().getAttributes().getValue("PLACE_SE_CD");
+                    String visitBeaconPlaceName = visit.getPlace().getAttributes().getValue("BC_PLACE_NM");
+                    String visitEventImg= visit.getPlace().getAttributes().getValue("EVENT_IMG");
+                    String visitTelNo= visit.getPlace().getAttributes().getValue("TEL_NO");
+                    String visitAddr= visit.getPlace().getAttributes().getValue("ADDR");
+                    String visitVersion= visit.getPlace().getAttributes().getValue("VERSION");
+                    String visitItem1 = visit.getPlace().getAttributes().getValue("ITEM1");
+                    String visitItem2 = visit.getPlace().getAttributes().getValue("ITEM2");
+
                     Log.v("tempLog  :  ", "onVisitStart visitBeaconNo:  " + visitPlace + ", " + visitBeaconNo + ", " + visitPlaceSeqCd + ", " + visitBeaconPlaceName + ", " + visitLit + ", " +
                             visitLong + ", " + visitUrl + ", " + visitEvent + ", " + visitEventImg + ", " + visitTelNo + ", " + visitAddr + ", " + visitVersion + ", " + visitItem1 + ", " + visitItem2);
                     String[] resultItemArray1 = visitItem1.split("|");
