@@ -47,28 +47,27 @@
                 android:visibility="invisible" />
         </FrameLayout>-->
 
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="5dp"
+            android:background="#00000000"
+            android:onClick="onStartBtnClick" />
 
         <Button
             android:id="@+id/button1"
             android:layout_width="match_parent"
-            android:layout_height="75dp"
+            android:layout_height="80dp"
             android:layout_marginLeft="55dp"
             android:layout_marginRight="50dp"
-            android:layout_marginTop="460dp"
+            android:layout_marginTop="380dp"
             android:background="#00000000"
             android:onClick="onAppStartBtnClick"
             android:singleLine="false"
             android:textSize="30sp" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:layout_marginLeft="55dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginTop="25dp"
-            android:background="#00000000"
-            android:onClick="onStartBtnClick" />
 
     </LinearLayout>
 
