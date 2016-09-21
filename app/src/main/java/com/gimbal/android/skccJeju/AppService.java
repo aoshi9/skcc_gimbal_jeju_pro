@@ -139,13 +139,25 @@ public class AppService extends Service {
         communicationListener = new CommunicationListener() {
             @Override
             public Collection<Communication> presentNotificationForCommunications(Collection<Communication> communications, Visit visit) {
+                String commOpenYn ="Y";
+
 
                 for (Communication communication : communications) {
+                    Log.v("tempLog  :  ", "presentNotificationForCommunications :  "   + communication.getAttributes().getValue("beacon_no")+" , "+ communication.getAttributes().getValue("basket_chk"));
 
-                    Log.v("tempLog  :  ", "presentNotificationForCommunications :  "  + communication.getTitle() + " , " + communication.getAttributes().getValue("beacon_no"));
+                    String strBeaconNo = communication.getAttributes().getValue("beacon_no");
+                    String strBasketChk = communication.getAttributes().getValue("basket_chk");
+
+                   //Communication 이벤트 발생시 basket_chk='Y' 인것은 장바구니에 담은 비콘만 상단바 알림 이벤트 발생
+                    if(strBasketChk.equals("Y")) {
+                        commOpenYn = dbHelper.selectChkBasketYn(strBeaconNo);
+                        Log.v("tempLog  :  ", "commOpenYn :  "     + communication.getAttributes().getValue("beacon_no")+" , " + commOpenYn);
+                    }
                 }
+                //commOpenYn =="Y" 인 상태에서만 Notification 이벤트 발생
+                if(commOpenYn.equals("Y")) return communications;
+                else return null;
 
-                return communications;
             }
 
             @Override
