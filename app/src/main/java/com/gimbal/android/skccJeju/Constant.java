@@ -14,4 +14,5 @@ public class Constant {
     public static final String SIXTH_COLUMN = "ITEM_NM";
     public static final String SEVENTH_COLUMN = "ITEM_PRICE";
     public static final String EIGHTH_COLUMN = "ITEM_NO";
+    public static final String NINTH_COLUMN = "BASKET_YN";
 }
