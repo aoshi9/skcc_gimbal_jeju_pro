@@ -81,9 +81,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onStartBtnClick(View view) {
-        Toast.makeText(getApplicationContext(), "BT SERVICE? Start.",
+        Toast.makeText(getApplicationContext(), "비콘 이력 접속(임시)? Start.",
                 Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, BeaconMapActivity.class);
+        Intent intent = new Intent(this, AppActivity.class);
         startActivity(intent);
     }
 
