@@ -61,25 +61,22 @@ public class PlaceDetailActivity extends AppCompatActivity {
         list = new ArrayList<HashMap<String,String>>();
 
         Intent intent = getIntent();
-        //String beaconNo = intent.getStringExtra("strBeaconNo");
-        //Log.v("tempLog : strBeaconNo ", beaconNo);
-        String beaconNo = "BC001";
+        String beaconNo = intent.getStringExtra("strBeaconNo");
+        Log.v("tempLog : strBeaconNo ", beaconNo);
+        //String beaconNo = "BC001";
 
          /* DataBase Part */
         dbHelper = new DBHelper(this.getApplicationContext(), "Gimbal.db", null, 1);
 
-        dbHelper.SotBeaconInfoInsert("BC001", "1", "SK수산", 33.512871433920715, 126.52806210319818, "http://", "금주 행사는 ", "event_img1", "02-5445-5555", "제주도 제주시 일도2동 345번지", "1");
+        /*dbHelper.SotBeaconInfoInsert("BC001", "1", "SK수산", 33.512871433920715, 126.52806210319818, "http://", "금주 행사는 ", "event_img1", "02-5445-5555", "제주도 제주시 일도2동 345번지", "1");
         dbHelper.SotBeaconInfoInsert("BC002", "1", "SK과일", 33.512849093102645, 126.52870580659532, "http://", "테스트 2 행상", "event_img2", "02-5445-5544", "제주도 제주시 일도2동 344번지", "1");
         dbHelper.SotBeaconInfoItemInsert("BC001", "BC001_01", "광어", "12,000원", "자연산", "1+1");
         dbHelper.SotBeaconInfoItemInsert("BC001", "BC001_02", "자연산 광어", "10,000원", "자연산 싱싱한 광어", "싱싱한 자연산만...");
         dbHelper.SotBeaconInfoItemInsert("BC002", "BC002_01", "천혜향", "10kg 3만원", "맛있는 천혜향", "반값 이벤트");
-        dbHelper.SotBeaconInfoItemInsert("BC002", "BC002_02", "남원 한라봉", "10kg 2만원", "제주 남원에서 직접 수확한 한라봉", "싱싱한 한라봉...");
+        dbHelper.SotBeaconInfoItemInsert("BC002", "BC002_02", "남원 한라봉", "10kg 2만원", "제주 남원에서 직접 수확한 한라봉", "싱싱한 한라봉...");*/
 
         String resultString = dbHelper.shopItemSelectByBeaconNo(beaconNo); //이전의 intent에서 넘어와야 되지만 일단은 하드코딩
         String[] resultArray = resultString.split("!");
-
-        Log.v("HoyoungLog  :  ", "Data : " + resultArray[0] + ", " + resultArray[1] + ", " + resultArray[2] + ", " + resultArray[3] + ", " + resultArray[4] + ", " + resultArray[5]);
-        Log.v("HoyoungLog  :  ", "Data : " + resultArray[6] + ", " + resultArray[7] + ", " + resultArray[8] + ", " + resultArray[9] + ", " + resultArray[10] + ", " + resultArray[11]);
 
         Log.v("tempLog  :  ", "dbHelper.shopItemSelectByBeaconNo:  " + dbHelper.shopItemSelectByBeaconNo(beaconNo));
         Log.v("tempLog  :  ", "resultString.resultString:  " + resultString);
