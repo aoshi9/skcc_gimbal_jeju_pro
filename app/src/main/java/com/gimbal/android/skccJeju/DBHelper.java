@@ -92,7 +92,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 " WHERE B.PLACE_SE_CD = ? ;";
         Cursor cursor = db.rawQuery(myQuery, new String[] {"1"});*/
 
-        Cursor cursor = db.rawQuery("SELECT B.BC_NO, BC_PLACE_NM, LATITUDE, LONGITUDE, URL, ITEM_NO, ITEM_NM, ITEM_PRICE " +
+        Cursor cursor = db.rawQuery("SELECT B.BC_NO, BC_PLACE_NM, LATITUDE, LONGITUDE, URL, ITEM_NO, ITEM_NM, ITEM_PRICE, BASKET_YN " +
                 " FROM SOT_BEACON_INFO B LEFT JOIN SOT_BEACON_INFO_ITEM I " +
                 " ON B.BC_NO = I.BC_NO " +
                 " WHERE B.PLACE_SE_CD = '" + placeCode + "'; " , null);
@@ -116,6 +116,8 @@ public class DBHelper extends SQLiteOpenHelper {
                             + cursor.getString(cursor.getColumnIndex("ITEM_PRICE"))
                             + "!"
                             + cursor.getString(cursor.getColumnIndex("ITEM_NO"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("BASKET_YN"))
                             + "!";
                 }while(cursor.moveToNext());
             }

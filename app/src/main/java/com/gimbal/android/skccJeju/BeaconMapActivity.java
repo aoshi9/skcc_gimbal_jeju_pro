@@ -198,7 +198,7 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
     public void onCalloutBalloonOfPOIItemTouched(MapView mapView, MapPOIItem mapPOIItem) {
         //말풍선 클릭하였을 시의 상황
         Intent  intent = new Intent(this, PlaceDetailActivity.class); //나중에 추가되면 변경할 것
-//        intent.putExtra("BC_NO",list.get((Integer)mapPOIItem.getUserObject()).get("FIRST_COLUMN"));
+        intent.putExtra("BC_NO",list.get((Integer)mapPOIItem.getUserObject()).get("FIRST_COLUMN"));
         //가게 상세 페이지로의 전환을 위해, BC_NO 정보를 intent에 담아서 보낸다.
         startActivity(intent);
     }
