@@ -308,13 +308,13 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     //09201635 WishList.class를 위한 추가
-    public String selectedItemInfo(String bcNo) {
+    public String selectedItemInfo(String marketName) {
         SQLiteDatabase db = getReadableDatabase();
         String result = "";
         Cursor cursor = db.rawQuery("SELECT B.BC_NO, BC_PLACE_NM, LATITUDE, LONGITUDE, URL, ITEM_NO, ITEM_NM, ITEM_PRICE " +
-                " FROM SOT_BEACON_INFO B INNER JOIN SOT_BEACON_INFO_ITEM I " +
+                " FROM SOT_BEACON_INFO B LEFT JOIN SOT_BEACON_INFO_ITEM I " +
                 " ON B.BC_NO = I.BC_NO " +
-                " WHERE B.BC_NO = '" + bcNo + "'" +
+                " WHERE B.PLACE_SE_CD = '" + marketName + "'" +
                 " AND I.BASKET_YN = 'Y'; " , null);
 
         if(cursor.getCount()!=0) {

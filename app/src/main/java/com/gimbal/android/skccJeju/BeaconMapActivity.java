@@ -10,6 +10,7 @@ import static com.gimbal.android.skccJeju.Constant.SEVENTH_COLUMN;  //ITEM_PRICE
 import static com.gimbal.android.skccJeju.Constant.EIGHTH_COLUMN;  //ITEM_NO
 import static com.gimbal.android.skccJeju.Constant.NINTH_COLUMN;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
@@ -46,6 +47,7 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
     private MapPoint MARKER_POINT;
     private ArrayList<HashMap<String, String>> list;
     private DBHelper dbHelper;
+    private RelativeLayout container;
 
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -60,9 +62,9 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
         mMapView = new MapView(this);
         mMapView.setDaumMapApiKey("9d207c0434c4d2684359d20cc8e87556");
         //지도의 중심은 동문시장 좌표로!
-        mMapView.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(33.5119828, 126.5282266), true);
+        mMapView.setMapCenterPointAndZoomLevel(MapPoint.mapPointWithGeoCoord(33.512789, 126.528353), -1, true);
         //xml에 선언된 map_view 레이아웃을 찾아온 후, 생성한 MapView객체 추가
-        RelativeLayout container = (RelativeLayout) findViewById(R.id.map_view);
+        container = (RelativeLayout) findViewById(R.id.map_view);
 
         //MapView에 POIItemEventListener 등록
         mMapView.setPOIItemEventListener(this);
@@ -182,6 +184,7 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
             @Override
             public void onClick(View view) {
                 // 장바구니 화면 intent 연결
+                container.removeView(mMapView); //지도끄고 이동한다.
                 Intent  intent = new Intent(view.getContext(), WishList.class); //나중에 추가되면 변경할 것
                 startActivity(intent);
             }
@@ -197,8 +200,8 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
     @Override
     public void onCalloutBalloonOfPOIItemTouched(MapView mapView, MapPOIItem mapPOIItem) {
         //말풍선 클릭하였을 시의 상황
-        Intent  intent = new Intent(this, PlaceDetailActivity.class); //나중에 추가되면 변경할 것
-        intent.putExtra("BC_NO",list.get((Integer)mapPOIItem.getUserObject()).get("FIRST_COLUMN"));
+        Intent intent = new Intent(this, PlaceDetailActivity.class); //나중에 추가되면 변경할 것
+        intent.putExtra("strBeaconNo",list.get((Integer)mapPOIItem.getUserObject()).get(FIRST_COLUMN).toString());
         //가게 상세 페이지로의 전환을 위해, BC_NO 정보를 intent에 담아서 보낸다.
         startActivity(intent);
     }

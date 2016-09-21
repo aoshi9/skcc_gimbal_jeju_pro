@@ -9,6 +9,7 @@ import static com.gimbal.android.skccJeju.Constant.SIXTH_COLUMN;    //ITEM_NM
 import static com.gimbal.android.skccJeju.Constant.SEVENTH_COLUMN;  //ITEM_PRICE
 import static com.gimbal.android.skccJeju.Constant.EIGHTH_COLUMN;  //ITEM_NO
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
@@ -23,6 +24,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+
+import com.gimbal.android.Beacon;
 
 import net.daum.mf.map.api.MapPOIItem;
 import net.daum.mf.map.api.MapPolyline;
@@ -46,6 +49,7 @@ public class WishList extends AppCompatActivity implements MapView.POIItemEventL
     private DBHelper dbHelper;
     private  MapPoint MyLocation = MapPoint.mapPointWithGeoCoord(33.5129772790485, 126.52796675053673); // GPS에서 받아와야 정상이지만, 제주도이므로 하드코딩
     private ArrayList<MapPOIItem> markers = new ArrayList<MapPOIItem>();
+    private RelativeLayout container;
 
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -60,9 +64,10 @@ public class WishList extends AppCompatActivity implements MapView.POIItemEventL
         mMapView = new MapView(this);
         mMapView.setDaumMapApiKey("9d207c0434c4d2684359d20cc8e87556");
         //지도의 중심은 동문시장 좌표로!
-        mMapView.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(33.5119828, 126.5282266), true);
+        mMapView.setMapCenterPointAndZoomLevel(MapPoint.mapPointWithGeoCoord(33.512789, 126.528353), -1, true);
+
         //xml에 선언된 map_view 레이아웃을 찾아온 후, 생성한 MapView객체 추가
-        RelativeLayout container = (RelativeLayout) findViewById(R.id.map_view);
+         container = (RelativeLayout) findViewById(R.id.map_view);
 
         //MapView에 POIItemEventListener 등록
         mMapView.setPOIItemEventListener(this);
@@ -96,7 +101,7 @@ public class WishList extends AppCompatActivity implements MapView.POIItemEventL
         }
 
         //Log.v("HoyoungLog  :  ", "List Size : " + list.size());
-        ItemListAdapter adapter = new ItemListAdapter(this, list);
+        WishListListAdapter adapter = new WishListListAdapter(this, list);
         listView.setAdapter(adapter);
 
 
@@ -160,26 +165,13 @@ public class WishList extends AppCompatActivity implements MapView.POIItemEventL
             }
         });
 
-        /* MapView에 PolyLine을 통해 경로 표시 */
+      /*  *//* MapView에 PolyLine을 통해 경로 표시 *//*
         MapPolyline polyline = new MapPolyline();
         polyline.setTag(1000);
         polyline.setLineColor(Color.argb(255, 0, 0, 0));
 
-        /* PolyLine을 통한 경로 설정 */
+        *//* PolyLine을 통한 경로 설정 *//*
         polyline.addPoint(Mymarker.getMapPoint()); //내 위치가 시작점
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         //내 위치에서 가장 가까운곳, 그곳에서 가장 가까운 곳 순으로 그려가자
         ArrayList<MapPOIItem> unsortedMarkers = new ArrayList<MapPOIItem>();
@@ -191,50 +183,12 @@ public class WishList extends AppCompatActivity implements MapView.POIItemEventL
             unsortedMarkers.add(markers.get(i));
         }
 
-        //double latitude = markers.get(0).getMapPoint().getMapPointGeoCoord().latitude;
-        //double longitude = markers.get(0).getMapPoint().getMapPointGeoCoord().longitude;
-
-        //계산에 쓰일 변수
-        double latitude;
-        double longitude;
-        double anotherLatitude;
-        double anotherLongitude;
-        double min = Double.MAX_VALUE;
-        int minMarkerIndex = 0;
-        double dis = 0.0;
-
-        sortedMarkers.add(Mymarker);
-        //position 세팅
-        for(int i=0; i<unsortedMarkers.size(); i++) {
-            latitude = sortedMarkers.get(i).getMapPoint().getMapPointGeoCoord().latitude;
-            longitude = sortedMarkers.get(i).getMapPoint().getMapPointGeoCoord().longitude;
-
-            for(int j=0; j<unsortedMarkers.size(); j++) {
-                anotherLatitude = unsortedMarkers.get(j).getMapPoint().getMapPointGeoCoord().latitude;
-                anotherLongitude = unsortedMarkers.get(j).getMapPoint().getMapPointGeoCoord().longitude;
-                dis = distance(latitude, longitude, anotherLatitude, anotherLongitude);
-                if(dis != 0) {
-                    if(dis < min) {
-                        min = dis;
-                        minMarkerIndex = j;
-                    }
-                }
-
-            }
-
-        }
-
-
-
-
-
-
         for(int i=0; i<markers.size(); i++) {
             polyline.addPoint(markers.get(i).getMapPoint());
         }
 
         // PolyLine 지도에 올리기
-        mMapView.addPolyline(polyline);
+        mMapView.addPolyline(polyline);*/
     }
 
     /* POI EventListener Method */
@@ -246,8 +200,8 @@ public class WishList extends AppCompatActivity implements MapView.POIItemEventL
     @Override
     public void onCalloutBalloonOfPOIItemTouched(MapView mapView, MapPOIItem mapPOIItem) {
         //말풍선 클릭하였을 시의 상황
-        Intent  intent = new Intent(this, MainActivity.class); //나중에 추가되면 변경할 것
-        intent.putExtra("BC_NO",list.get((Integer)mapPOIItem.getUserObject()).get("FIRST_COLUMN"));
+        Intent intent = new Intent(this, PlaceDetailActivity.class); //나중에 추가되면 변경할 것
+        intent.putExtra("strBeaconNo",list.get((Integer)mapPOIItem.getUserObject()).get(FIRST_COLUMN).toString());
         //가게 상세 페이지로의 전환을 위해, BC_NO 정보를 intent에 담아서 보낸다.
         startActivity(intent);
     }
@@ -265,5 +219,13 @@ public class WishList extends AppCompatActivity implements MapView.POIItemEventL
 
     public double distance(double fromX, double fromY, double toX, double toY) {
         return Math.sqrt((fromX - toX)*(fromX - toX) + (fromY - toY)*(fromY - toY));
+    }
+
+    //뒤로가기를 누르면, 새로 activity 시작하도록
+    @Override
+    public void onBackPressed() {
+        container.removeView(mMapView); //지도끄고 이동한다.
+        Intent  intent = new Intent(this, BeaconMapActivity.class); //나중에 추가되면 변경할 것
+        startActivity(intent);
     }
 }
