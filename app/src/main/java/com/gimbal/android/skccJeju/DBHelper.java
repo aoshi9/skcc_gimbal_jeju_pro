@@ -236,7 +236,7 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     // SOT_BEACON_INFO 테이블의 select 작업 함수
-    public ArrayList<HashMap<String,String>> placeItemInfoSelect(String bcNo) {
+    public String placeItemInfoSelect(String bcNo) {
         // 읽고 쓰기가 가능하게 DB 열기
         SQLiteDatabase db = getReadableDatabase();
         String result = "";
@@ -250,25 +250,22 @@ public class DBHelper extends SQLiteOpenHelper {
         if(cursor.getCount()!=0) {
             if(cursor.moveToFirst()){
                 do{
-                    //테이블에서 두개의 컬럼값을 가져와서
-                    String Name = cursor.getString(cursor.getColumnIndex("ITEM_NM"));
-                    String Price = cursor.getString(cursor.getColumnIndex("ITEM_PRICE"));
-
-                    //HashMap에 넣
-                    HashMap<String,String> items = new HashMap<String,String>();
-
-                    items.put("NAME",Name);
-                    items.put("PRICE",Price);
-
-                    //ArrayList에 추가합니다..
-                    itemList.add(items);
-
+                    result += cursor.getString(cursor.getColumnIndex("BC_NO"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("ITEM_NO"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("ITEM_NM"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("ITEM_PRICE"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("ITEM_DESC"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("ITEM_EVENT"))
+                            + "!";
                 }while(cursor.moveToNext());
             }
-
         }
-        return itemList;
-
+        return result;
     }
 
     //장바구니에 담긴 정보를 불러오는 select함수

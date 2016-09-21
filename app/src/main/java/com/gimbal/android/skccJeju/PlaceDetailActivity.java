@@ -2,7 +2,6 @@ package com.gimbal.android.skccJeju;
 
 import static com.gimbal.android.skccJeju.Constant.FIRST_COLUMN;
 import static com.gimbal.android.skccJeju.Constant.SECOND_COLUMN;
-import static com.gimbal.android.skccJeju.Constant.SEVENTH_COLUMN;
 import static com.gimbal.android.skccJeju.Constant.THIRD_COLUMN;
 import static com.gimbal.android.skccJeju.Constant.FOURTH_COLUMN;
 import static com.gimbal.android.skccJeju.Constant.FIFTH_COLUMN;
@@ -50,44 +49,34 @@ public class PlaceDetailActivity extends AppCompatActivity {
     private Double dLatitude= 0.0;
     private Double dLongitude= 0.0;
     private DBHelper dbHelper;
-
-    private ArrayList<HashMap<String, String>> itemList;
-    ListView list;
-    private LinearLayout mLayout;
+    private ArrayList<HashMap<String, String>> list;
 
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_place);
         setContentView(R.layout.activity_detail);
 
-        list = (ListView) findViewById(R.id.listView);
-        ListAdapter adapter;
-
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
+        /* ListView part */
+        ListView listView=(ListView)findViewById(R.id.listView1);
+        list = new ArrayList<HashMap<String,String>>();
 
         Intent intent = getIntent();
-        //String beaconNo = intent.getStringExtra("strBeaconNo");
-        String beaconNo = "00002";
-        //Log.v("tempLog : strBeaconNo ", beaconNo);
+        String beaconNo = intent.getStringExtra("strBeaconNo");
+        Log.v("tempLog : strBeaconNo ", beaconNo);
+        //String beaconNo = "BC001";
 
          /* DataBase Part */
         dbHelper = new DBHelper(this.getApplicationContext(), "Gimbal.db", null, 1);
 
-        dbHelper.SotBeaconInfoInsert("00001", "1", "G마켓", 37.163351, 127.081862, "http://www.gmarket.co.kr/", "미친세일", "market1", "010-2450-5037", "충남 쥐마켓 본사", "1");
-        dbHelper.SotBeaconInfoInsert("00002", "1", "11번가", 39.163351, 127.081862, "http://www.11st.co.kr/", "돌은세일", "market2", "010-1111-1111", "서울 11번가 본사", "1");
-        dbHelper.SotBeaconInfoInsert("00003", "1", "쿠퐝", 40.163351, 127.081862, "http://www.coupang.com/", "망할세일", "market3", "010-9898-9898", "경기 쿠퐝 본사", "1");
-        dbHelper.SotBeaconInfoItemInsert("00001", "00001", "방어", 1000, "itemDiscount", "1+1");
-        dbHelper.SotBeaconInfoItemInsert("00001", "00002", "옥돔", 2000, "itemDiscount", "2+1");
-        dbHelper.SotBeaconInfoItemInsert("00002", "00001", "11번뇌봉", 2000, "itemDiscount", "3+1");
-        dbHelper.SotBeaconInfoItemInsert("00003", "00001", "쿠퐝쿠폰", 3000, "itemDiscount", "4+1");
+        /*dbHelper.SotBeaconInfoInsert("BC001", "1", "SK수산", 33.512871433920715, 126.52806210319818, "http://", "금주 행사는 ", "event_img1", "02-5445-5555", "제주도 제주시 일도2동 345번지", "1");
+        dbHelper.SotBeaconInfoInsert("BC002", "1", "SK과일", 33.512849093102645, 126.52870580659532, "http://", "테스트 2 행상", "event_img2", "02-5445-5544", "제주도 제주시 일도2동 344번지", "1");
+        dbHelper.SotBeaconInfoItemInsert("BC001", "BC001_01", "광어", "12,000원", "자연산", "1+1");
+        dbHelper.SotBeaconInfoItemInsert("BC001", "BC001_02", "자연산 광어", "10,000원", "자연산 싱싱한 광어", "싱싱한 자연산만...");
+        dbHelper.SotBeaconInfoItemInsert("BC002", "BC002_01", "천혜향", "10kg 3만원", "맛있는 천혜향", "반값 이벤트");
+        dbHelper.SotBeaconInfoItemInsert("BC002", "BC002_02", "남원 한라봉", "10kg 2만원", "제주 남원에서 직접 수확한 한라봉", "싱싱한 한라봉...");*/
 
         String resultString = dbHelper.shopItemSelectByBeaconNo(beaconNo); //이전의 intent에서 넘어와야 되지만 일단은 하드코딩
         String[] resultArray = resultString.split("!");
-
-        Log.v("HoyoungLog  :  ", "Data : " + resultArray[0] + ", " + resultArray[1] + ", " + resultArray[2] + ", " + resultArray[3] + ", " + resultArray[4] + ", " + resultArray[5]);
-        Log.v("HoyoungLog  :  ", "Data : " + resultArray[6] + ", " + resultArray[7] + ", " + resultArray[8] + ", " + resultArray[9] + ", " + resultArray[10] + ", " + resultArray[11]);
 
         Log.v("tempLog  :  ", "dbHelper.shopItemSelectByBeaconNo:  " + dbHelper.shopItemSelectByBeaconNo(beaconNo));
         Log.v("tempLog  :  ", "resultString.resultString:  " + resultString);
@@ -100,42 +89,24 @@ public class PlaceDetailActivity extends AppCompatActivity {
         String telNo = resultArray[7];
         String addr = resultArray[8];
 
-        ArrayList resultArray2 = dbHelper.placeItemInfoSelect(beaconNo
-        );
+        String resultString1 = dbHelper.placeItemInfoSelect(beaconNo); //이전의 intent에서 넘어와야 되지만 일단은 하드코딩
+        String[] resultArray1 = resultString1.split("!");
 
-        //새로운 apapter를 생성하여 데이터를 넣은 후..
-        adapter = new SimpleAdapter(
-                this, resultArray2, R.layout.list_item2,
-                new String[]{"NAME","PRICE"},
-                new int[]{ R.id.name, R.id.price}
-        );
+        for(int i=0; i<resultArray1.length/6; i++) {
+            HashMap<String,String> dataMap = new HashMap<String, String>();
+            dataMap.put(FIRST_COLUMN, resultArray1[6*i]);
+            dataMap.put(SECOND_COLUMN, resultArray1[6*i+1]);
+            dataMap.put(THIRD_COLUMN, resultArray1[6*i+2]);
+            dataMap.put(FOURTH_COLUMN, resultArray1[6*i+3]);
+            dataMap.put(FIFTH_COLUMN, resultArray1[6*i+4]);
+            dataMap.put(SIXTH_COLUMN, resultArray1[6*i+5]);
 
+            list.add(dataMap);
+        }
 
-        //화면에 보여주기 위해 Listview에 연결합니다.
-        list.setAdapter(adapter);
-
-        Log.v("placeItemInfolect  :  ", "placeItemInflect:  " + resultArray2);
-        Log.v("placeItemInfolect  :  ", "placeItemInflect:  " + resultArray2.get(0));
-        Log.v("placeItemInfolect  :  ", "placeItemInflect:  " + resultArray2.get(1));
-
-
-      /*  String text = null;
-        ArrayList<String> temp = new ArrayList<String>();
-
-
-        for(int i = 0; i<resultArray2.size(); i++){
-            LinearLayout layout = (LinearLayout)findViewById(R.id.mainLayout);
-            TextView itemlist = new TextView(this);
-            itemlist = (TextView) findViewById(R.id.itemlist);
-
-            text = i + resultArray2.get(i).toString();
-            temp.add(text);
-            itemlist.setText(temp.get(i));
-
-            layout.addView(itemlist);
-
-        }*/
-
+        //Log.v("HoyoungLog  :  ", "List Size : " + list.size());
+        ItemList2Adapter adapter = new ItemList2Adapter(this, list);
+        listView.setAdapter(adapter);
 
         TextView placeName = (TextView) findViewById(R.id.placeName);
         placeName.setText(place);
@@ -147,12 +118,12 @@ public class PlaceDetailActivity extends AppCompatActivity {
         telNoText.setText("전화번호 " + "\n" + telNo);
 
         TextView placeEventText = (TextView) findViewById(R.id.placeEvent);
-        placeEventText.setText("진행중 이벤트 " + "\n" + placeEvent);
+        placeEventText.setText("이벤트 :  "  + placeEvent);
 
 
         ImageView eventImg = (ImageView) findViewById(R.id.eventImg);
-        //eventImg.setImageResource(getResources().getIdentifier(placeImg, "drawable", getPackageName()));
-        eventImg.setImageResource(R.drawable.market1);
+        eventImg.setImageResource(getResources().getIdentifier(placeImg, "drawable", getPackageName()));
+        //eventImg.setImageResource(R.drawable.market1);
 
         imageView = (ImageView) findViewById(R.id.eventImg);
 
@@ -165,64 +136,6 @@ public class PlaceDetailActivity extends AppCompatActivity {
 
             }
         });
-
-       /* //다음이 제공하는 MapView객체 생성 및 API Key 설정
-        mMapView = new MapView(this);
-        mMapView.setDaumMapApiKey("9d207c0434c4d2684359d20cc8e87556");
-
-        //xml에 선언된 map_view 레이아웃을 찾아온 후, 생성한 MapView객체 추가
-        RelativeLayout container = (RelativeLayout) findViewById(R.id.map_view);
-
-        container.addView(mMapView);
-
-        marker = new MapPOIItem();
-        marker.setItemName(place);
-        marker.setTag(0);
-        marker.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
-        marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.scale(false);
-
-
-        if(dLatitude != 0.0) {
-
-            mMapView.setMapCenterPointAndZoomLevel(MapPoint.mapPointWithGeoCoord(dLatitude, dLongitude), 0, true);
-
-            MARKER_POINT= MapPoint.mapPointWithGeoCoord(dLatitude, dLongitude);
-            marker.setMapPoint(MARKER_POINT);
-            mMapView.addPOIItem(marker);
-
-        }
-        Button  gotoMapBtn = (Button) findViewById(R.id.gotoMapBtn);
-        gotoMapBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                String mapUrl = "daummaps://look?p="+dLatitude+","+dLongitude;
-                Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(mapUrl));
-                startActivity(intent);
-
-            }
-        });
-
-        Button  locationRfBtn = (Button) findViewById(R.id.locationRfBtn);
-        locationRfBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if(dLatitude!= 0.0) {
-
-                    mMapView.setMapCenterPointAndZoomLevel(MapPoint.mapPointWithGeoCoord(dLatitude, dLongitude), 1, true);
-
-                    MARKER_POINT= MapPoint.mapPointWithGeoCoord(dLatitude, dLongitude);
-                    marker.setMapPoint(MARKER_POINT);
-                    mMapView.addPOIItem(marker);
-
-                }
-
-            }
-        });*/
-
-
 
     }
 

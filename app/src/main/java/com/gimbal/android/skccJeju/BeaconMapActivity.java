@@ -82,9 +82,9 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
         long result1 = dbHelper.SotBeaconInfoInsert("00001", "1", "G마켓", 37.163351, 127.081862, "http://www.gmarket.co.kr/", "미친세일", "미친세일중.jpg", "010-2450-5037", "충남 쥐마켓 본사", "1");
         long result2 = dbHelper.SotBeaconInfoInsert("00002", "1", "11번가", 39.163351, 127.081862, "http://www.11st.co.kr/", "돌은세일", "돌은세일중.jpg", "010-1111-1111", "서울 11번가 본사", "1");
         long result3 = dbHelper.SotBeaconInfoInsert("00003", "1", "쿠퐝", 40.163351, 127.081862, "http://www.coupang.com/", "망할세일", "망할세일중.jpg", "010-9898-9898", "경기 쿠퐝 본사", "1");
-        long result4 = dbHelper.SotBeaconInfoItemInsert("00001", "12", "쥐고기", 1000, "itemDiscount", "1+1");
-        long result5 = dbHelper.SotBeaconInfoItemInsert("00002", "13", "11번뇌봉", 2000, "itemDiscount", "2+1");
-        long result6 = dbHelper.SotBeaconInfoItemInsert("00003", "14", "쿠퐝쿠폰", 3000, "itemDiscount", "3+1");
+        long result4 = dbHelper.SotBeaconInfoItemInsert("00001", "12", "쥐고기", "1000", "itemDiscount", "1+1");
+        long result5 = dbHelper.SotBeaconInfoItemInsert("00002", "13", "11번뇌봉", "2000", "itemDiscount", "2+1");
+        long result6 = dbHelper.SotBeaconInfoItemInsert("00003", "14", "쿠퐝쿠폰", "3000", "itemDiscount", "3+1");
 
         /* insert문제없음을 확인
         Log.v("HoyoungLog  :  ", "Result1 : " + result1);
@@ -178,6 +178,8 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
             @Override
             public void onClick(View view) {
                 // 장바구니 화면 intent 연결
+                Intent  intent = new Intent(view.getContext(), WishList.class); //나중에 추가되면 변경할 것
+                startActivity(intent);
             }
         });
     }
