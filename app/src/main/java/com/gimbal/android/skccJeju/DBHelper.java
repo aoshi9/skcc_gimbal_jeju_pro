@@ -341,4 +341,26 @@ public class DBHelper extends SQLiteOpenHelper {
         }
         return result;
     }
+
+
+
+
+    //Communication 이벤트 발생시 basket_chk='Y' 인것은 장바구니에 담은 비콘만 상단바 알림 이벤트 발생
+    public String selectChkBasketYn(String beaconNo) {
+        SQLiteDatabase db = getReadableDatabase();
+        String result = "N";
+
+
+        Cursor cursor = db.rawQuery("SELECT I.ITEM_NO " +
+                " FROM SOT_BEACON_INFO B LEFT JOIN SOT_BEACON_INFO_ITEM I " +
+                " ON B.BC_NO = I.BC_NO " +
+                " WHERE I.BASKET_YN = 'Y' " +
+                " AND B.BC_NO = '" + beaconNo + "'; " , null);
+
+        //inside Cursor 아예 실행이 안됨
+        if(cursor.getCount()!=0) {
+            result = "Y";
+        }
+        return result;
+    }
 }
