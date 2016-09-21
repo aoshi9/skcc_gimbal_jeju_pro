@@ -18,7 +18,6 @@ public class AppMenuActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.v("onCreate","MainActivity");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
@@ -48,6 +47,13 @@ public class AppMenuActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), "동문시장 방문",
                 Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, DongmoonStart.class);
+        startActivity(intent);
+    }
+
+    public void onErrorBtnClick(View view) {
+        Toast.makeText(getApplicationContext(), "Error!",
+                Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, ErrorActivity.class);
         startActivity(intent);
     }
 
