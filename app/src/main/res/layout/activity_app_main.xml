@@ -51,10 +51,10 @@
         <Button
             android:id="@+id/button1"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="100dp"
             android:layout_marginLeft="55dp"
             android:layout_marginRight="50dp"
-            android:layout_marginTop="380dp"
+            android:layout_marginTop="360dp"
             android:background="#00000000"
             android:onClick="onAppStartBtnClick"
             android:singleLine="false"
