@@ -63,8 +63,8 @@ public class WishList extends AppCompatActivity implements MapView.POIItemEventL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wish_list);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
 
         /*  Map Part */
         //다음이 제공하는 MapView객체 생성 및 API Key 설정
