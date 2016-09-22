@@ -33,7 +33,11 @@ import net.daum.mf.map.api.MapView;
 import net.daum.mf.map.api.MapPoint;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+
+import java.util.Comparator;
+import java.util.List;
 
 
 /**
@@ -47,7 +51,10 @@ public class WishList extends AppCompatActivity implements MapView.POIItemEventL
     private MapPoint MARKER_POINT;
     private ArrayList<HashMap<String, String>> list;
     private DBHelper dbHelper;
-    private  MapPoint MyLocation = MapPoint.mapPointWithGeoCoord(33.5129772790485, 126.52796675053673); // GPS에서 받아와야 정상이지만, 제주도이므로 하드코딩
+    private static double pLatitude =33.5129772790485;
+    private static double pLongitude =126.52796675053673;
+
+    private  MapPoint MyLocation = MapPoint.mapPointWithGeoCoord(pLatitude, pLongitude); // GPS에서 받아와야 정상이지만, 제주도이므로 하드코딩
     private ArrayList<MapPOIItem> markers = new ArrayList<MapPOIItem>();
     private RelativeLayout container;
 
@@ -97,8 +104,23 @@ public class WishList extends AppCompatActivity implements MapView.POIItemEventL
             dataMap.put(SIXTH_COLUMN, resultArray[8*i+5]);
             dataMap.put(SEVENTH_COLUMN, resultArray[8*i+6]);
             dataMap.put(EIGHTH_COLUMN, resultArray[8*i+7]);
+
+
+            //거리 계산하기..KMK
+            String distance = calcDistance(pLatitude, pLongitude, Double.valueOf(resultArray[8*i+2]), Double.valueOf(resultArray[8*i+3]));
+            Log.v("tempLog  :  ", "distance: " +resultArray[8*i] +  " , " + distance);
+            //MAP put..KMK
+            dataMap.put("DIST", distance);
+
+
             list.add(dataMap);
         }
+
+        //DIST로 SORTING..KMK
+        MapComparator comp = new MapComparator("DIST");
+        Collections.sort(list, comp);
+
+
 
         //Log.v("HoyoungLog  :  ", "List Size : " + list.size());
         WishListListAdapter adapter = new WishListListAdapter(this, list);
@@ -113,6 +135,12 @@ public class WishList extends AppCompatActivity implements MapView.POIItemEventL
             markers.add(new MapPOIItem());
         }
 
+        //가까운 위치로 선 그리기기..kmk
+       MapPolyline polyline = new MapPolyline();
+        polyline.setTag(1000);
+        polyline.setLineColor(Color.argb(128, 255, 51, 0)); // Polyline 컬러 지정.
+        polyline.addPoint(MapPoint.mapPointWithGeoCoord(pLatitude, pLongitude));
+
         //Log.v("HoyoungLog  :  ", "위도경도 : " + list.get(0).get(THIRD_COLUMN) + ", " + list.get(0).get(FOURTH_COLUMN));
         // MapPOIItem형의 ArrayList 구성객체들에 데이터를 넣어주기 -> 현재 심각한 결함은 가게단위가 아니라 아이템 단위로 보여주기에 동일위치에 여러 마커 겹쳐 존재
         for(int i=0; i<list.size(); i++) {
@@ -124,6 +152,9 @@ public class WishList extends AppCompatActivity implements MapView.POIItemEventL
             MARKER_POINT= MapPoint.mapPointWithGeoCoord(Double.valueOf(list.get(i).get(THIRD_COLUMN)), Double.valueOf(list.get(i).get(FOURTH_COLUMN)));
             marker.setMapPoint(MARKER_POINT);
             marker.setUserObject(i); // marker마다 list번호 정보를 달아둔다.
+
+            //선그리기  ..kmk
+            polyline.addPoint(MapPoint.mapPointWithGeoCoord(Double.valueOf(list.get(i).get(THIRD_COLUMN)), Double.valueOf(list.get(i).get(FOURTH_COLUMN))));
 
             /* 아이템 단위로 넘어오는 LIST에서 중복을 제거하여 가게단위로 만들자 */
             if(i != 0) {
@@ -149,6 +180,10 @@ public class WishList extends AppCompatActivity implements MapView.POIItemEventL
         for(int i=0; i<markers.size(); i++) {
             mMapView.addPOIItem(markers.get(i));
         }
+
+        //선그리기  ..kmk
+        mMapView.addPolyline(polyline);
+
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
         {
@@ -228,4 +263,43 @@ public class WishList extends AppCompatActivity implements MapView.POIItemEventL
         Intent  intent = new Intent(this, BeaconMapActivity.class); //나중에 추가되면 변경할 것
         startActivity(intent);
     }
+
+    //거리 계산 ..KMK
+    public static String calcDistance(double lat1, double lon1, double lat2, double lon2){
+        double EARTH_R, Rad, radLat1, radLat2, radDist;
+        double distance, ret;
+
+        EARTH_R = 6371000.0;
+        Rad = Math.PI/180;
+        radLat1 = Rad * lat1;
+        radLat2 = Rad * lat2;
+        radDist = Rad * (lon1 - lon2);
+
+        distance = Math.sin(radLat1) * Math.sin(radLat2);
+        distance = distance + Math.cos(radLat1) * Math.cos(radLat2) * Math.cos(radDist);
+        ret = EARTH_R * Math.acos(distance);
+        String result = String.valueOf(ret);
+
+        return result;
+    }
+
+
+
+    //DIST로 SORTING..KMK
+    class MapComparator implements Comparator<HashMap<String, String>> {
+
+        private final String key;
+
+        public MapComparator(String key) {
+            this.key = key;
+        }
+
+        @Override
+        public int compare(HashMap<String, String> first, HashMap<String, String> second) {
+            int result = first.get(key).compareTo(second.get(key));
+            return result;
+        }
+    }
+
+
 }
