@@ -108,14 +108,14 @@ public class PlaceDetailActivity extends AppCompatActivity {
         ItemList2Adapter adapter = new ItemList2Adapter(this, list);
         listView.setAdapter(adapter);
 
-        TextView placeName = (TextView) findViewById(R.id.placeName);
-        placeName.setText(place);
-
-        TextView addrText = (TextView) findViewById(R.id.addr);
-        addrText.setText("주소 "+ "\n" + addr);
-
-        TextView telNoText = (TextView) findViewById(R.id.telNo);
-        telNoText.setText("전화번호 " + "\n" + telNo);
+//        TextView placeName = (TextView) findViewById(R.id.placeName);
+//        placeName.setText(place);
+//
+//        TextView addrText = (TextView) findViewById(R.id.addr);
+//        addrText.setText("주소 "+ "\n" + addr);
+//
+//        TextView telNoText = (TextView) findViewById(R.id.telNo);
+//        telNoText.setText("전화번호 " + "\n" + telNo);
 
         TextView placeEventText = (TextView) findViewById(R.id.placeEvent);
         placeEventText.setText("이벤트 :  "  + placeEvent);

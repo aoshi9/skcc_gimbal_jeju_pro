@@ -64,7 +64,7 @@ public class GimbalDAO {
             SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
             String jsonString = prefs.getString(EVENTS_KEY, null);
             //TODO: removc
-            Log.v("tempLog  :  ", "getEvents :  "  +jsonString);
+            //Log.v("tempLog  :  ", "getEvents :  "  +jsonString);
             if (jsonString != null) {
                 JSONArray jsonArray = new JSONArray(jsonString);
                 for (int i = 0; i < jsonArray.length(); i++) {
@@ -94,7 +94,7 @@ public class GimbalDAO {
             SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
             JSONArray jsonArray = new JSONArray();
             //TODO: removc
-            Log.v("tempLog  :  ", "setEvents :  "  +prefs.getString(EVENTS_KEY, null));
+           // Log.v("tempLog  :  ", "setEvents :  "  +prefs.getString(EVENTS_KEY, null));
 
             for (GimbalEvent event : events) {
                 JSONObject jsonObject = new JSONObject();

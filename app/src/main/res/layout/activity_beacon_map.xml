@@ -1,44 +1,82 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:background="@color/optin_background"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        />
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
 
     <RelativeLayout
         android:id="@+id/map_view"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="250dp"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="5dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginRight="5dp"
         android:layout_marginBottom="5dp"
         android:layout_alignParentTop="true"
-        android:layout_margin="5dp"
         android:layout_marginTop="20dp" />
 
-    <ListView
-        android:id="@+id/listView1"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:choiceMode="multipleChoice" />
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical" >-->
+
+    <!--<ListView-->
+        <!--android:id="@+id/listView1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:choiceMode="multipleChoice"-->
+        <!--android:layout_below="@+id/tv_header" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_header"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:orientation="vertical"-->
+        <!--android:text="상점명           상품명             상품가격     장바구니포함여부" />-->
+
+<!--</RelativeLayout>-->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="270dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="wrap_content"
+            android:layout_height="210dp"
+            android:layout_alignParentLeft="true"
+            android:choiceMode="multipleChoice"
+            android:layout_below="@+id/tv1" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:background="@color/optin_background"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:text="  상점명             상품명                상품가격        장바구니포함"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawableRight="@android:drawable/ic_menu_rotate"
+        android:background="@color/medium_grey"
         android:id="@+id/goToWishList"
-        android:layout_alignParentTop="true"/>
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="장바구니 화면 이동"
+        android:textStyle="bold"/>
 
 </TableLayout>
 

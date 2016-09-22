@@ -92,7 +92,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 " WHERE B.PLACE_SE_CD = ? ;";
         Cursor cursor = db.rawQuery(myQuery, new String[] {"1"});*/
 
-        Cursor cursor = db.rawQuery("SELECT B.BC_NO, BC_PLACE_NM, LATITUDE, LONGITUDE, URL, ITEM_NO, ITEM_NM, ITEM_PRICE " +
+        Cursor cursor = db.rawQuery("SELECT B.BC_NO, BC_PLACE_NM, LATITUDE, LONGITUDE, URL, ITEM_NO, ITEM_NM, ITEM_PRICE, BASKET_YN " +
                 " FROM SOT_BEACON_INFO B LEFT JOIN SOT_BEACON_INFO_ITEM I " +
                 " ON B.BC_NO = I.BC_NO " +
                 " WHERE B.PLACE_SE_CD = '" + placeCode + "'; " , null);
@@ -116,6 +116,8 @@ public class DBHelper extends SQLiteOpenHelper {
                             + cursor.getString(cursor.getColumnIndex("ITEM_PRICE"))
                             + "!"
                             + cursor.getString(cursor.getColumnIndex("ITEM_NO"))
+                            + "!"
+                            + cursor.getString(cursor.getColumnIndex("BASKET_YN"))
                             + "!";
                 }while(cursor.moveToNext());
             }
@@ -306,13 +308,13 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     //09201635 WishList.class를 위한 추가
-    public String selectedItemInfo(String bcNo) {
+    public String selectedItemInfo(String marketName) {
         SQLiteDatabase db = getReadableDatabase();
         String result = "";
         Cursor cursor = db.rawQuery("SELECT B.BC_NO, BC_PLACE_NM, LATITUDE, LONGITUDE, URL, ITEM_NO, ITEM_NM, ITEM_PRICE " +
-                " FROM SOT_BEACON_INFO B INNER JOIN SOT_BEACON_INFO_ITEM I " +
+                " FROM SOT_BEACON_INFO B LEFT JOIN SOT_BEACON_INFO_ITEM I " +
                 " ON B.BC_NO = I.BC_NO " +
-                " WHERE B.BC_NO = '" + bcNo + "'" +
+                " WHERE B.PLACE_SE_CD = '" + marketName + "'" +
                 " AND I.BASKET_YN = 'Y'; " , null);
 
         if(cursor.getCount()!=0) {
@@ -336,6 +338,28 @@ public class DBHelper extends SQLiteOpenHelper {
                             + "!";
                 }while(cursor.moveToNext());
             }
+        }
+        return result;
+    }
+
+
+
+
+    //Communication 이벤트 발생시 basket_chk='Y' 인것은 장바구니에 담은 비콘만 상단바 알림 이벤트 발생
+    public String selectChkBasketYn(String beaconNo) {
+        SQLiteDatabase db = getReadableDatabase();
+        String result = "N";
+
+
+        Cursor cursor = db.rawQuery("SELECT I.ITEM_NO " +
+                " FROM SOT_BEACON_INFO B LEFT JOIN SOT_BEACON_INFO_ITEM I " +
+                " ON B.BC_NO = I.BC_NO " +
+                " WHERE I.BASKET_YN = 'Y' " +
+                " AND B.BC_NO = '" + beaconNo + "'; " , null);
+
+        //inside Cursor 아예 실행이 안됨
+        if(cursor.getCount()!=0) {
+            result = "Y";
         }
         return result;
     }
