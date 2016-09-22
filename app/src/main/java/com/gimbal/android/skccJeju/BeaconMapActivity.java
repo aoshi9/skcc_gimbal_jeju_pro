@@ -54,15 +54,17 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beacon_map);
 
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("시장 둘러보기");
+        toolbar.setSubtitle("장바구니에 담을 상품을 클릭하세요");
 
         /*  Map Part */
         //다음이 제공하는 MapView객체 생성 및 API Key 설정
         mMapView = new MapView(this);
         mMapView.setDaumMapApiKey("9d207c0434c4d2684359d20cc8e87556");
         //지도의 중심은 동문시장 좌표로!
-        mMapView.setMapCenterPointAndZoomLevel(MapPoint.mapPointWithGeoCoord(33.512789, 126.528353), -1, true);
+        mMapView.setMapCenterPointAndZoomLevel(MapPoint.mapPointWithGeoCoord(33.512789, 126.528353), -2, true);
         //xml에 선언된 map_view 레이아웃을 찾아온 후, 생성한 MapView객체 추가
         container = (RelativeLayout) findViewById(R.id.map_view);
 
@@ -216,5 +218,14 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
 
     }
     /* POI EventListener Method */
+
+    //뒤로가기를 누르면, 새로 activity 시작하도록
+
+    @Override
+    public void onBackPressed() {
+        //container.removeView(mMapView); //지도끄고 이동한다.
+        Intent  intent = new Intent(this, DongmoonStart.class); //나중에 추가되면 변경할 것
+        startActivity(intent);
+    }
 
 }
