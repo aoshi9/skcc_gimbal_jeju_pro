@@ -89,7 +89,7 @@
             android:label="@string/action_settings" />
 
         <activity android:name="com.gimbal.android.skccJeju.BeaconMapActivity" />
-        <activity android:name="com.gimbal.android.skccJeju.PlaceDetailActivity" />
+        <activity android:name="com.gimbal.android.skccJeju.PlaceDetailActivity" android:noHistory="true" />
         <activity android:name="com.gimbal.android.skccJeju.AppMenuActivity" />
         <activity android:name="com.gimbal.android.skccJeju.DongmoonStart" />
         <activity android:name="com.gimbal.android.skccJeju.WishList" />
