@@ -11,7 +11,7 @@ public class BackPressCloseHandler {
     private long backKeyPressedTime = 0;
     private Toast toast;
 
-    private Activity activity;
+    private Activity activity; //
 
     public BackPressCloseHandler(Activity context) {
         this.activity = context;
