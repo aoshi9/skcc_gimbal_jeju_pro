@@ -52,15 +52,6 @@ public class ItemListAdapter extends BaseAdapter {
 
     public ArrayList<HashMap<String, String>> list;
     private Activity activity;
-    TextView placeName;
-    TextView latitude;
-    TextView longitude;
-    TextView url;
-    TextView itemName;
-    TextView itemPrice;
-    TextView bcNo;
-    TextView itemNo;
-    TextView basketYn;
 
     public ItemListAdapter(Activity activity, ArrayList<HashMap<String, String>> list) {
         super();
@@ -75,37 +66,57 @@ public class ItemListAdapter extends BaseAdapter {
     public Object getItem(int position) {return list.get(position);}
 
     @Override
-    public long getItemId(int position) { return 0;}
+    public long getItemId(int position) { return position;}
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        LayoutInflater inflater = activity.getLayoutInflater();
+
+        ViewHolder holder;
 
         if(convertView == null) {
+            LayoutInflater inflater = activity.getLayoutInflater();
             convertView = inflater.inflate(R.layout.item_info_list, null);
 
-            bcNo = (TextView) convertView.findViewById((R.id.bc_no));
-            placeName = (TextView) convertView.findViewById(R.id.placeName);
-            latitude = (TextView) convertView.findViewById(R.id.latitude);
-            longitude = (TextView) convertView.findViewById(R.id.longitude);
-            url = (TextView) convertView.findViewById(R.id.url);
-            itemName = (TextView) convertView.findViewById(R.id.itemName);
-            itemPrice = (TextView) convertView.findViewById(R.id.itemPrice);
-            itemNo = (TextView) convertView.findViewById(R.id.item_no);
-            basketYn = (TextView) convertView.findViewById(R.id.basketYn);
+            holder = new ViewHolder();
+            holder.bcNo = (TextView) convertView.findViewById((R.id.bc_no));
+            holder.placeName = (TextView) convertView.findViewById(R.id.placeName);
+            holder.latitude = (TextView) convertView.findViewById(R.id.latitude);
+            holder.longitude = (TextView) convertView.findViewById(R.id.longitude);
+            holder.url = (TextView) convertView.findViewById(R.id.url);
+            holder.itemName = (TextView) convertView.findViewById(R.id.itemName);
+            holder.itemPrice = (TextView) convertView.findViewById(R.id.itemPrice);
+            holder.itemNo = (TextView) convertView.findViewById(R.id.item_no);
+            holder.basketYn = (TextView) convertView.findViewById(R.id.basketYn);
+            //add the holder as a tag to the convertView
+
+            convertView.setTag(holder);
+        } else {
+            holder = (ViewHolder) convertView.getTag();
         }
 
         HashMap<String, String> map = list.get(position);
-        bcNo.setText(map.get(FIRST_COLUMN));
-        placeName.setText(map.get(SECOND_COLUMN));
-        latitude.setText(map.get(THIRD_COLUMN));
-        longitude.setText(map.get(FOURTH_COLUMN));
-        url.setText(map.get(FIFTH_COLUMN));
-        itemName.setText(map.get(SIXTH_COLUMN));
-        itemPrice.setText(map.get(SEVENTH_COLUMN));
-        itemNo.setText(map.get(EIGHTH_COLUMN));
-        basketYn.setText(map.get(NINTH_COLUMN));
+        holder.bcNo.setText(map.get(FIRST_COLUMN));
+        holder.placeName.setText(map.get(SECOND_COLUMN));
+        holder.latitude.setText(map.get(THIRD_COLUMN));
+        holder.longitude.setText(map.get(FOURTH_COLUMN));
+        holder.url.setText(map.get(FIFTH_COLUMN));
+        holder.itemName.setText(map.get(SIXTH_COLUMN));
+        holder.itemPrice.setText(map.get(SEVENTH_COLUMN));
+        holder.itemNo.setText(map.get(EIGHTH_COLUMN));
+        holder.basketYn.setText(map.get(NINTH_COLUMN));
 
         return convertView;
+    }
+
+    private class ViewHolder {
+        TextView placeName;
+        TextView latitude;
+        TextView longitude;
+        TextView url;
+        TextView itemName;
+        TextView itemPrice;
+        TextView bcNo;
+        TextView itemNo;
+        TextView basketYn;
     }
 }

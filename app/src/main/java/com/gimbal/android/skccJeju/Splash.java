@@ -26,7 +26,7 @@ public class Splash extends AppCompatActivity {
             public void run() {
                 finish();       // 3 초후 이미지를 닫아버림
             }
-        }, 3000);
+        }, 1000);
     }
 
 }
