@@ -3,6 +3,7 @@ package com.gimbal.android.skccJeju;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -19,14 +20,22 @@ public class Splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
 
-        Handler hd = new Handler();
+        /*Handler hd = new Handler();
         hd.postDelayed(new Runnable() {
 
             @Override
             public void run() {
                 finish();       // 3 초후 이미지를 닫아버림
             }
-        }, 1000);
-    }
+        }, 2000);*/
 
+        Handler handler = new Handler() {
+            public void handleMessage(Message msg) {
+                super.handleMessage(msg);
+                startActivity(new Intent(Splash.this, MainActivity.class));
+                finish();
+            }
+        };
+        handler.sendEmptyMessageDelayed(0, 2000);
+    }
 }
