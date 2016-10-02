@@ -162,7 +162,7 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
                 // 선택된 item이 click 되어 있는 상태인지 체크하는 부분 (최준형)
                 Log.v("HoyoungLog  :  ", "isEnabled : " + parent.getChildAt(position).isEnabled());
                 if(parent.getChildAt(position).isEnabled()) {
-                    //view.setBackgroundColor(Color.GRAY);             // 선택했을 때, 회색으로 하이라이트
+//                    view.setBackgroundColor(Color.GRAY);             // 선택했을 때, 회색으로 하이라이트
 
                     Toast.makeText(getApplicationContext(), list.get(position).get(SIXTH_COLUMN) + " 장바구니 담기", Toast.LENGTH_SHORT).show();
 
@@ -173,7 +173,7 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
                     TextView tv = (TextView) view.findViewById(R.id.basketYn);
                     tv.setText("Y");
                 } else {
-                    //view.setBackgroundColor(Color.TRANSPARENT);     // 취소했을 때, 원상복구
+//                    view.setBackgroundColor(Color.TRANSPARENT);     // 취소했을 때, 원상복구
 
                     Toast.makeText(getApplicationContext(), list.get(position).get(SIXTH_COLUMN) + " 장바구니 빼기", Toast.LENGTH_SHORT).show();
 
