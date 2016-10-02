@@ -44,7 +44,47 @@
             android:choiceMode="multipleChoice"
             android:layout_below="@+id/tv1" />
 
-        <TextView
+        <LinearLayout
+            android:id="@+id/tv1"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:background="@color/optin_background">
+
+            <TextView
+                android:id="@+id/placeName"
+                android:text="상점명"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/itemName"
+                android:text="상품명"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/itemPrice"
+                android:text="상품가격"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+
+
+        <!--<TextView
             android:id="@+id/tv1"
             android:layout_width="fill_parent"
             android:layout_height="30dp"
@@ -53,16 +93,9 @@
             android:orientation="vertical"
             android:layout_centerHorizontal="true"
             android:text="상점명                      상품명                        상품가격"
-            android:textStyle="bold" />
+            android:textStyle="bold" />-->
 
     </RelativeLayout>
 
-    <!--<ListView-->
-        <!--android:id="@+id/listView1"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="200dp"-->
-        <!--android:layout_alignParentLeft="true"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:choiceMode="multipleChoice" />-->
 
 </TableLayout>
