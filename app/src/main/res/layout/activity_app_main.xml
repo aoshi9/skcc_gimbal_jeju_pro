@@ -8,15 +8,6 @@
     tools:context="com.gimbal.android.skccJeju.MainActivity">
 
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:background="#F6E5BB" />
-
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -60,10 +51,10 @@
         <Button
             android:id="@+id/button1"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="100dp"
             android:layout_marginLeft="55dp"
             android:layout_marginRight="50dp"
-            android:layout_marginTop="380dp"
+            android:layout_marginTop="310dp"
             android:background="#00000000"
             android:onClick="onAppStartBtnClick"
             android:singleLine="false"

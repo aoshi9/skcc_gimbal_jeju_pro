@@ -15,15 +15,18 @@ import com.gimbal.android.Gimbal;
 
 public class MainActivity extends AppCompatActivity {
     LocationPermissions permissions;
+    private BackPressCloseHandler backPressCloseHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app_main);
-        startActivity(new Intent(this, Splash.class));
+        //startActivity(new Intent(this, Splash.class));
 
         Gimbal.setApiKey(this.getApplication(), "8cbce2c7-6e27-419c-9be1-7b01f1d990e4");
         startService(new Intent(this, AppService.class));
+
+        backPressCloseHandler = new BackPressCloseHandler(this);
 
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
@@ -95,4 +98,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
+    @Override //뒤도가기 누르면 종료 알림창 뜨도록
+    public void onBackPressed() {
+        //super.onBackPressed();
+        backPressCloseHandler.onBackPressed();
+    }
 }

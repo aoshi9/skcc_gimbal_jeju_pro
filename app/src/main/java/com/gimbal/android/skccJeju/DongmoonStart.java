@@ -61,4 +61,10 @@ public class DongmoonStart extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent  intent = new Intent(this, AppMenuActivity.class); //나중에 추가되면 변경할 것
+        startActivity(intent);
+    }
+
 }
