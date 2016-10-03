@@ -1,9 +1,11 @@
 package com.gimbal.android.skccJeju;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -11,6 +13,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import net.daum.mf.map.api.MapPOIItem;
 import net.daum.mf.map.api.MapPoint;
@@ -41,26 +44,22 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
     private MapPoint MARKER_POINT;
     private ArrayList<HashMap<String, String>> list;
     private DBHelper dbHelper;
-
+    private RelativeLayout container;
+    private ArrayList<MapPOIItem> markers = new ArrayList<MapPOIItem>();
     //fonts test
-    private Typeface fontStyle;
-
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beacon_map);
-
-        //fonts test
-        fontStyle.createFromAsset(this.getAssets(),"BMJUA_ttf.ttf");
 
         /*  Map Part */
         //다음이 제공하는 MapView객체 생성 및 API Key 설정
         mMapView = new MapView(this);
         mMapView.setDaumMapApiKey("9d207c0434c4d2684359d20cc8e87556");
         //지도의 중심은 동문시장 좌표로!
-        mMapView.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(33.5119828, 126.5282266), true);
+        mMapView.setMapCenterPointAndZoomLevel(MapPoint.mapPointWithGeoCoord(33.512789, 126.528353), -3, true);
         //xml에 선언된 map_view 레이아웃을 찾아온 후, 생성한 MapView객체 추가
-        RelativeLayout container = (RelativeLayout) findViewById(R.id.map_view);
+        container = (RelativeLayout) findViewById(R.id.map_view);
 
         //MapView에 POIItemEventListener 등록
         mMapView.setPOIItemEventListener(this);
@@ -96,7 +95,6 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
         String resultString = dbHelper.shopItemSelectByPlaceSeCd("1"); //이전의 intent에서 넘어와야 되지만 일단은 하드코딩
         String[] resultArray = resultString.split("!");
 
-        Log.v("HoyoungLog  :  ", "Data : " + resultArray[0] + ", " + resultArray[1] + ", " + resultArray[2] + ", " + resultArray[3] + ", " + resultArray[4] + ", " + resultArray[5]);
         Log.v("HoyoungLog  :  ", "Data : " + resultArray[6] + ", " + resultArray[7] + ", " + resultArray[8] + ", " + resultArray[9] + ", " + resultArray[10] + ", " + resultArray[11]);
         //BC_NO, BC_PLACE_NM, LATITUDE, LONGITUDE, URL, ITEM_NM, ITEM_PRICE, ITEM_NO
         for(int i=0; i<resultArray.length/9; i++) {
@@ -117,39 +115,8 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
         ItemListAdapter adapter = new ItemListAdapter(this, list, this.getApplicationContext());
         listView.setAdapter(adapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
-        {
-            @Override
-            public void onItemClick(AdapterView<?> parent, final View view, int position, long id)
-            {
-
-                // 선택된 item이 click 되어 있는 상태인지 체크하는 부분 (최준형)
-                Log.v("HoyoungLog  :  ", "isEnabled : " + parent.getChildAt(position).isEnabled());
-                if(parent.getChildAt(position).isEnabled()) {
-//                    view.setBackgroundColor(Color.GRAY);             // 선택했을 때, 회색으로 하이라이트
-                    parent.getChildAt(position).setEnabled(false);
-                    Log.v("tempLog  :  ", "basketYShopItemSelect : " + list.get(position).get(FIRST_COLUMN) + ", " + list.get(position).get(EIGHTH_COLUMN));
-                    dbHelper.SotBeaconInfoItemBasketY(list.get(position).get(FIRST_COLUMN), list.get(position).get(EIGHTH_COLUMN));     // DB BASKET_YN 컬럼 update
-                    Log.v("tempLog  :  ", "basketYShopItemSelect : " + dbHelper.basketYShopItemSelect());
-                    TextView tv = (TextView) view.findViewById(R.id.basketYn);
-                    tv.setText("Y");
-                    //font style test
-                    tv.setTypeface(fontStyle);
-                } else {
-//                    view.setBackgroundColor(Color.TRANSPARENT);     // 취소했을 때, 원상복구
-                    parent.getChildAt(position).setEnabled(true);
-                    dbHelper.SotBeaconInfoItemBasketN(list.get(position).get(FIRST_COLUMN), list.get(position).get(EIGHTH_COLUMN));     // DB BASKET_YN 컬럼 update
-                    Log.v("tempLog  :  ", "basketYShopItemSelect : " + dbHelper.basketYShopItemSelect());
-                    TextView tv = (TextView) view.findViewById(R.id.basketYn);
-                    tv.setText("N");
-                    //font style test
-                    tv.setTypeface(fontStyle);
-                }
-            }
-        });
-
         /* MapView에 ListView Item 올리기 */
-        ArrayList<MapPOIItem> markers = new ArrayList<MapPOIItem>();
+        markers = new ArrayList<MapPOIItem>();
         MapPOIItem marker = new MapPOIItem();
 
         // MapPOIItem형 ArrayList를 ListView item의 item갯수에 맞추어 채우기
@@ -176,6 +143,43 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
             mMapView.addPOIItem(markers.get(i));
         }
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            @Override
+            public void onItemClick(AdapterView<?> parent, final View view, int position, long id)
+            {
+                // 선택된 item이 click 되어 있는 상태인지 체크하는 부분 (최준형)
+                Log.v("HoyoungLog  :  ", "isEnabled : " + parent.getChildAt(position).isEnabled());
+                if(parent.getChildAt(position).isEnabled()) {
+//                    view.setBackgroundColor(Color.GRAY);             // 선택했을 때, 회색으로 하이라이트
+                    parent.getChildAt(position).setEnabled(false);
+                    Log.v("tempLog  :  ", "basketYShopItemSelect : " + list.get(position).get(FIRST_COLUMN) + ", " + list.get(position).get(EIGHTH_COLUMN));
+                    dbHelper.SotBeaconInfoItemBasketY(list.get(position).get(FIRST_COLUMN), list.get(position).get(EIGHTH_COLUMN));     // DB BASKET_YN 컬럼 update
+                    Log.v("tempLog  :  ", "basketYShopItemSelect : " + dbHelper.basketYShopItemSelect());
+                    TextView tv = (TextView) view.findViewById(R.id.basketYn);
+                    tv.setText("V");
+                    tv.setTextColor(Color.parseColor("#EC6652"));
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                } else {
+//                    view.setBackgroundColor(Color.TRANSPARENT);     // 취소했을 때, 원상복구
+                    parent.getChildAt(position).setEnabled(true);
+                    dbHelper.SotBeaconInfoItemBasketN(list.get(position).get(FIRST_COLUMN), list.get(position).get(EIGHTH_COLUMN));     // DB BASKET_YN 컬럼 update
+                    Log.v("tempLog  :  ", "basketYShopItemSelect : " + dbHelper.basketYShopItemSelect());
+                    TextView tv = (TextView) view.findViewById(R.id.basketYn);
+                    tv.setText(" ");
+                }
+
+                //position은 sequence로서 0부터 시작한다.
+                //아이템 단위의 리스트를 클릭했을경우, 가게이름이 같은 마커를 select한 효과주기
+                String placeName = list.get(position).get(SECOND_COLUMN);
+                for(i=0; i<markers.size(); i++) {
+                    if(placeName.equals(markers.get(i).getItemName()))
+                        mMapView.selectPOIItem(markers.get(i), true);
+                }
+            }
+        });
+
+
         //리스트 클릭된 녀석들에 대해 BC_NO, item_nm 정보를 저장하고 있다가, 이 버튼을 누르면, 기존 ITEM테이블의 BASKET_YN 모두 N으로 바꾸고, 저장된 BC_NO에 대해 BASKET_YN Y로 변경
         /* Button Part */
         Button  wishListBtn = (Button) findViewById(R.id.goToWishList);
@@ -183,6 +187,7 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
             @Override
             public void onClick(View view) {
                 // 장바구니 화면 intent 연결
+                container.removeView(mMapView); //지도끄고 이동한다.
                 Intent  intent = new Intent(view.getContext(), WishList.class); //나중에 추가되면 변경할 것
                 startActivity(intent);
             }
@@ -198,8 +203,8 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
     @Override
     public void onCalloutBalloonOfPOIItemTouched(MapView mapView, MapPOIItem mapPOIItem) {
         //말풍선 클릭하였을 시의 상황
-        Intent  intent = new Intent(this, PlaceDetailActivity.class); //나중에 추가되면 변경할 것
-//        intent.putExtra("BC_NO",list.get((Integer)mapPOIItem.getUserObject()).get("FIRST_COLUMN"));
+        Intent intent = new Intent(this, PlaceDetailActivity.class); //나중에 추가되면 변경할 것
+        intent.putExtra("strBeaconNo",list.get((Integer)mapPOIItem.getUserObject()).get(FIRST_COLUMN).toString());
         //가게 상세 페이지로의 전환을 위해, BC_NO 정보를 intent에 담아서 보낸다.
         startActivity(intent);
     }
@@ -214,5 +219,21 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
 
     }
     /* POI EventListener Method */
+
+    //뒤로가기를 누르면, 새로 activity 시작하도록
+
+    @Override
+    public void onBackPressed() {
+        //container.removeView(mMapView); //지도끄고 이동한다.
+        Intent  intent = new Intent(this, DongmoonStart.class); //나중에 추가되면 변경할 것
+        startActivity(intent);
+    }
+
+    public void onStartBtnClick(View view) {
+        Toast.makeText(getApplicationContext(), "비콘 이력 접속",
+                Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, AppActivity.class);
+        startActivity(intent);
+    }
 
 }

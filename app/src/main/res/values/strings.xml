@@ -19,8 +19,8 @@
 -->
 <resources>
 
-    <string name="app_name">JEJU_BEACON_DEMO</string>
-    <string name="app_title">JEJU_BEACON_DEMO</string>
+    <string name="app_name">시장하쥬?</string>
+    <string name="app_title">시장하쥬</string>
     <string name="action_enable">Enable</string>
     <string name="action_not_now">Not Now</string>
     <string name="action_privacy_policy">Privacy Policy</string>
@@ -31,7 +31,7 @@
     <string name="optin_top_text">Enable location to find</string>
     <string name="optin_bottom_text">nearby places.</string>
 
-    <string name="str1">"제주관광 비콘서비스"</string>
+    <string name="str1">"시장하쥬?"</string>
     <string name="str2">"비콘으로 제주관광"</string>
     <string name="str3">"아이디와 비밀번호를 입력해 주세요 "</string>
     <string name="str4">"로그인"</string>

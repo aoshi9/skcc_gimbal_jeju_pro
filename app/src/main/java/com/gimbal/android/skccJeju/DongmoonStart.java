@@ -47,14 +47,14 @@ public class DongmoonStart extends AppCompatActivity {
         PushRegistrationHelper.registerForPush();
     }
 
-    public void onBeaconConHisClick(View view) {
-        Toast.makeText(getApplicationContext(), "비콘 접속이력 .",
+    public void onStartBtnClick(View view) {
+        Toast.makeText(getApplicationContext(), "비콘 이력 접속",
                 Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, AppActivity.class);
         startActivity(intent);
     }
 
-    public void onStartBtnClick(View view) {
+    public void onStartJejuClick(View view) {
         Toast.makeText(getApplicationContext(), "제주동문시장 관광 도우미.",
                 Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, BeaconMapActivity.class);

@@ -16,6 +16,8 @@
  */
 package com.gimbal.android.skccJeju;
 
+import android.util.Log;
+
 import java.io.InterruptedIOException;
 import java.io.Serializable;
 import java.util.Date;
@@ -41,6 +43,14 @@ public class GimbalEvent implements Serializable {
 
 
     public GimbalEvent() {
+        Log.v("tempLog  :  ", "Gimbal Event Instance !:  ");
+        this.title = "title";
+        this.url = "url";
+        this.latitude = "latitude";
+        this.longitude= "longitude";
+        this.beaconNo = "beaconNo";
+        this.place = "place";
+        this.event = "event";
     }
 
     public GimbalEvent(TYPE type, String title, Date date, String url, String latitude, String longitude, String beaconNo, String place , String event) {

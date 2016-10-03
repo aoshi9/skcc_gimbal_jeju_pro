@@ -1,10 +1,10 @@
 /**
  * Copyright (C) 2015 Gimbal, Inc. All rights reserved.
- *
+ * <p/>
  * This software is the confidential and proprietary information of Gimbal, Inc.
- *
+ * <p/>
  * The following sample code illustrates various aspects of the Gimbal SDK.
- *
+ * <p/>
  * The sample code herein is provided for your convenience, and has not been
  * tested or designed to work on any particular system configuration. It is
  * provided AS IS and your use of this sample code, whether as provided or
@@ -17,7 +17,6 @@
 package com.gimbal.android.skccJeju;
 
 
-import android.app.Dialog;
 import android.app.Notification;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -27,8 +26,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -36,21 +33,21 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.gimbal.android.Gimbal;
 import com.gimbal.experience.android.Action;
 import com.gimbal.experience.android.ExperienceListener;
 import com.gimbal.experience.android.ExperienceManager;
 
-
 import java.util.Collection;
 
 
-public class AppActivity extends AppCompatActivity{
+/**
+ * 상점 방문 이력
+ */
+public class AppActivity extends AppCompatActivity {
     private static final String POP_WINDOW = "popup_window";
 
     private GimbalEventReceiver gimbalEventReceiver;
@@ -66,17 +63,13 @@ public class AppActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-//
-        Gimbal.setApiKey(this.getApplication(), "8cbce2c7-6e27-419c-9be1-7b01f1d990e4");
-//
-      startService(new Intent(this, AppService.class));
 
-//        if (GimbalDAO.showOptIn(getApplicationContext())) test{
-//            startActivity(new Intent(this, OptInActivity.class));
-//        }
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(myToolbar);
+        Log.v("tempLog  :  ", "AppActivity onCreate  ");
+        setContentView(R.layout.activity_main);
+        Gimbal.setApiKey(this.getApplication(), "8cbce2c7-6e27-419c-9be1-7b01f1d990e4");
+
+        startService(new Intent(this, AppService.class));
+
 
         adapter = new GimbalEventListAdapter(this);
 
@@ -89,27 +82,26 @@ public class AppActivity extends AppCompatActivity{
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //TODO: removc
                 Log.v("tempLog  :  ", "listView.setOnItemClickListener:  ");
-                String type = ((TextView)view.findViewById(R.id.type)).getText().toString();
-                String title = ((TextView)view.findViewById(R.id.title)).getText().toString();
-                String url = ((TextView)view.findViewById(R.id.url)).getText().toString();
-                String latitude = ((TextView)view.findViewById(R.id.latitude)).getText().toString();
-                String longitude = ((TextView)view.findViewById(R.id.longitude)).getText().toString();
-                String beaconNo = ((TextView)view.findViewById(R.id.beaconNo)).getText().toString();
-                String place = ((TextView)view.findViewById(R.id.place)).getText().toString();
-                String placeEvent = ((TextView)view.findViewById(R.id.placeEvent)).getText().toString();
+                String type = ((TextView) view.findViewById(R.id.type)).getText().toString();
+                String title = ((TextView) view.findViewById(R.id.title)).getText().toString();
+                String url = ((TextView) view.findViewById(R.id.url)).getText().toString();
+                String latitude = ((TextView) view.findViewById(R.id.latitude)).getText().toString();
+                String longitude = ((TextView) view.findViewById(R.id.longitude)).getText().toString();
+                String beaconNo = ((TextView) view.findViewById(R.id.beaconNo)).getText().toString();
+                String place = ((TextView) view.findViewById(R.id.place)).getText().toString();
+                String placeEvent = ((TextView) view.findViewById(R.id.placeEvent)).getText().toString();
 
 
-
-                if(type.equals("PLACE_ENTER")){
-                    Intent  intent = new Intent(AppActivity.this, PlaceDetailActivity.class);
-                    intent.putExtra("strType",  type);
-                    intent.putExtra("strTitle",  title);
-                    intent.putExtra("strUrl",  url);
-                    intent.putExtra("strLatitude",  latitude);
-                    intent.putExtra("strLongitude",  longitude);
-                    intent.putExtra("strBeaconNo",  beaconNo);
-                    intent.putExtra("strPlace",  place);
-                    intent.putExtra("strPlaceEvent",  placeEvent);
+                if (type.equals("PLACE_ENTER")) {
+                    Intent intent = new Intent(AppActivity.this, PlaceDetailActivity.class);
+                    intent.putExtra("strType", type);
+                    intent.putExtra("strTitle", title);
+                    intent.putExtra("strUrl", url);
+                    intent.putExtra("strLatitude", latitude);
+                    intent.putExtra("strLongitude", longitude);
+                    intent.putExtra("strBeaconNo", beaconNo);
+                    intent.putExtra("strPlace", place);
+                    intent.putExtra("strPlaceEvent", placeEvent);
 
                     startActivity(intent);
 
@@ -118,7 +110,7 @@ public class AppActivity extends AppCompatActivity{
 //
 //                    ImageView iv = (ImageView) dialog.findViewById(R.id.popup);
 //                    iv.setImageResource(R.drawable.popup_img1);
-                }else if(type.equals("COMMUNICATION_PRESENTED") || type.equals("COMMUNICATION_INSTANT_PUSH") ){
+                } else if (type.equals("COMMUNICATION_PRESENTED") || type.equals("COMMUNICATION_INSTANT_PUSH")) {
                     Intent intent = new Intent(Intent.ACTION_VIEW,
                             Uri.parse(url));
                     startActivity(intent);
@@ -165,8 +157,7 @@ public class AppActivity extends AppCompatActivity{
                 if (inBackground) {
                     bringAppToForeground();
                     clickedAction = action;
-                }
-                else {
+                } else {
                     ExperienceManager.getInstance().receivedExperienceAction(action);
                 }
             }

@@ -1,10 +1,10 @@
 /**
  * Copyright (C) 2015 Gimbal, Inc. All rights reserved.
- *
+ * <p/>
  * This software is the confidential and proprietary information of Gimbal, Inc.
- *
+ * <p/>
  * The following sample code illustrates various aspects of the Gimbal SDK.
- *
+ * <p/>
  * The sample code herein is provided for your convenience, and has not been
  * tested or designed to work on any particular system configuration. It is
  * provided AS IS and your use of this sample code, whether as provided or
@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.Locale;
 
 import android.app.Activity;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -36,6 +37,7 @@ public class GimbalEventListAdapter extends BaseAdapter {
     private SimpleDateFormat dateFormat = new SimpleDateFormat("MMM d, yyyy, hh:mm:ss a", Locale.getDefault());
 
     public GimbalEventListAdapter(Activity activity) {
+        Log.v("tempLog  :  ", "GimbalEventListAdapter Instance!  ");
         this.activity = activity;
     }
 
@@ -78,8 +80,7 @@ public class GimbalEventListAdapter extends BaseAdapter {
         Integer iconRes = iconRes(event.getType());
         if (iconRes != null) {
             icon.setImageResource(iconRes);
-        }
-        else {
+        } else {
             icon.setImageDrawable(null);
         }
 
@@ -121,7 +122,7 @@ public class GimbalEventListAdapter extends BaseAdapter {
             case PLACE_EXIT:
                 return R.drawable.place_exit;
             case COMMUNICATION_PRESENTED:
-            	return R.drawable.comm_presented;
+                return R.drawable.comm_presented;
             case COMMUNICATION_ENTER:
                 return R.drawable.comm_enter;
             case COMMUNICATION_EXIT:

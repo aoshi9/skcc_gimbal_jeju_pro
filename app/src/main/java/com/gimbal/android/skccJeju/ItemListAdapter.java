@@ -17,41 +17,35 @@
 package com.gimbal.android.skccJeju;
 
 
-import static com.gimbal.android.skccJeju.Constant.FIRST_COLUMN;
-import static com.gimbal.android.skccJeju.Constant.SECOND_COLUMN;
-import static com.gimbal.android.skccJeju.Constant.THIRD_COLUMN;
-import static com.gimbal.android.skccJeju.Constant.FOURTH_COLUMN;
-import static com.gimbal.android.skccJeju.Constant.FIFTH_COLUMN;
-import static com.gimbal.android.skccJeju.Constant.SIXTH_COLUMN;
-import static com.gimbal.android.skccJeju.Constant.SEVENTH_COLUMN;
-import static com.gimbal.android.skccJeju.Constant.EIGHTH_COLUMN;
-import static com.gimbal.android.skccJeju.Constant.NINTH_COLUMN;
-
-import java.util.ArrayList;
 import android.app.Activity;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.TextView;
-import com.gimbal.android.skccJeju.GimbalEvent.TYPE;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-
-import android.app.Activity;
+import android.content.Context;
+import android.content.res.AssetManager;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import static com.gimbal.android.skccJeju.Constant.EIGHTH_COLUMN;
+import static com.gimbal.android.skccJeju.Constant.FIFTH_COLUMN;
+import static com.gimbal.android.skccJeju.Constant.FIRST_COLUMN;
+import static com.gimbal.android.skccJeju.Constant.FOURTH_COLUMN;
+import static com.gimbal.android.skccJeju.Constant.NINTH_COLUMN;
+import static com.gimbal.android.skccJeju.Constant.SECOND_COLUMN;
+import static com.gimbal.android.skccJeju.Constant.SEVENTH_COLUMN;
+import static com.gimbal.android.skccJeju.Constant.SIXTH_COLUMN;
+import static com.gimbal.android.skccJeju.Constant.THIRD_COLUMN;
 
 public class ItemListAdapter extends BaseAdapter {
 
     public ArrayList<HashMap<String, String>> list;
     private Activity activity;
+    private Context ctx;
+    private Typeface tf;
     TextView placeName;
     TextView latitude;
     TextView longitude;
@@ -62,10 +56,13 @@ public class ItemListAdapter extends BaseAdapter {
     TextView itemNo;
     TextView basketYn;
 
-    public ItemListAdapter(Activity activity, ArrayList<HashMap<String, String>> list) {
+
+    public ItemListAdapter(Activity activity, ArrayList<HashMap<String, String>> list, Context ctx) {
         super();
         this.activity = activity;
         this.list = list;
+        this.ctx = ctx;
+        this.tf = Typeface.createFromAsset(this.ctx.getAssets(),"BMJUA_ttf.ttf");
     }
 
     @Override
@@ -97,6 +94,7 @@ public class ItemListAdapter extends BaseAdapter {
 
         HashMap<String, String> map = list.get(position);
         bcNo.setText(map.get(FIRST_COLUMN));
+        bcNo.setTypeface(tf);
         placeName.setText(map.get(SECOND_COLUMN));
         latitude.setText(map.get(THIRD_COLUMN));
         longitude.setText(map.get(FOURTH_COLUMN));
@@ -105,6 +103,18 @@ public class ItemListAdapter extends BaseAdapter {
         itemPrice.setText(map.get(SEVENTH_COLUMN));
         itemNo.setText(map.get(EIGHTH_COLUMN));
         basketYn.setText(map.get(NINTH_COLUMN));
+
+//        font set Test
+        bcNo.setTypeface(tf);
+        placeName.setTypeface(tf);
+        latitude.setTypeface(tf);
+        longitude.setTypeface(tf);
+        url.setTypeface(tf);
+        itemName.setTypeface(tf);
+        itemPrice.setTypeface(tf);
+        itemNo.setTypeface(tf);
+        basketYn.setTypeface(tf);
+//fonts set Test
 
         return convertView;
     }

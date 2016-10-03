@@ -43,6 +43,13 @@ public class AppMenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onStartBtnClick(View view) {
+        Toast.makeText(getApplicationContext(), "비콘 이력 접속",
+                Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, AppActivity.class);
+        startActivity(intent);
+    }
+
     public void onStartMarketBtnClick(View view) {
         Toast.makeText(getApplicationContext(), "동문시장 방문",
                 Toast.LENGTH_SHORT).show();

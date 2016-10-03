@@ -46,22 +46,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-//        final ImageButton imgbtn1 = (ImageButton) findViewById(R.id.mainImg1);
-//        final ImageButton imgbtn2 = (ImageButton) findViewById(R.id.mainImg2);
-//
-//        imgbtn1.setOnTouchListener(new View.OnTouchListener() {
-//            @Override
-//            public boolean onTouch(View v, MotionEvent event) {
-//                if(event.getAction()== MotionEvent.ACTION_BUTTON_PRESS){
-//                    imgbtn1.setVisibility(View.INVISIBLE);
-//                    imgbtn2.setVisibility(View.VISIBLE);
-//                }else if(event.getAction()== MotionEvent.ACTION_BUTTON_PRESS){
-//                    imgbtn1.setVisibility(View.VISIBLE);
-//                    imgbtn2.setVisibility(View.INVISIBLE);
-//                }
-//                return false;
-//            }
-//        });
     }
 
     private void enablePlaceMonitoring() {
@@ -74,15 +58,9 @@ public class MainActivity extends AppCompatActivity {
         PushRegistrationHelper.registerForPush();
     }
 
-    public void onBeaconConHisClick(View view) {
-        Toast.makeText(getApplicationContext(), "비콘 접속이력 .",
-                Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, AppActivity.class);
-        startActivity(intent);
-    }
 
     public void onStartBtnClick(View view) {
-        Toast.makeText(getApplicationContext(), "비콘 이력 접속(임시)? Start.",
+        Toast.makeText(getApplicationContext(), "비콘 이력 접속",
                 Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, AppActivity.class);
         startActivity(intent);
