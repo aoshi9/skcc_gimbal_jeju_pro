@@ -152,6 +152,9 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
                 Log.v("HoyoungLog  :  ", "isEnabled : " + parent.getChildAt(position).isEnabled());
                 if(parent.getChildAt(position).isEnabled()) {
 //                    view.setBackgroundColor(Color.GRAY);             // 선택했을 때, 회색으로 하이라이트
+
+                    Toast.makeText(getApplicationContext(), list.get(position).get(SIXTH_COLUMN) + " 장바구니 담기", Toast.LENGTH_SHORT).show();
+
                     parent.getChildAt(position).setEnabled(false);
                     Log.v("tempLog  :  ", "basketYShopItemSelect : " + list.get(position).get(FIRST_COLUMN) + ", " + list.get(position).get(EIGHTH_COLUMN));
                     dbHelper.SotBeaconInfoItemBasketY(list.get(position).get(FIRST_COLUMN), list.get(position).get(EIGHTH_COLUMN));     // DB BASKET_YN 컬럼 update
@@ -162,6 +165,9 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
                     tv.setTypeface(Typeface.DEFAULT_BOLD);
                 } else {
 //                    view.setBackgroundColor(Color.TRANSPARENT);     // 취소했을 때, 원상복구
+
+                    Toast.makeText(getApplicationContext(), list.get(position).get(SIXTH_COLUMN) + " 장바구니 빼기", Toast.LENGTH_SHORT).show();
+
                     parent.getChildAt(position).setEnabled(true);
                     dbHelper.SotBeaconInfoItemBasketN(list.get(position).get(FIRST_COLUMN), list.get(position).get(EIGHTH_COLUMN));     // DB BASKET_YN 컬럼 update
                     Log.v("tempLog  :  ", "basketYShopItemSelect : " + dbHelper.basketYShopItemSelect());
