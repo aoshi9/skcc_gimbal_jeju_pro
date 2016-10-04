@@ -43,13 +43,6 @@ public class AppMenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onStartBtnClick(View view) {
-        Toast.makeText(getApplicationContext(), "비콘 이력 접속",
-                Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, AppActivity.class);
-        startActivity(intent);
-    }
-
     public void onStartMarketBtnClick(View view) {
         Toast.makeText(getApplicationContext(), "동문시장 방문",
                 Toast.LENGTH_SHORT).show();
@@ -64,4 +57,13 @@ public class AppMenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
+    //뒤로가기를 누르면, MainActivity로 가기
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class); //나중에 추가되면 변경할 것
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
 }
