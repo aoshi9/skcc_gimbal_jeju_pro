@@ -126,7 +126,6 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
             markers.add(new MapPOIItem());
         }
 
-        Log.v("HoyoungLog  :  ", "위도경도 : " + list.get(0).get(THIRD_COLUMN) + ", " + list.get(0).get(FOURTH_COLUMN));
         // MapPOIItem형의 ArrayList 구성객체들에 데이터를 넣어주기 -> 현재 심각한 결함은 가게단위가 아니라 아이템 단위로 보여주기에 동일위치에 여러 마커 겹쳐 존재
         for(int i=0; i<list.size(); i++) {
             marker = markers.get(i);
