@@ -69,7 +69,7 @@ public class WishList extends AppCompatActivity implements MapView.POIItemEventL
         mMapView = new MapView(this);
         mMapView.setDaumMapApiKey("9d207c0434c4d2684359d20cc8e87556");
         //지도의 중심은 동문시장 좌표로!
-        mMapView.setMapCenterPointAndZoomLevel(MapPoint.mapPointWithGeoCoord(33.512789, 126.528353), -1, true);
+        mMapView.setMapCenterPointAndZoomLevel(MapPoint.mapPointWithGeoCoord(33.512789, 126.528353), -3, true);
 
         //xml에 선언된 map_view 레이아웃을 찾아온 후, 생성한 MapView객체 추가
          container = (RelativeLayout) findViewById(R.id.map_view);
@@ -233,10 +233,12 @@ public class WishList extends AppCompatActivity implements MapView.POIItemEventL
     @Override
     public void onCalloutBalloonOfPOIItemTouched(MapView mapView, MapPOIItem mapPOIItem) {
         //말풍선 클릭하였을 시의 상황
-        Intent intent = new Intent(this, PlaceDetailActivity.class); //나중에 추가되면 변경할 것
-        intent.putExtra("strBeaconNo",list.get((Integer)mapPOIItem.getUserObject()).get(FIRST_COLUMN).toString());
-        //가게 상세 페이지로의 전환을 위해, BC_NO 정보를 intent에 담아서 보낸다.
-        startActivity(intent);
+        if(!mapPOIItem.getItemName().equals("현재위치")) {
+            Intent intent = new Intent(this, PlaceDetailActivity.class);
+            intent.putExtra("strBeaconNo",list.get((Integer)mapPOIItem.getUserObject()).get(FIRST_COLUMN).toString());
+            //가게 상세 페이지로의 전환을 위해, BC_NO 정보를 intent에 담아서 보낸다.
+            startActivity(intent);
+        }
     }
 
     @Override
@@ -280,6 +282,7 @@ public class WishList extends AppCompatActivity implements MapView.POIItemEventL
 
         return result;
     }
+
 
 
     //DIST로 SORTING..KMK
