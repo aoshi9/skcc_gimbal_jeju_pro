@@ -4,6 +4,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/activity_beacon_map_temp3">
 
+
+
     <RelativeLayout
         android:id="@+id/map_view"
         android:layout_width="match_parent"
