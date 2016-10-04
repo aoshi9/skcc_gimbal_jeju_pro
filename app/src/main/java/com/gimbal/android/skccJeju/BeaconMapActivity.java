@@ -114,7 +114,7 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
         }
 
         //Log.v("HoyoungLog  :  ", "List Size : " + list.size());
-        ItemListAdapter adapter = new ItemListAdapter(this, list);
+        ItemListAdapter adapter = new ItemListAdapter(this, list,this.getApplicationContext());
         listView.setAdapter(adapter);
 
         /* MapView에 ListView Item 올리기 */
