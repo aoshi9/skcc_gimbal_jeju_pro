@@ -39,7 +39,7 @@
     <application
         android:name="JejubeaconGvar"
         android:allowBackup="true"
-        android:icon="@drawable/jejuicon2"
+        android:icon="@drawable/main_icon_temp"
         android:label="@string/app_name"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
@@ -64,12 +64,14 @@
         </receiver>
 
         <activity
-            android:name="com.gimbal.android.skccJeju.Splash"
+            android:name="com.gimbal.android.skccJeju.MainActivity"
             android:label="@string/app_title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name="com.gimbal.android.skccJeju.AppActivity"
@@ -87,12 +89,12 @@
             android:label="@string/action_settings" />
 
         <activity android:name="com.gimbal.android.skccJeju.BeaconMapActivity" />
-        <activity android:name="com.gimbal.android.skccJeju.PlaceDetailActivity" android:noHistory="true" />
+        <activity android:name="com.gimbal.android.skccJeju.PlaceDetailActivity" />
         <activity android:name="com.gimbal.android.skccJeju.AppMenuActivity" />
         <activity android:name="com.gimbal.android.skccJeju.DongmoonStart" />
         <activity android:name="com.gimbal.android.skccJeju.WishList" />
         <activity android:name="com.gimbal.android.skccJeju.ErrorActivity"/>
-        <activity android:name="com.gimbal.android.skccJeju.MainActivity" />
+        <activity android:name="com.gimbal.android.skccJeju.Splash"/>
 
         <service
             android:name="com.gimbal.android.skccJeju.AppService"
