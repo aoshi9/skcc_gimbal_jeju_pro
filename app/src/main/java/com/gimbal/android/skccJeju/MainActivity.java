@@ -15,15 +15,18 @@ import com.gimbal.android.Gimbal;
 
 public class MainActivity extends AppCompatActivity {
     LocationPermissions permissions;
+    private BackPressCloseHandler backPressCloseHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app_main);
-        startActivity(new Intent(this, Splash.class));
+        //startActivity(new Intent(this, Splash.class));
 
         Gimbal.setApiKey(this.getApplication(), "8cbce2c7-6e27-419c-9be1-7b01f1d990e4");
         startService(new Intent(this, AppService.class));
+
+        backPressCloseHandler = new BackPressCloseHandler(this);
 
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
@@ -46,6 +49,22 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+//        final ImageButton imgbtn1 = (ImageButton) findViewById(R.id.mainImg1);
+//        final ImageButton imgbtn2 = (ImageButton) findViewById(R.id.mainImg2);
+//
+//        imgbtn1.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                if(event.getAction()== MotionEvent.ACTION_BUTTON_PRESS){
+//                    imgbtn1.setVisibility(View.INVISIBLE);
+//                    imgbtn2.setVisibility(View.VISIBLE);
+//                }else if(event.getAction()== MotionEvent.ACTION_BUTTON_PRESS){
+//                    imgbtn1.setVisibility(View.VISIBLE);
+//                    imgbtn2.setVisibility(View.INVISIBLE);
+//                }
+//                return false;
+//            }
+//        });
     }
 
     private void enablePlaceMonitoring() {
@@ -73,4 +92,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
+    @Override //뒤도가기 누르면 종료 알림창 뜨도록
+    public void onBackPressed() {
+        //super.onBackPressed();
+        backPressCloseHandler.onBackPressed();
+    }
 }
