@@ -16,12 +16,12 @@
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_beacon_map_temp3.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/main_jeju_square_0903.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/main_jeju_square_0903.jpg"
-    },
-    {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml",
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/main_jeju_square_0903.jpg",
+        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/main_jeju_square_0903.jpg"
     },
     {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_icon_dark.xml",
@@ -36,12 +36,12 @@
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_cab_background_top_material.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/jeju_title.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/jeju_title.jpg"
-    },
-    {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/market1.jpg",
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/market1.jpg"
+    },
+    {
+        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/jeju_title.jpg",
+        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/jeju_title.jpg"
     },
     {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/mypagebtn1.jpg",
@@ -64,6 +64,10 @@
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/main_jeju_circle2.jpg"
     },
     {
+        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_dongmoon_temp2.jpg",
+        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_dongmoon_temp2.jpg"
+    },
+    {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_cab_background_internal_bg.xml"
     },
@@ -74,6 +78,18 @@
     {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/app_jeju_icon.jpg",
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/app_jeju_icon.jpg"
+    },
+    {
+        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/splash.jpg",
+        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/splash.jpg"
+    },
+    {
+        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_menu_temp.jpg",
+        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_menu_temp.jpg"
+    },
+    {
+        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_beacon_map.jpg",
+        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_beacon_map.jpg"
     },
     {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/main_icon_temp.png",
@@ -90,6 +106,14 @@
     {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/backgroundimg.jpg",
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/backgroundimg.jpg"
+    },
+    {
+        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_menu.jpg",
+        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_menu.jpg"
+    },
+    {
+        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_beacon_map_temp.jpg",
+        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_beacon_map_temp.jpg"
     },
     {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/test1.jpg",
@@ -116,6 +140,10 @@
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_plus_signin_btn_icon_light.xml"
     },
     {
+        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_main_temp2.jpg",
+        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_main_temp2.jpg"
+    },
+    {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/comm_exit.png",
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/comm_exit.png"
     },
@@ -126,6 +154,10 @@
     {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_wish_list_temp2.jpg",
+        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_wish_list_temp2.jpg"
     },
     {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/jeju_main_test0828.jpg",
@@ -140,6 +172,10 @@
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/jejuicon2.png"
     },
     {
+        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/splash_temp.jpg",
+        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/splash_temp.jpg"
+    },
+    {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/event_img5.jpg",
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/event_img5.jpg"
     },
@@ -152,6 +188,10 @@
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/bluemarket.jpg"
     },
     {
+        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_wish_list_temp.jpg",
+        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_wish_list_temp.jpg"
+    },
+    {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark.xml",
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_google_signin_btn_text_dark.xml"
     },
@@ -162,6 +202,10 @@
     {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/dm1.png",
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/dm1.png"
+    },
+    {
+        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_beacon_map_temp2.jpg",
+        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_beacon_map_temp2.jpg"
     },
     {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/app_jeju_icon1.jpg",
@@ -186,6 +230,10 @@
     {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/marketbtn1.jpg",
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/marketbtn1.jpg"
+    },
+    {
+        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_menu_temp2.jpg",
+        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_menu_temp2.jpg"
     },
     {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_error_temp2.jpg",
@@ -232,6 +280,10 @@
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/bluemarketjeju.jpg"
     },
     {
+        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_wish_list.jpg",
+        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_wish_list.jpg"
+    },
+    {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/jeju_circle.jpg",
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/jeju_circle.jpg"
     },
@@ -248,12 +300,28 @@
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/backgroundimgfinal.jpg"
     },
     {
+        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_main.jpg",
+        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_main.jpg"
+    },
+    {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_error_temp.jpg",
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_error_temp.jpg"
     },
     {
+        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_dongmoon.jpg",
+        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_dongmoon.jpg"
+    },
+    {
+        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_dongmoon_temp.jpg",
+        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_dongmoon_temp.jpg"
+    },
+    {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/event_img1.jpg",
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/event_img1.jpg"
+    },
+    {
+        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_main_temp.jpg",
+        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_main_temp.jpg"
     },
     {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
@@ -268,16 +336,20 @@
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_dialog_material_background_light.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/backgroundimg2.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/backgroundimg2.jpg"
-    },
-    {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_btn_borderless_material.xml"
     },
     {
+        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/backgroundimg2.jpg",
+        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/backgroundimg2.jpg"
+    },
+    {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_light.xml",
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_plus_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_app_main.jpg",
+        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_app_main.jpg"
     },
     {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
@@ -296,12 +368,12 @@
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_btn_check_material.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/splash_temp2.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/splash_temp2.jpg"
-    },
-    {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/splash_temp2.jpg",
+        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/splash_temp2.jpg"
     },
     {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",
@@ -348,6 +420,10 @@
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/comm_presented.png"
     },
     {
+        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_app_main_temp.jpg",
+        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_app_main_temp.jpg"
+    },
+    {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_main_temp3.jpg",
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_main_temp3.jpg"
     },
@@ -390,5 +466,9 @@
     {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/exp_notification_prepared.png",
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/exp_notification_prepared.png"
+    },
+    {
+        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_app_main_temp2.jpg",
+        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_app_main_temp2.jpg"
     }
 ]
