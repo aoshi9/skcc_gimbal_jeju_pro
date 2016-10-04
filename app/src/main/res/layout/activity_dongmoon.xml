@@ -6,19 +6,27 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="com.gimbal.android.skccJeju.MainActivity">
-
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="5dp"
+        android:background="#00000000"
+        android:onClick="onStartBtnClick" />
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/dmbgp"
+        android:background="@drawable/activity_dongmoon_temp3"
         android:orientation="vertical">
 
         <ViewFlipper
             android:id="@+id/flipper"
             android:layout_marginTop="70dp"
             android:layout_width="match_parent"
-            android:layout_height="430dp">
+            android:layout_height="440dp">
 
             <ImageView
                 android:id="@+id/img01"
@@ -44,7 +52,7 @@
         <Button
             android:id="@+id/button1"
             android:layout_width="match_parent"
-            android:layout_height="75dp"
+            android:layout_height="95dp"
             android:layout_marginLeft="55dp"
             android:layout_marginRight="50dp"
             android:layout_marginTop="0dp"

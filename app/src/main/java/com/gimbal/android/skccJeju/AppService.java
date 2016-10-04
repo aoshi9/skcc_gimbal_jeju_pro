@@ -58,6 +58,8 @@ public class AppService extends Service {
     private DBHelper dbHelper;
     @Override
     public void onCreate() {
+
+        Log.v("tempLog  :  ", "AppService onCreate");
         events = new LinkedList<GimbalEvent>(GimbalDAO.getEvents(getApplicationContext()));
 
         Gimbal.setApiKey(this.getApplication(), "8cbce2c7-6e27-419c-9be1-7b01f1d990e4");

@@ -17,6 +17,7 @@ public class DBHelper extends SQLiteOpenHelper {
     // DBHelper 생성자로 관리할 DB 이름과 버전 정보를 받음
     public DBHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
+        Log.v("tempLog  :  ", "DBHelper Instance ");
     }
 
     // DB를 새로 생성할 때 호출되는 함수

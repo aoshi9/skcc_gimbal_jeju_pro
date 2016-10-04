@@ -1,6 +1,8 @@
 package com.gimbal.android.skccJeju;
 
 import android.app.Activity;
+import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +28,8 @@ import static com.gimbal.android.skccJeju.Constant.THIRD_COLUMN;
 public class WishListListAdapter extends BaseAdapter {
     public ArrayList<HashMap<String, String>> list;
     private Activity activity;
+    private Context ctx;
+    private Typeface tf;
     TextView placeName;
     TextView latitude;
     TextView longitude;
@@ -35,10 +39,13 @@ public class WishListListAdapter extends BaseAdapter {
     TextView bcNo;
     TextView itemNo;
 
-    public WishListListAdapter(Activity activity, ArrayList<HashMap<String, String>> list) {
+    public WishListListAdapter(Activity activity, ArrayList<HashMap<String, String>> list, Context ctx
+    ) {
         super();
         this.activity = activity;
         this.list = list;
+        this.ctx = ctx;
+        this.tf = Typeface.createFromAsset(this.ctx.getAssets(),"BMJUA_ttf.ttf");
     }
 
     @Override
@@ -82,6 +89,17 @@ public class WishListListAdapter extends BaseAdapter {
         itemName.setText(map.get(SIXTH_COLUMN));
         itemPrice.setText(map.get(SEVENTH_COLUMN));
         itemNo.setText(map.get(EIGHTH_COLUMN));
+
+        //font set Test
+        bcNo.setTypeface(tf);
+        placeName.setTypeface(tf);
+        latitude.setTypeface(tf);
+        longitude.setTypeface(tf);
+        url.setTypeface(tf);
+        itemName.setTypeface(tf);
+        itemPrice.setTypeface(tf);
+        itemNo.setTypeface(tf);
+
 
         return convertView;
     }

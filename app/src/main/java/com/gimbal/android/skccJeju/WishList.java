@@ -63,10 +63,6 @@ public class WishList extends AppCompatActivity implements MapView.POIItemEventL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wish_list);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("시장 둘러보기");
-        toolbar.setSubtitle("비콘 알림을 받는 장바구니 상품을 보실 수 있습니다");
 
         /*  Map Part */
         //다음이 제공하는 MapView객체 생성 및 API Key 설정
@@ -125,7 +121,7 @@ public class WishList extends AppCompatActivity implements MapView.POIItemEventL
 
 
         //Log.v("HoyoungLog  :  ", "List Size : " + list.size());
-        WishListListAdapter adapter = new WishListListAdapter(this, list);
+        WishListListAdapter adapter = new WishListListAdapter(this, list,this.getApplicationContext());
         listView.setAdapter(adapter);
 
 
@@ -305,5 +301,11 @@ public class WishList extends AppCompatActivity implements MapView.POIItemEventL
         }
     }
 
+    public void onStartBtnClick(View view) {
+        Toast.makeText(getApplicationContext(), "비콘 이력 접속",
+                Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, AppActivity.class);
+        startActivity(intent);
+    }
 
 }

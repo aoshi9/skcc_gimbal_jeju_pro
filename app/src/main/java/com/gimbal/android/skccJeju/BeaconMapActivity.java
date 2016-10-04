@@ -1,39 +1,35 @@
 package com.gimbal.android.skccJeju;
 
-import static com.gimbal.android.skccJeju.Constant.FIRST_COLUMN;    //BC_NO
-import static com.gimbal.android.skccJeju.Constant.SECOND_COLUMN;   //BC_PLACE_NAME
-import static com.gimbal.android.skccJeju.Constant.THIRD_COLUMN;    //LATITUDE
-import static com.gimbal.android.skccJeju.Constant.FOURTH_COLUMN;   //LONGITUDE
-import static com.gimbal.android.skccJeju.Constant.FIFTH_COLUMN;    //URL
-import static com.gimbal.android.skccJeju.Constant.SIXTH_COLUMN;    //ITEM_NM
-import static com.gimbal.android.skccJeju.Constant.SEVENTH_COLUMN;  //ITEM_PRICE
-import static com.gimbal.android.skccJeju.Constant.EIGHTH_COLUMN;  //ITEM_NO
-import static com.gimbal.android.skccJeju.Constant.NINTH_COLUMN;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
-import android.net.Uri;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import net.daum.mf.map.api.MapPOIItem;
-import net.daum.mf.map.api.MapPolyline;
-import net.daum.mf.map.api.MapView;
 import net.daum.mf.map.api.MapPoint;
+import net.daum.mf.map.api.MapView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import static com.gimbal.android.skccJeju.Constant.EIGHTH_COLUMN;
+import static com.gimbal.android.skccJeju.Constant.FIFTH_COLUMN;
+import static com.gimbal.android.skccJeju.Constant.FIRST_COLUMN;
+import static com.gimbal.android.skccJeju.Constant.FOURTH_COLUMN;
+import static com.gimbal.android.skccJeju.Constant.NINTH_COLUMN;
+import static com.gimbal.android.skccJeju.Constant.SECOND_COLUMN;
+import static com.gimbal.android.skccJeju.Constant.SEVENTH_COLUMN;
+import static com.gimbal.android.skccJeju.Constant.SIXTH_COLUMN;
+import static com.gimbal.android.skccJeju.Constant.THIRD_COLUMN;
 
 
 /**
@@ -54,11 +50,6 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beacon_map);
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("시장 둘러보기");
-        toolbar.setSubtitle("장바구니에 담을 상품을 클릭하세요");
 
         /*  Map Part */
         //다음이 제공하는 MapView객체 생성 및 API Key 설정
@@ -123,7 +114,7 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
         }
 
         //Log.v("HoyoungLog  :  ", "List Size : " + list.size());
-        ItemListAdapter adapter = new ItemListAdapter(this, list);
+        ItemListAdapter adapter = new ItemListAdapter(this, list,this.getApplicationContext());
         listView.setAdapter(adapter);
 
         /* MapView에 ListView Item 올리기 */
@@ -135,7 +126,6 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
             markers.add(new MapPOIItem());
         }
 
-        Log.v("HoyoungLog  :  ", "위도경도 : " + list.get(0).get(THIRD_COLUMN) + ", " + list.get(0).get(FOURTH_COLUMN));
         // MapPOIItem형의 ArrayList 구성객체들에 데이터를 넣어주기 -> 현재 심각한 결함은 가게단위가 아니라 아이템 단위로 보여주기에 동일위치에 여러 마커 겹쳐 존재
         for(int i=0; i<list.size(); i++) {
             marker = markers.get(i);
@@ -172,7 +162,11 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
                     Log.v("tempLog  :  ", "basketYShopItemSelect : " + dbHelper.basketYShopItemSelect());
                     TextView tv = (TextView) view.findViewById(R.id.basketYn);
                     tv.setText("Y");
+                    tv.setTextColor(Color.parseColor("#EC6652"));
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
                 } else {
+
+                    //
 //                    view.setBackgroundColor(Color.TRANSPARENT);     // 취소했을 때, 원상복구
 
                     Toast.makeText(getApplicationContext(), list.get(position).get(SIXTH_COLUMN) + " 장바구니 빼기", Toast.LENGTH_SHORT).show();
@@ -241,6 +235,13 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
     public void onBackPressed() {
         //container.removeView(mMapView); //지도끄고 이동한다.
         Intent  intent = new Intent(this, DongmoonStart.class); //나중에 추가되면 변경할 것
+        startActivity(intent);
+    }
+
+    public void onStartBtnClick(View view) {
+        Toast.makeText(getApplicationContext(), "비콘 이력 접속",
+                Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, AppActivity.class);
         startActivity(intent);
     }
 

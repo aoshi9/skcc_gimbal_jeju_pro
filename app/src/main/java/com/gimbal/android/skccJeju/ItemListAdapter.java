@@ -29,6 +29,11 @@ import static com.gimbal.android.skccJeju.Constant.NINTH_COLUMN;
 
 import java.util.ArrayList;
 import android.app.Activity;
+import android.content.Context;
+import android.content.res.AssetManager;
+import android.graphics.Color;
+import android.graphics.Typeface;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -52,11 +57,16 @@ public class ItemListAdapter extends BaseAdapter {
 
     public ArrayList<HashMap<String, String>> list;
     private Activity activity;
+    private Context ctx;
+    private Typeface tf;
 
-    public ItemListAdapter(Activity activity, ArrayList<HashMap<String, String>> list) {
+
+    public ItemListAdapter(Activity activity, ArrayList<HashMap<String, String>> list, Context ctx) {
         super();
         this.activity = activity;
         this.list = list;
+        this.ctx = ctx;
+        this.tf = Typeface.createFromAsset(this.ctx.getAssets(),"BMJUA_ttf.ttf");
     }
 
     @Override
@@ -104,6 +114,25 @@ public class ItemListAdapter extends BaseAdapter {
         holder.itemPrice.setText(map.get(SEVENTH_COLUMN));
         holder.itemNo.setText(map.get(EIGHTH_COLUMN));
         holder.basketYn.setText(map.get(NINTH_COLUMN));
+
+        holder.bcNo.setTypeface(tf);
+        holder.bcNo.setTextColor(Color.parseColor("#000000"));
+        holder.placeName.setTypeface(tf);
+        holder.placeName.setTextColor(Color.parseColor("#000000"));
+        holder.latitude.setTypeface(tf);
+        holder.latitude.setTextColor(Color.parseColor("#000000"));
+        holder.longitude.setTypeface(tf);
+        holder.longitude.setTextColor(Color.parseColor("#000000"));
+        holder.url.setTypeface(tf);
+        holder.url.setTextColor(Color.parseColor("#000000"));
+        holder.itemName.setTypeface(tf);
+        holder.itemName.setTextColor(Color.parseColor("#000000"));
+        holder.itemPrice.setTypeface(tf);
+        holder.itemPrice.setTextColor(Color.parseColor("#000000"));
+        holder.itemNo.setTypeface(tf);
+        holder.itemNo.setTextColor(Color.parseColor("#000000"));
+        holder.basketYn.setTypeface(tf);
+        holder.basketYn.setTextColor(Color.parseColor("#000000"));
 
         return convertView;
     }

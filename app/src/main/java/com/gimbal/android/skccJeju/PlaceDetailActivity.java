@@ -1,40 +1,29 @@
 package com.gimbal.android.skccJeju;
 
-import static com.gimbal.android.skccJeju.Constant.FIRST_COLUMN;
-import static com.gimbal.android.skccJeju.Constant.SECOND_COLUMN;
-import static com.gimbal.android.skccJeju.Constant.THIRD_COLUMN;
-import static com.gimbal.android.skccJeju.Constant.FOURTH_COLUMN;
-import static com.gimbal.android.skccJeju.Constant.FIFTH_COLUMN;
-import static com.gimbal.android.skccJeju.Constant.SIXTH_COLUMN;
-
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.SimpleAdapter;
 
 import net.daum.mf.map.api.MapPOIItem;
-import net.daum.mf.map.api.MapView;
 import net.daum.mf.map.api.MapPoint;
+import net.daum.mf.map.api.MapView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
+import static com.gimbal.android.skccJeju.Constant.FIFTH_COLUMN;
+import static com.gimbal.android.skccJeju.Constant.FIRST_COLUMN;
+import static com.gimbal.android.skccJeju.Constant.FOURTH_COLUMN;
+import static com.gimbal.android.skccJeju.Constant.SECOND_COLUMN;
+import static com.gimbal.android.skccJeju.Constant.SIXTH_COLUMN;
+import static com.gimbal.android.skccJeju.Constant.THIRD_COLUMN;
 
 /**
  * Created by min on 2016-05-05.
@@ -108,17 +97,23 @@ public class PlaceDetailActivity extends AppCompatActivity {
         ItemList2Adapter adapter = new ItemList2Adapter(this, list);
         listView.setAdapter(adapter);
 
-        TextView placeName = (TextView) findViewById(R.id.placeName);
-        placeName.setText(place);
+        //font 설정
+        Typeface typeface = Typeface.createFromAsset(getAssets(),"BMJUA_ttf.ttf");
 
-        TextView addrText = (TextView) findViewById(R.id.addr);
-        addrText.setText("주소 "+ "\n" + addr);
+//        TextView placeName = (TextView) findViewById(R.id.placeName);
+//        placeName.setText(place);
+//        placeName.setTypeface(typeface);
 
-        TextView telNoText = (TextView) findViewById(R.id.telNo);
-        telNoText.setText("전화번호 " + "\n" + telNo);
-
-        TextView placeEventText = (TextView) findViewById(R.id.placeEvent);
-        placeEventText.setText("이벤트 :  "  + placeEvent);
+//        TextView addrText = (TextView) findViewById(R.id.addr);
+//        addrText.setTypeface(typeface);
+//        addrText.setText("주소 "+ "\n" + addr);
+//
+//        TextView telNoText = (TextView) findViewById(R.id.telNo);
+//        telNoText.setText("전화번호 " + "\n" + telNo);
+//        telNoText.setTypeface(typeface);
+//        TextView placeEventText = (TextView) findViewById(R.id.placeEvent);
+//        placeEventText.setText("이벤트 :  "  + placeEvent);
+//        placeEventText.setTypeface(typeface);
 
 
         ImageView eventImg = (ImageView) findViewById(R.id.eventImg);

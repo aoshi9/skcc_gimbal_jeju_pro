@@ -12,38 +12,16 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/jejumain"
+        android:background="@drawable/activity_app_main_temp3"
         android:orientation="vertical">
 
-<!--        <FrameLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageButton
-                android:id="@+id/mainImg1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="0dp"
-                android:src="@drawable/main_jeju_square_0903"
-                android:visibility="invisible" />
-
-            <ImageButton
-                android:id="@+id/mainImg2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="right|center_vertical"
-                android:layout_margin="0dp"
-                android:src="@drawable/jeju_main2"
-                android:visibility="invisible" />
-        </FrameLayout>-->
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="50dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="0dp"
-            android:layout_marginRight="50dp"
+            android:layout_marginRight="0dp"
             android:layout_marginTop="5dp"
             android:background="#00000000"
             android:onClick="onStartBtnClick" />
@@ -54,7 +32,7 @@
             android:layout_height="100dp"
             android:layout_marginLeft="55dp"
             android:layout_marginRight="50dp"
-            android:layout_marginTop="310dp"
+            android:layout_marginTop="460dp"
             android:background="#00000000"
             android:onClick="onAppStartBtnClick"
             android:singleLine="false"

@@ -1,27 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-    Copyright (C) 2015 Gimbal, Inc. All rights reserved.
-
-    This software is the confidential and proprietary information of Gimbal, Inc.
-
-    The following sample code illustrates various aspects of the Gimbal SDK.
-
-    The sample code herein is provided for your convenience, and has not been
-    tested or designed to work on any particular system configuration. It is
-    provided AS IS and your use of this sample code, whether as provided or
-    with any modification, is at your own risk. Neither Gimbal, Inc.
-    nor any affiliate takes any liability nor responsibility with respect
-    to the sample code, and disclaims all warranties, express and
-    implied, including without limitation warranties on merchantability,
-    fitness for a specified purpose, and against infringement.
--->
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.gimbal.android.skccJeju"
     android:versionCode="1"
     android:versionName="1.0">
 
     <!--    <uses-sdk
-            android:minSdkVersion="19"
-            android:targetSdkVersion="23" />-->
+     android:minSdkVersion="19"
+     android:targetSdkVersion="23" />-->
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -39,19 +24,19 @@
     <application
         android:name="JejubeaconGvar"
         android:allowBackup="true"
-        android:icon="@drawable/app_jeju_icon"
+        android:icon="@drawable/jejuicon2"
         android:label="@string/app_name"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
 
         <!--
-             Uncomment <meta-data> section if you want to use Gimbal's
+         Uncomment <meta-data> section if you want to use Gimbal's
 	        1. Instant Communication
 	        2. Time Based Communication
 	        3. Manage Ad ID
 
 	        Add google-play-services_lib dependency to the project. Refer to http://gimbal.com/doc/android/v2/devguide.html#set_gcm
-        -->
+         -->
         <uses-library android:name="com.google.android.maps" />
         <meta-data
             android:name="com.google.android.gms.version"

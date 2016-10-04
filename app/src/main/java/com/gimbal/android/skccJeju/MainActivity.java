@@ -77,15 +77,9 @@ public class MainActivity extends AppCompatActivity {
         PushRegistrationHelper.registerForPush();
     }
 
-    public void onBeaconConHisClick(View view) {
-        Toast.makeText(getApplicationContext(), "비콘 접속이력 .",
-                Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, AppActivity.class);
-        startActivity(intent);
-    }
 
     public void onStartBtnClick(View view) {
-        Toast.makeText(getApplicationContext(), "비콘 이력 접속(임시)? Start.",
+        Toast.makeText(getApplicationContext(), "비콘 이력 접속",
                 Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, AppActivity.class);
         startActivity(intent);
