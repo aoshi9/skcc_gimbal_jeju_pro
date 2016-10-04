@@ -24,6 +24,12 @@
         android:minSdkVersion="21"
         android:targetSdkVersion="22" />
 
+    <!--
+            <uses-sdk
+            android:minSdkVersion="19"
+            android:targetSdkVersion="23" />
+    -->
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -49,12 +55,12 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
 
         <!--
-             Uncomment <meta-data> section if you want to use Gimbal's 
+             Uncomment <meta-data> section if you want to use Gimbal's
 	        1. Instant Communication
 	        2. Time Based Communication
 	        3. Manage Ad ID
-	        
-	        Add google-play-services_lib dependency to the project. Refer to http://gimbal.com/doc/android/v2/devguide.html#set_gcm 
+
+	        Add google-play-services_lib dependency to the project. Refer to http://gimbal.com/doc/android/v2/devguide.html#set_gcm
         -->
         <uses-library android:name="com.google.android.maps" />
 
@@ -69,7 +75,7 @@
         </receiver>
 
         <activity
-            android:name="com.gimbal.android.skccJeju.MainActivity"
+            android:name="com.gimbal.android.skccJeju.Splash"
             android:label="@string/app_title" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -91,7 +97,14 @@
             android:icon="@drawable/ic_action_settings"
             android:label="@string/action_settings" />
         <activity android:name="com.gimbal.android.skccJeju.BeaconMapActivity" />
-        <activity android:name="com.gimbal.android.skccJeju.PlaceDetailActivity" />
+        <activity
+            android:name="com.gimbal.android.skccJeju.PlaceDetailActivity"
+            android:noHistory="true" />
+        <activity android:name="com.gimbal.android.skccJeju.AppMenuActivity" />
+        <activity android:name="com.gimbal.android.skccJeju.DongmoonStart" />
+        <activity android:name="com.gimbal.android.skccJeju.WishList" />
+        <activity android:name="com.gimbal.android.skccJeju.ErrorActivity" />
+        <activity android:name="com.gimbal.android.skccJeju.MainActivity" />
 
         <service
             android:name="com.gimbal.android.skccJeju.AppService"

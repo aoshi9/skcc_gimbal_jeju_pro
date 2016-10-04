@@ -1,85 +1,64 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:18:1-120:12
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:17:1-122:12
 	xmlns:android
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:18:11-69
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:17:11-69
 	package
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:19:5-42
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:18:5-42
 		INJECTED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml
 		INJECTED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:21:5-30
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:20:5-30
 		INJECTED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml
 		INJECTED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml
 	android:versionCode
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:20:5-28
-		INJECTED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml
-		INJECTED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml
-uses-sdk
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:23:5-25:41
-MERGED from [com.google.android.gms:play-services-base:8.4.0] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.1.1] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:20:5-43
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.1.1] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.1.1] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:20:5-43
-MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:26:5-42
-MERGED from [com.google.android.gms:play-services-base:8.4.0] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.1.1] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:20:5-43
-	android:targetSdkVersion
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:25:9-38
-		INJECTED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml
-		INJECTED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml
-	android:minSdkVersion
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:24:9-35
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:19:5-28
 		INJECTED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml
 		INJECTED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:27:5-67
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:26:5-67
 MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:21:5-66
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:27:22-64
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:26:22-64
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:28:5-79
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:27:5-79
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:28:22-76
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:27:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:29:5-76
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:28:5-76
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:29:22-73
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:28:22-73
 uses-permission#android.permission.WAKE_LOCK
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:30:5-68
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:29:5-68
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:30:22-65
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:29:22-65
 uses-permission#android.permission.BATTERY_STATS
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:31:5-72
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:30:5-72
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:31:22-69
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:30:22-69
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:32:5-79
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:31:5-79
 MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:20:5-78
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:32:22-76
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:31:22-76
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:33:5-81
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:32:5-81
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:33:22-78
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:32:22-78
 uses-permission#android.permission.BLUETOOTH
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:34:5-68
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:33:5-68
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:34:22-65
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:33:22-65
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:35:5-74
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:34:5-74
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:35:22-71
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:34:22-71
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:38:5-82
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:37:5-82
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:38:22-79
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:37:22-79
 application
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:40:5-118:19
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:39:5-120:19
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
 MERGED from [com.android.support:support-v4:23.1.1] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
@@ -96,110 +75,151 @@ MERGED from [com.android.support:support-v4:23.1.1] C:\devBeacon\skcc_gimbal_jej
 	android:icon
 		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:42:9-47
 	android:theme
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:45:9-65
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:44:9-65
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:44:9-38
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:40:9-38
 uses-library#com.google.android.maps
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:56:9-63
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:55:9-64
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:56:23-61
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:55:23-61
 meta-data#com.google.android.gms.version
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:57:9-59:69
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:56:9-58:69
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:58:13-58
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:57:13-58
 	android:value
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:59:13-66
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:58:13-66
 receiver#com.gimbal.android.skccJeju.AutoStartBroadcastReceiver
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:61:9-65:20
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:60:9-64:20
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:61:19-88
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:60:19-88
 intent-filter#android.intent.action.BOOT_COMPLETED
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:62:13-64:29
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:61:13-63:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:63:17-79
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:62:17-79
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:63:25-76
-activity#com.gimbal.android.skccJeju.MainActivity
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:66:15-75:26
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:62:25-76
+activity#com.gimbal.android.skccJeju.Splash
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:66:9-73:20
 	android:label
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:68:19-52
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:68:13-46
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:67:19-74
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:67:13-62
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:69:19-73:35
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:69:13-72:29
 action#android.intent.action.MAIN
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:70:23-75
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:70:17-69
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:70:31-72
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:70:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:72:23-83
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:71:17-77
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:72:33-80
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:71:27-74
 activity#com.gimbal.android.skccJeju.AppActivity
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:76:15-80:26
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:74:9-78:20
 	android:label
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:78:19-52
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:76:13-46
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:77:19-73
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:75:13-67
 activity#com.gimbal.android.skccJeju.OptInActivity
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:81:15-85:75
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:79:9-83:69
 	android:screenOrientation
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:84:19-55
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:82:13-49
 	android:label
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:83:19-40
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:81:13-34
 	android:theme
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:85:19-72
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:83:13-66
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:82:19-75
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:80:13-69
 activity#com.gimbal.android.skccJeju.SettingsActivity
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:86:15-89:61
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:84:9-87:55
 	android:label
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:89:19-58
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:87:13-52
 	android:icon
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:88:19-62
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:86:13-56
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:87:19-78
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:85:13-72
 activity#com.gimbal.android.skccJeju.BeaconMapActivity
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:91:15-88
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:89:9-82
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:91:26-86
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:89:19-79
 activity#com.gimbal.android.skccJeju.PlaceDetailActivity
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:92:15-90
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:90:9-109
+	android:noHistory
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:90:82-106
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:92:26-88
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:90:19-81
+activity#com.gimbal.android.skccJeju.AppMenuActivity
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:91:9-80
+	android:name
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:91:19-77
+activity#com.gimbal.android.skccJeju.DongmoonStart
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:92:9-78
+	android:name
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:92:19-75
+activity#com.gimbal.android.skccJeju.WishList
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:93:9-73
+	android:name
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:93:19-70
+activity#com.gimbal.android.skccJeju.ErrorActivity
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:94:9-77
+	android:name
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:94:19-75
+activity#com.gimbal.android.skccJeju.MainActivity
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:95:9-77
+	android:name
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:95:19-74
 service#com.gimbal.android.skccJeju.AppService
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:95:15-97:46
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:97:9-99:40
 	android:exported
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:97:19-43
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:99:13-37
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:96:19-72
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:98:13-66
 service#com.gimbal.internal.service.GimbalService
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:99:9-105:19
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:101:9-107:19
 	android:exported
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:101:13-37
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:103:13-37
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:100:13-69
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:102:13-69
 intent-filter#com.gimbal.android.sample.service.GIMBAL_SERVICE
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:102:13-104:29
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:104:13-106:29
 action#com.gimbal.android.sample.service.GIMBAL_SERVICE
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:103:17-91
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:105:17-91
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:103:25-88
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:105:25-88
 receiver#com.gimbal.internal.service.GimbalServiceStartStopReceiver
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:107:9-116:20
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:109:9-118:20
 	android:enabled
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:109:13-35
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:111:13-35
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:108:13-86
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:110:13-86
 intent-filter#android.intent.action.ACTION_SHUTDOWN
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:113:13-115:29
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:115:13-117:29
 action#android.intent.action.ACTION_SHUTDOWN
-ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:114:17-80
+ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:116:17-80
 	android:name
-		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:114:25-77
+		ADDED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml:116:25-77
+uses-sdk
+INJECTED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.google.android.gms:play-services-base:8.4.0] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:23.1.1] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:23.1.1] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.1.1] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:26:5-42
+MERGED from [com.google.android.gms:play-services-base:8.4.0] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:23.1.1] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:20:5-43
+	android:targetSdkVersion
+		INJECTED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml
+		INJECTED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml
+		INJECTED from C:\devBeacon\skcc_gimbal_jeju_pro\app\src\main\AndroidManifest.xml
 uses-feature#0x00020000
 ADDED from [com.google.android.gms:play-services-maps:8.4.0] C:\devBeacon\skcc_gimbal_jeju_pro\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:22:5-24:33
 	android:required
