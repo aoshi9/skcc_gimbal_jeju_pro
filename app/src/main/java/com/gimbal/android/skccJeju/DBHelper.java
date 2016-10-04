@@ -27,9 +27,9 @@ public class DBHelper extends SQLiteOpenHelper {
         // 추가 테이블 필요시 이 부분에 추가
         //db.execSQL("CREATE TABLE SHOP_ITEM (SHOP_ID TEXT, ITEM TEXT, PRICE INTEGER, PRIMARY KEY(SHOP_ID, ITEM));");
         //db.execSQL("CREATE TABLE SHOP_ITEM (SHOP_ID TEXT, ITEM TEXT, PRICE INTEGER);");
-        db.execSQL("CREATE TABLE SOT_BEACON_INFO (BC_NO TEXT, PLACE_SE_CD TEXT, BC_PLACE_NM TEXT, LATITUDE DOUBLE, " +
+        db.execSQL("CREATE TABLE SOT_BEACON_INFO (BC_NO TEXT PRIMARY KEY, PLACE_SE_CD TEXT, BC_PLACE_NM TEXT, LATITUDE DOUBLE, " +
                  "LONGITUDE DOUBLE, URL TEXT, EVENT TEXT, EVENT_IMG TEXT, TEL_NO TEXT, ADDR TEXT, VERSION TEXT);");
-        db.execSQL("CREATE TABLE SOT_BEACON_INFO_ITEM (BC_NO TEXT, ITEM_NO TEXT, ITEM_NM TEXT, ITEM_PRICE TEXT, ITEM_DESC TEXT, BASKET_YN TEXT, ITEM_EVENT TEXT);");
+        db.execSQL("CREATE TABLE SOT_BEACON_INFO_ITEM (BC_NO TEXT, ITEM_NO TEXT, ITEM_NM TEXT, ITEM_PRICE TEXT, ITEM_DESC TEXT, BASKET_YN TEXT, ITEM_EVENT TEXT, PRIMARY KEY(BC_NO, ITEM_NO));");
     }
 
     // DB 업그레이드를 위해 버전이 변경될 때 호출되는 함수f
@@ -363,5 +363,21 @@ public class DBHelper extends SQLiteOpenHelper {
             result = "Y";
         }
         return result;
+    }
+
+    //SOT_BEACON_INFO 테이블 INSERT or REPLACE문
+    public void SotBeaconInfoInsertOrReplace(String beaconNumber, String marketCode, String shopName, double latitude, double longitude, String url, String event, String eventImg, String phoneNumber, String address, String version) {
+        // 읽고 쓰기가 가능하게 DB 열기
+        SQLiteDatabase db = getWritableDatabase();
+        db.execSQL("INSERT OR REPLACE INTO SOT_BEACON_INFO VALUES('" + beaconNumber  + "', '" + marketCode + "', '" + shopName + "', " + latitude + ", " + longitude + ", '" + url + "', '" + event + "', '" + eventImg + "', '" + phoneNumber + "', '" + address + "', '" + version + "');");
+        db.close();
+    }
+
+    //SOT_BEACON_INFO_ITEM 테이블 INSERT or REPLACE문 & BasketYN은 Default로 N
+    public void SotBeaconInfoItemInsertOrReplace(String beaconNumber, String itemNumber, String itemName, String itemPrice, String itemDiscount, String itemEvent) {
+        // 읽고 쓰기가 가능하게 DB 열기
+        SQLiteDatabase db = getWritableDatabase();
+        db.execSQL("INSERT OR REPLACE INTO SOT_BEACON_INFO_ITEM VALUES('" + beaconNumber  + "', '" + itemNumber + "', '" + itemName + "', '" + itemPrice + "', '" + itemDiscount + "', 'N', '" + itemEvent + "');");
+        db.close();
     }
 }
