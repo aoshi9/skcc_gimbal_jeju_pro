@@ -2,6 +2,7 @@ package com.gimbal.android.skccJeju;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -78,19 +79,19 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
 //        dbHelper.DELETE();
         //Log.v("HoyoungLog  :  ", "Data : " + 2);
         //세 개의 가게에 각각 하나의 아이템들이 있다고 가정을 합시다.
-        long result1 = dbHelper.SotBeaconInfoInsert("00001", "1", "G마켓", 37.163351, 127.081862, "http://www.gmarket.co.kr/", "미친세일", "미친세일중.jpg", "010-2450-5037", "충남 쥐마켓 본사", "1");
-        long result2 = dbHelper.SotBeaconInfoInsert("00002", "1", "11번가", 39.163351, 127.081862, "http://www.11st.co.kr/", "돌은세일", "돌은세일중.jpg", "010-1111-1111", "서울 11번가 본사", "1");
-        long result3 = dbHelper.SotBeaconInfoInsert("00003", "1", "쿠퐝", 40.163351, 127.081862, "http://www.coupang.com/", "망할세일", "망할세일중.jpg", "010-9898-9898", "경기 쿠퐝 본사", "1");
-        long result4 = dbHelper.SotBeaconInfoItemInsert("00001", "12", "쥐고기", "1000", "itemDiscount", "1+1");
-        long result5 = dbHelper.SotBeaconInfoItemInsert("00002", "13", "11번뇌봉", "2000", "itemDiscount", "2+1");
-        long result6 = dbHelper.SotBeaconInfoItemInsert("00003", "14", "쿠퐝쿠폰", "3000", "itemDiscount", "3+1");
-
-        Log.v("HoyoungLog  :  ", "Result1 : " + result1);
-        Log.v("HoyoungLog  :  ", "Result2 : " + result2);
-        Log.v("HoyoungLog  :  ", "Result3 : " + result3);
-        Log.v("HoyoungLog  :  ", "Result4 : " + result4);
-        Log.v("HoyoungLog  :  ", "Result5 : " + result5);
-        Log.v("HoyoungLog  :  ", "Result6 : " + result6);
+//        long result1 = dbHelper.SotBeaconInfoInsert("00001", "1", "G마켓", 37.163351, 127.081862, "http://www.gmarket.co.kr/", "미친세일", "미친세일중.jpg", "010-2450-5037", "충남 쥐마켓 본사", "1");
+//        long result2 = dbHelper.SotBeaconInfoInsert("00002", "1", "11번가", 39.163351, 127.081862, "http://www.11st.co.kr/", "돌은세일", "돌은세일중.jpg", "010-1111-1111", "서울 11번가 본사", "1");
+//        long result3 = dbHelper.SotBeaconInfoInsert("00003", "1", "쿠퐝", 40.163351, 127.081862, "http://www.coupang.com/", "망할세일", "망할세일중.jpg", "010-9898-9898", "경기 쿠퐝 본사", "1");
+//        long result4 = dbHelper.SotBeaconInfoItemInsert("00001", "12", "쥐고기", "1000", "itemDiscount", "1+1");
+//        long result5 = dbHelper.SotBeaconInfoItemInsert("00002", "13", "11번뇌봉", "2000", "itemDiscount", "2+1");
+//        long result6 = dbHelper.SotBeaconInfoItemInsert("00003", "14", "쿠퐝쿠폰", "3000", "itemDiscount", "3+1");
+//
+//        Log.v("HoyoungLog  :  ", "Result1 : " + result1);
+//        Log.v("HoyoungLog  :  ", "Result2 : " + result2);
+//        Log.v("HoyoungLog  :  ", "Result3 : " + result3);
+//        Log.v("HoyoungLog  :  ", "Result4 : " + result4);
+//        Log.v("HoyoungLog  :  ", "Result5 : " + result5);
+//        Log.v("HoyoungLog  :  ", "Result6 : " + result6);
 
         String resultString = dbHelper.shopItemSelectByPlaceSeCd("1"); //이전의 intent에서 넘어와야 되지만 일단은 하드코딩
         String[] resultArray = resultString.split("!");

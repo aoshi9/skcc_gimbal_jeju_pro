@@ -20,6 +20,7 @@ package com.gimbal.android.skccJeju;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.AssetManager;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -106,14 +107,23 @@ public class ItemListAdapter extends BaseAdapter {
 
 //        font set Test
         bcNo.setTypeface(tf);
+        bcNo.setTextColor(Color.parseColor("#000000"));
         placeName.setTypeface(tf);
+        placeName.setTextColor(Color.parseColor("#000000"));
         latitude.setTypeface(tf);
+        latitude.setTextColor(Color.parseColor("#000000"));
         longitude.setTypeface(tf);
+        longitude.setTextColor(Color.parseColor("#000000"));
         url.setTypeface(tf);
+        url.setTextColor(Color.parseColor("#000000"));
         itemName.setTypeface(tf);
+        itemName.setTextColor(Color.parseColor("#000000"));
         itemPrice.setTypeface(tf);
+        itemPrice.setTextColor(Color.parseColor("#000000"));
         itemNo.setTypeface(tf);
+        itemNo.setTextColor(Color.parseColor("#000000"));
         basketYn.setTypeface(tf);
+        basketYn.setTextColor(Color.parseColor("#000000"));
 //fonts set Test
 
         return convertView;

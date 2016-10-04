@@ -2,17 +2,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/activity_beacon_map">
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginTop="5dp"
-        android:background="#00000000"
-        android:onClick="onStartBtnClick" />
+    android:background="@drawable/activity_beacon_map_temp3">
 
     <RelativeLayout
         android:id="@+id/map_view"
@@ -28,12 +18,12 @@
         android:layout_marginRight="25dp"
         android:id="@+id/listView1"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
+        android:layout_height="200dp"
         android:choiceMode="multipleChoice"
         android:layout_below="@+id/tv1" />
 
     <Button
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="#00000000"

@@ -7,20 +7,11 @@
     android:fitsSystemWindows="true"
     tools:context="com.gimbal.android.skccJeju.MainActivity">
 
-    <Button
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginTop="5dp"
-        android:background="#00000000"
-        android:onClick="onStartBtnClick" />
-
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/activity_menu"
+        android:background="@drawable/activity_menu_temp3"
         android:orientation="vertical">
 
         <Button

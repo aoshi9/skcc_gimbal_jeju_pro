@@ -64,12 +64,14 @@
         </receiver>
 
         <activity
-            android:name="com.gimbal.android.skccJeju.Splash"
+            android:name="com.gimbal.android.skccJeju.MainActivity"
             android:label="@string/app_title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name="com.gimbal.android.skccJeju.AppActivity"
@@ -92,7 +94,7 @@
         <activity android:name="com.gimbal.android.skccJeju.DongmoonStart" />
         <activity android:name="com.gimbal.android.skccJeju.WishList" />
         <activity android:name="com.gimbal.android.skccJeju.ErrorActivity"/>
-        <activity android:name="com.gimbal.android.skccJeju.MainActivity" />
+        <activity android:name="com.gimbal.android.skccJeju.Splash"/>
 
         <service
             android:name="com.gimbal.android.skccJeju.AppService"

@@ -2,16 +2,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/activity_wish_list">
-
-    <Button
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginTop="10dp"
-        android:background="#00000000"
-        android:onClick="onStartBtnClick" />
+    android:background="@drawable/activity_wish_list_temp3">
 
     <RelativeLayout
         android:id="@+id/map_view"
@@ -19,7 +10,7 @@
         android:layout_height="168dp"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:layout_marginTop="70dp" />
+        android:layout_marginTop="75dp" />
 
     <ListView
         android:layout_marginTop="65dp"
@@ -27,7 +18,7 @@
         android:layout_marginRight="25dp"
         android:id="@+id/listView1"
         android:layout_width="wrap_content"
-        android:layout_height="160dp"
+        android:layout_height="250dp"
         android:choiceMode="multipleChoice"
         android:layout_below="@+id/tv1" />
 
