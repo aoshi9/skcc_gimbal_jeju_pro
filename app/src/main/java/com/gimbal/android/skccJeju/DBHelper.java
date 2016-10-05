@@ -184,7 +184,6 @@ public class DBHelper extends SQLiteOpenHelper {
         while (cursor.moveToNext()) {
             result = cursor.getString(0);
         }
-        Log.v("hyub  :  ", "basket result : " + result);
 
         return result;
     }
