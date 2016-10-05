@@ -94,7 +94,7 @@ public class PlaceDetailActivity extends AppCompatActivity {
         }
 
         //Log.v("HoyoungLog  :  ", "List Size : " + list.size());
-        ItemList2Adapter adapter = new ItemList2Adapter(this, list);
+        ItemList2Adapter adapter = new ItemList2Adapter(this, list,this.getApplicationContext());
         listView.setAdapter(adapter);
 
         //font 설정
