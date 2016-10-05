@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             dbHelper.SotBeaconInfoInsertOrReplace("BC001", "1", "SK수산", 33.512871433920715, 126.52806210319818, "http://jejudongmun.modoo.at", "마라도 방어 한마리 만원", "event_img1", "02-5445-5555", "제주도 제주시 일도2동 345번지", "1");
             dbHelper.SotBeaconInfoInsertOrReplace("BC002", "1", "SK과일", 33.512849093102645, 126.52870580659532, "http://jejudongmun.modoo.at", "서귀포 한라봉 특가", "event_img2", "02-5445-5544", "제주도 제주시 일도2동 344번지", "1");
             dbHelper.SotBeaconInfoInsertOrReplace("BC003", "1", "SK건어물", 33.5127645823235, 126.52819621356707, "http://jejudongmun.modoo.at", "한치 엄청싸게 팝니다.", "event_img3", "02-5445-5555", "제주도 제주시 일도2동 344번지", "1");
-            dbHelper.SotBeaconInfoInsertOrReplace("BC004", "1", "SK수산", 33.512871433920715, 126.52806210319818, "http://jejudongmun.modoo.at", "옥돔 1+1  Event", "event_img4", "02-5445-5222", "제주도 제주시 일도2동 325번지", "1");
+            dbHelper.SotBeaconInfoInsertOrReplace("BC004", "1", "스크수산", 33.512737276693, 126.52858365901943, "http://jejudongmun.modoo.at", "옥돔 1+1  Event", "event_img4", "02-5445-5222", "제주도 제주시 일도2동 325번지", "1");
             dbHelper.SotBeaconInfoInsertOrReplace("BC005", "1", "SK분식", 33.512712364111394, 126.52851220460457, "http://jejudongmun.modoo.at", "제주만의 사랑식", "event_img5", "02-5445-3333", "제주도 제주시 일도2동 325번지", "1");
 
             dbHelper.SotBeaconInfoItemInsertOrReplace("BC001", "BC001_01", "방어", "2,000원", "마라도산", "1+1특가");
@@ -69,10 +69,21 @@ public class MainActivity extends AppCompatActivity {
         Intent intent_noti = getIntent();
         String strAction = intent_noti.getStringExtra("strAction");
         Log.v("tempLog  :  ", "strAction.intent_noti_strAction :  "  +strAction);
+
         if(strAction != null && strAction.equals("NotificationClicked")){
-            Intent  intent_move = new Intent(this, PlaceDetailActivity.class);
-            intent_move.putExtra("strBeaconNo",  intent_noti.getStringExtra("strBeaconNo"));
-            startActivity(intent_move);
+
+            String strBeaconNo = intent_noti.getStringExtra("strBeaconNo");
+            if(strBeaconNo.equals("BC006_IN")){
+                Toast.makeText(getApplicationContext(), "[비상] 본부장님이 접근 알림",
+                        Toast.LENGTH_LONG).show();
+            }else if(strBeaconNo.equals("BC006_OUT")) {
+                Toast.makeText(getApplicationContext(), "[비상해제] 본부장님 접근해제 알림",
+                        Toast.LENGTH_LONG).show();
+            }else {
+                Intent intent_move = new Intent(this, PlaceDetailActivity.class);
+                intent_move.putExtra("strBeaconNo", strBeaconNo);
+                startActivity(intent_move);
+            }
         }
 
 
