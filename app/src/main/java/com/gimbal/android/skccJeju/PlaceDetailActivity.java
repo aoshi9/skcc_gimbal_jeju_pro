@@ -60,11 +60,11 @@ public class PlaceDetailActivity extends AppCompatActivity {
         {
             //본부장님 접근시 배경화면 바꾸고 나머지 Invisible 처리
 
-            backgroundImg = "leader_detail";
+            backgroundImg = "detail_leader_in";
             LinearLayout layout = (LinearLayout) findViewById(R.id.detailInfo);
             layout.setVisibility(LinearLayout.INVISIBLE);
             TableLayout tableLayout = (TableLayout) findViewById(R.id.backgroundPic);
-            tableLayout.setBackgroundResource(R.drawable.leader_detail);
+            tableLayout.setBackgroundResource(R.drawable.detail_leader_in);
 
         }
         else if(beaconNo.equalsIgnoreCase("BC006_OUT"))
