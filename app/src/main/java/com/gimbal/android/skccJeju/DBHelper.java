@@ -174,15 +174,25 @@ public class DBHelper extends SQLiteOpenHelper {
     public void SotBeaconInfoItemBasketY(String beaconNumber, String itemNo) {
         SQLiteDatabase db = getWritableDatabase();
         db.execSQL("UPDATE SOT_BEACON_INFO_ITEM SET BASKET_YN='Y' WHERE BC_NO='" + beaconNumber + "' AND ITEM_NO='" + itemNo + "';");
-        Log.v("HoyoungLog  :  ", "update3 : " + "UPDATE SOT_BEACON_INFO_ITEM SET BASKET_YN= 'Y' WHERE BC_NO = '" + beaconNumber + "' AND ITEM_NO = '" + itemNo + "';");
         db.close();
+    }
+
+    public String GetYn(String beaconNumber, String itemNo){
+        SQLiteDatabase db = getWritableDatabase();
+        String result=null;
+        Cursor cursor = db.rawQuery("SELECT BASKET_YN FROM SOT_BEACON_INFO_ITEM WHERE BC_NO='" + beaconNumber + "' AND ITEM_NO='" + itemNo + "';", null);
+        while (cursor.moveToNext()) {
+            result = cursor.getString(0);
+        }
+        Log.v("hyub  :  ", "basket result : " + result);
+
+        return result;
     }
 
     // SOT_BEACON_INFO_ITEM 테이블의 BASKET_YN -> N
     public void SotBeaconInfoItemBasketN(String beaconNumber, String itemNo) {
         SQLiteDatabase db = getWritableDatabase();
         db.execSQL("UPDATE SOT_BEACON_INFO_ITEM SET BASKET_YN= 'N' WHERE BC_NO = '" + beaconNumber + "' AND ITEM_NO = '" + itemNo + "';");
-        Log.v("HoyoungLog  :  ", "update : " + "UPDATE SOT_BEACON_INFO_ITEM SET BASKET_YN= 'N' WHERE BC_NO = '" + beaconNumber + "' AND ITEM_NO = '" + itemNo + "';");
         db.close();
     }
 

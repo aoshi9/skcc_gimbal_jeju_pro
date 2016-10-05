@@ -150,13 +150,17 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
             public void onItemClick(AdapterView<?> parent, final View view, int position, long id)
             {
                 // 선택된 item이 click 되어 있는 상태인지 체크하는 부분 (최준형)
-                if(parent.getChildAt(position).isEnabled()  ) {
-//                    view.setBackgroundColor(Color.GRAY);             // 선택했을 때, 회색으로 하이라이트
+                String basketYn = dbHelper.GetYn(list.get(position).get(FIRST_COLUMN), list.get(position).get(EIGHTH_COLUMN));
+                Boolean isUnChecked = basketYn.equalsIgnoreCase("N");
 
+//                Log.v("hyub : ","basketYn : "+basketYn);
+                if( (parent.getChildAt(position).isEnabled() )&&(isUnChecked) ) {
+//                   view.setBackgroundColor(Color.GRAY);             // 선택했을 때, 회색으로 하이라이트
                     Toast.makeText(getApplicationContext(), list.get(position).get(SIXTH_COLUMN) + " 장바구니 담기", Toast.LENGTH_SHORT).show();
 
                     parent.getChildAt(position).setEnabled(false);
                     dbHelper.SotBeaconInfoItemBasketY(list.get(position).get(FIRST_COLUMN), list.get(position).get(EIGHTH_COLUMN));     // DB BASKET_YN 컬럼 update
+                    Log.v("hyub : ","basket Y : "+list.get(position).get(NINTH_COLUMN));
                     TextView tv = (TextView) view.findViewById(R.id.basketYn);
                     tv.setText("       V");
                     tv.setTextColor(Color.parseColor("#EC6652"));
@@ -170,6 +174,7 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
 
                     parent.getChildAt(position).setEnabled(true);
                     dbHelper.SotBeaconInfoItemBasketN(list.get(position).get(FIRST_COLUMN), list.get(position).get(EIGHTH_COLUMN));     // DB BASKET_YN 컬럼 update
+                    Log.v("hyub : ","basket N : "+list.get(position).get(NINTH_COLUMN));
                     Log.v("tempLog  :  ", "basketYShopItemSelect : " + dbHelper.basketYShopItemSelect());
                     TextView tv = (TextView) view.findViewById(R.id.basketYn);
                     tv.setText(" ");
