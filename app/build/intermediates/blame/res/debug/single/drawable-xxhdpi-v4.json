@@ -16,12 +16,12 @@
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xxhdpi/common_plus_signin_btn_icon_light_pressed.9.png"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxhdpi/abc_btn_radio_to_on_mtrl_000.png"
-    },
-    {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png",
         "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxhdpi/abc_ic_voice_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
+        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxhdpi/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
         "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png",
