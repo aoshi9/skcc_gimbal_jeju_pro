@@ -1,474 +1,326 @@
 [
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_dongmoon_temp3.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_dongmoon_temp3.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_tab_indicator_material.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/event_img6.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/event_img6.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_icon_dark.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_icon_dark.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_detail.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_detail.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_beacon_map_temp3.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_beacon_map_temp3.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\app_jeju_icon.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\app_jeju_icon.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_seekbar_thumb_material.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\jejumain.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\jejumain.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/main_jeju_square_0903.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/main_jeju_square_0903.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\marketbtn1.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\marketbtn1.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_icon_dark.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_plus_signin_btn_icon_dark.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\exp_action_delivered.png",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\exp_action_delivered.png"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_app_main_temp3.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_app_main_temp3.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\place_exit.png",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\place_exit.png"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_cab_background_top_material.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/market1.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/market1.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\picture1.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\picture1.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/jeju_title.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/jeju_title.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/mypagebtn1.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/mypagebtn1.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_text_cursor_material.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/error.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/error.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dm1.png",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\dm1.png"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/dongmoon.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/dongmoon.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\backgroundimg.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\backgroundimg.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/dmbgp.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/dmbgp.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\popup_img1.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\popup_img1.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/main_jeju_circle2.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/main_jeju_circle2.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\event_img3.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\event_img3.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_dongmoon_temp2.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_dongmoon_temp2.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\jejumenu.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\jejumenu.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_cab_background_internal_bg.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\exp_notification_prepared.png",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\exp_notification_prepared.png"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_wish_list_temp3.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_wish_list_temp3.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\backgroundimg2.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\backgroundimg2.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/app_jeju_icon.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/app_jeju_icon.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\market1.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\market1.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/splash.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/splash.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\jeju_main2.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\jeju_main2.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_menu_temp.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_menu_temp.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_beacon_map.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_beacon_map.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\event_img6.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\event_img6.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/main_icon_temp.png",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/main_icon_temp.png"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\main_jeju_origin_square.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\main_jeju_origin_square.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_full_material.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_ratingbar_full_material.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_icon_light.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_icon_light.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/event_img4.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/event_img4.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_text_light.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_text_light.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/backgroundimg.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/backgroundimg.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_dialog_material_background_dark.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_menu.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_menu.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\event_img2.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\event_img2.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_beacon_map_temp.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_beacon_map_temp.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\comm_exit.png",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\comm_exit.png"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/test1.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/test1.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/mypage.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/mypage.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/exp_action_delivered.png",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/exp_action_delivered.png"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\event_img5.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\event_img5.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/market3.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/market3.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\jeju_main_test.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\jeju_main_test.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_list_selector_holo_light.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dm3.png",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\dm3.png"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_icon_light.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_plus_signin_btn_icon_light.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_main_temp2.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_main_temp2.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\error.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\error.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/comm_exit.png",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/comm_exit.png"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\place_enter.png",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\place_enter.png"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/main_jeju_origin_square.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/main_jeju_origin_square.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\main_jeju_square_0903.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\main_jeju_square_0903.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_btn_default_mtrl_shape.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_text_dark.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_wish_list_temp2.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_wish_list_temp2.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\event_img1.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\event_img1.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/jeju_main_test0828.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/jeju_main_test0828.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\comm_enter.png",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\comm_enter.png"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/popup_img2.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/popup_img2.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\main_jeju_circle2.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\main_jeju_circle2.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/jejuicon2.png",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/jejuicon2.png"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_text_dark.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_text_dark.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/splash_temp.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/splash_temp.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_edit_text_material.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/event_img5.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/event_img5.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_radio_material.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/event_img2.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/event_img2.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/bluemarket.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/bluemarket.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mypagebtn1.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\mypagebtn1.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_wish_list_temp.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_wish_list_temp.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dmbgp.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\dmbgp.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_google_signin_btn_text_dark.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\exp_fragment_presented.png",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\exp_fragment_presented.png"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/souvenir.png",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/souvenir.png"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\main_jeju_test.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\main_jeju_test.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/dm1.png",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/dm1.png"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_text_light.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_beacon_map_temp2.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_beacon_map_temp2.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/app_jeju_icon1.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/app_jeju_icon1.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\jeju_title.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\jeju_title.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_tab_indicator_material.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_seekbar_track_material.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/jejumain.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/jejumain.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\app_jeju_icon1.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\app_jeju_icon1.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/main_jeju_test.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/main_jeju_test.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\market3.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\market3.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_edit_text_material.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/marketbtn1.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/marketbtn1.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\event_img4.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\event_img4.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_menu_temp2.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_menu_temp2.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\comm_presented.png",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\comm_presented.png"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_error_temp2.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_error_temp2.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bluemarketjeju.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\bluemarketjeju.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/exp_notification_clicked.png",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/exp_notification_clicked.png"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\jeju_circle.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\jeju_circle.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/jejumenu.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/jejumenu.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/jeju_main_test.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/jeju_main_test.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dongmoon.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\dongmoon.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_menu_temp3.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_menu_temp3.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_dark.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_dialog_material_background_dark.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mypage.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\mypage.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_dark.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_plus_signin_btn_text_dark.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\splash.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\splash.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/error_1.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/error_1.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bluemarket.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\bluemarket.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_google_signin_btn_icon_light.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/bluemarketjeju.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/bluemarketjeju.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dm2.png",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\dm2.png"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_wish_list.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_wish_list.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\exp_notification_clicked.png",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\exp_notification_clicked.png"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/jeju_circle.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/jeju_circle.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\market2.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\market2.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/jeju_main2.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/jeju_main2.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_dialog_material_background_light.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/comm_enter.png",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/comm_enter.png"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\backgroundimgfinal.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\backgroundimgfinal.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/backgroundimgfinal.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/backgroundimgfinal.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_list_selector_holo_dark.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_main.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_main.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\jeju_main_test0828.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\jeju_main_test0828.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_error_temp.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_error_temp.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_icon_light.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_dongmoon.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_dongmoon.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\popup_img2.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\popup_img2.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_dongmoon_temp.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_dongmoon_temp.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\app_jeju_icon2.jpg",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\drawable\\app_jeju_icon2.jpg"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/event_img1.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/event_img1.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_main_temp.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_main_temp.jpg"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_list_selector_background_transition_holo_light.xml"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_google_signin_btn_icon_dark.xml"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_light.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_dialog_material_background_light.xml"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_btn_borderless_material.xml"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/backgroundimg2.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/backgroundimg2.jpg"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_light.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_plus_signin_btn_text_light.xml"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_app_main.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_app_main.jpg"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_btn_radio_material.xml"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/place_exit.png",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/place_exit.png"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/picture1.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/picture1.jpg"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_btn_check_material.xml"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_item_background_holo_dark.xml"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/splash_temp2.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/splash_temp2.jpg"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_seekbar_track_material.xml"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_textfield_search_material.xml"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_switch_thumb_material.xml"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/popup_img1.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/popup_img1.jpg"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/dm2.png",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/dm2.png"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/app_jeju_icon2.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/app_jeju_icon2.jpg"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_google_signin_btn_text_light.xml"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_spinner_textfield_background_material.xml"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/exp_fragment_presented.png",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/exp_fragment_presented.png"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_text_cursor_material.xml"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/comm_presented.png",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/comm_presented.png"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_app_main_temp.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_app_main_temp.jpg"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_main_temp3.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_main_temp3.jpg"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/wishlist_bp.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/wishlist_bp.jpg"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/market2.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/market2.jpg"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/dm3.png",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/dm3.png"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/event_img3.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/event_img3.jpg"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/place_enter.png",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/place_enter.png"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_item_background_holo_light.xml"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_list_selector_holo_dark.xml"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_btn_colored_material.xml"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/basicpic.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/basicpic.jpg"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/exp_notification_prepared.png",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/exp_notification_prepared.png"
-    },
-    {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/drawable/activity_app_main_temp2.jpg",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/drawable/activity_app_main_temp2.jpg"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_ratingbar_full_material.xml"
     }
 ]

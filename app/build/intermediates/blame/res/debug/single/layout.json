@@ -1,218 +1,218 @@
 [
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/settings.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/layout/settings.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_expanded_menu_layout.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_item_material.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_view_list_nav_layout.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_singlechoice_material.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_template_lines.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/activity_wish_list.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/layout/activity_wish_list.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_search_view.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\popup_img.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\layout\\popup_img.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_activity_chooser_view_list_item.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/activity_detail.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/layout/activity_detail.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/activity_beacon_map.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/layout/activity_beacon_map.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_screen_content_include.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/activity_dongmoon.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/layout/activity_dongmoon.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_alert_dialog_button_bar_material.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\wishlist_item_info.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\layout\\wishlist_item_info.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_part_time.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_checkbox.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\optin.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\layout\\optin.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/notification_template_lines.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_lines.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_big_media_narrow.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_dialog_title_material.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_toolbar.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/layout/activity_main.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_wish_list.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\layout\\activity_wish_list.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_up_container.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_activity_chooser_view.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_search_view.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_mode_close_item_material.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/activity_place.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/layout/activity_place.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_template_part_time.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/activity_error.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/layout/activity_error.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_menu.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\layout\\activity_menu.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_simple.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_media.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\select_dialog_multichoice_material.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/popup_img.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/layout/popup_img.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_radio.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_template_big_media.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/wishlist_item_info.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/layout/wishlist_item_info.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\settings.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\layout\\settings.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_content_include.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_item.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\layout\\list_item.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_alert_dialog_material.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\select_dialog_item_material.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_dialog_title_material.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_media_action.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/activity_menu.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/layout/activity_menu.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_popup_menu_item_layout.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_select_dialog_material.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_layout.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/splash.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/layout/splash.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_media_cancel_action.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_detail.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\layout\\activity_detail.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_title_item.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_template_big_media_narrow.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_expanded_menu_layout.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_big_media.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_beacon_map.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\layout\\activity_beacon_map.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/list_item2.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/layout/list_item2.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_app_main.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\layout\\activity_app_main.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_multichoice_material.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_alert_dialog_material.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/notification_media_action.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_media_action.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_search_dropdown_item_icons_2line.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_info_list.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\layout\\item_info_list.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/activity_app_main.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/layout/activity_app_main.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_activity_chooser_view.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_simple_overlay_action_mode.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_template_media.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_menu_layout.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_menu_item_layout.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_icon.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_error.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\layout\\activity_error.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/support_simple_spinner_dropdown_item.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/item_info_list.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/layout/item_info_list.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/list_item.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/layout/list_item.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_item2.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\layout\\list_item2.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_part_chronometer.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_screen_simple.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_menu_item_layout.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_dongmoon.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\layout\\activity_dongmoon.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/optin.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/src/main/res/layout/optin.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\splash.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\layout\\splash.xml"
     },
     {
-        "merged": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
-        "source": "/Users/hyubs/Android Project/xhdtlsroqkf1xla/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_mode_bar.xml"
+        "merged": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_place.xml",
+        "source": "C:\\devBeacon\\skcc_gimbal_jeju_pro\\app\\src\\main\\res\\layout\\activity_place.xml"
     }
 ]

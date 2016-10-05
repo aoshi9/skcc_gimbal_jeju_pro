@@ -15,4 +15,5 @@ public class Constant {
     public static final String SEVENTH_COLUMN = "ITEM_PRICE";
     public static final String EIGHTH_COLUMN = "ITEM_NO";
     public static final String NINTH_COLUMN = "BASKET_YN";
+    public static String FLAG = "FIRST";
 }

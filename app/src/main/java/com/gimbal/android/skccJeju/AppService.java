@@ -99,14 +99,15 @@ public class AppService extends Service {
 
                     Log.v("tempLog  :  ", "onVisitStart resultItemArray1:  " + resultItemArray1[0] + ", " + resultItemArray1[1] + ", " + resultItemArray1[2] + ", " + resultItemArray1[3] + ", " + resultItemArray1[4]);
                     Log.v("tempLog  :  ", "onVisitStart resultItemArray2:  " + resultItemArray2[0] + ", " + resultItemArray2[1] + ", " + resultItemArray2[2] + ", " + resultItemArray2[3] + ", " + resultItemArray2[4]);
-                    dbHelper.SotBeaconInfoInsert(visitBeaconNo, visitPlaceSeqCd, visitBeaconPlaceName, visitLit, visitLong, visitUrl, visitEvent, visitEventImg, visitTelNo, visitAddr, visitVersion);
-                    dbHelper.SotBeaconInfoItemInsert(visitBeaconNo, resultItemArray1[0], resultItemArray1[1], resultItemArray1[2], resultItemArray1[3], resultItemArray1[4]);
-                    dbHelper.SotBeaconInfoItemInsert(visitBeaconNo, resultItemArray2[0], resultItemArray2[1], resultItemArray2[2], resultItemArray2[3], resultItemArray2[4]);
+                    dbHelper.SotBeaconInfoInsertOrReplace(visitBeaconNo, visitPlaceSeqCd, visitBeaconPlaceName, visitLit, visitLong, visitUrl, visitEvent, visitEventImg, visitTelNo, visitAddr, visitVersion);
+                    dbHelper.SotBeaconInfoItemInsertOrReplace(visitBeaconNo, resultItemArray1[0], resultItemArray1[1], resultItemArray1[2], resultItemArray1[3], resultItemArray1[4]);
+                    dbHelper.SotBeaconInfoItemInsertOrReplace(visitBeaconNo, resultItemArray2[0], resultItemArray2[1], resultItemArray2[2], resultItemArray2[3], resultItemArray2[4]);
 
+                    addEvent(new GimbalEvent(TYPE.PLACE_ENTER, visitPlace + " : " + visitEvent, new Date(visit.getArrivalTimeInMillis()+visit.getDwellTimeInMillis()),visitUrl,visitLit.toString(), visitLong.toString(), visitBeaconNo,visitPlace,visitEvent));
+                }else {
+                    addEvent(new GimbalEvent(TYPE.PLACE_ENTER, visitPlace + " - Visit", new Date(visit.getArrivalTimeInMillis() + visit.getDwellTimeInMillis()), visitUrl, visitLit.toString(), visitLong.toString(), visitBeaconNo, visitPlace, visitEvent));
                 }
 
-
-                addEvent(new GimbalEvent(TYPE.PLACE_ENTER, visitPlace + " : " + visitEvent, new Date(visit.getArrivalTimeInMillis()+visit.getDwellTimeInMillis()),visitUrl,visitLit.toString(), visitLong.toString(), visitBeaconNo,visitPlace,visitEvent));
             }
             @Override
             public void onBeaconSighting(BeaconSighting bs, List<Visit> visit) {
