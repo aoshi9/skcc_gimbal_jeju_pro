@@ -71,17 +71,10 @@ public class MainActivity extends AppCompatActivity {
         if(strAction != null && strAction.equals("NotificationClicked")){
 
             String strBeaconNo = intent_noti.getStringExtra("strBeaconNo");
-            if(strBeaconNo.equals("BC006_IN")){
-                Toast.makeText(getApplicationContext(), "[비상] 본부장님이 접근 알림",
-                        Toast.LENGTH_LONG).show();
-            }else if(strBeaconNo.equals("BC006_OUT")) {
-                Toast.makeText(getApplicationContext(), "[비상해제] 본부장님 접근해제 알림",
-                        Toast.LENGTH_LONG).show();
-            }else {
-                Intent intent_move = new Intent(this, PlaceDetailActivity.class);
+            Intent intent_move = new Intent(this, PlaceDetailActivity.class);
                 intent_move.putExtra("strBeaconNo", strBeaconNo);
                 startActivity(intent_move);
-            }
+
         }
 
 
