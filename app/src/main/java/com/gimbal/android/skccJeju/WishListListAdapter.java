@@ -2,6 +2,7 @@ package com.gimbal.android.skccJeju;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -99,6 +100,15 @@ public class WishListListAdapter extends BaseAdapter {
         itemName.setTypeface(tf);
         itemPrice.setTypeface(tf);
         itemNo.setTypeface(tf);
+
+        bcNo.setTextColor(Color.parseColor("#000000"));
+        placeName.setTextColor(Color.parseColor("#000000"));
+        latitude.setTextColor(Color.parseColor("#000000"));
+        longitude.setTextColor(Color.parseColor("#000000"));
+        url.setTextColor(Color.parseColor("#000000"));
+        itemName.setTextColor(Color.parseColor("#000000"));
+        itemPrice.setTextColor(Color.parseColor("#000000"));
+        itemNo.setTextColor(Color.parseColor("#000000"));
 
 
         return convertView;

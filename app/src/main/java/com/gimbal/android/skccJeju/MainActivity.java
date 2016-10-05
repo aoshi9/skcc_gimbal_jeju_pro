@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
             dbHelper.SotBeaconInfoItemInsertOrReplace("BC003", "BC003_02", "옥돔", "10마리 4만원", "제주산 옥돔", "2마리 추가");
             dbHelper.SotBeaconInfoItemInsertOrReplace("BC004", "BC004_01", "옥돔", "한마리 10,000원", "제주특산물 옥돔", "오늘만 옥돔 1+1");
             dbHelper.SotBeaconInfoItemInsertOrReplace("BC004", "BC004_02", "우럭", "1KG 10,000원", "싱싱한 자연산", "한마리 오늘만 만원");
-            dbHelper.SotBeaconInfoItemInsertOrReplace("BC005", "BC005_01", "김떡순", "5천원", "김밥,떡볶이,순대", "오뎅 써비스~!~");
-            dbHelper.SotBeaconInfoItemInsertOrReplace("BC005", "BC005_02", "국물떡볶이", "3000원", "SK분식만의 궁물떡볶이", "오뎅 써비스~!~");
+            dbHelper.SotBeaconInfoItemInsertOrReplace("BC005", "BC005_01", "김떡순", "5천원", "김밥,떡볶이,순대", "오뎅 써비스~~");
+            dbHelper.SotBeaconInfoItemInsertOrReplace("BC005", "BC005_02", "국물떡볶이", "3000원", "SK분식만의 궁물떡볶이", "오뎅 써비스~~");
         }
         // 최초 한번 수행후, Flag 변수 다른 값으로 변경 (최준형)
         FLAG = "NOT FIRST";

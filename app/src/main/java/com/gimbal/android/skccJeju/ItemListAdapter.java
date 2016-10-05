@@ -135,7 +135,7 @@ public class ItemListAdapter extends BaseAdapter {
         if(map.get(NINTH_COLUMN).equalsIgnoreCase("Y"))
         {
             holder.basketYn.setTextColor(Color.parseColor("#EC6652"));
-            holder.basketYn.setText("V");
+            holder.basketYn.setText("       V");
         }
         else {
             holder.basketYn.setText(" ");
