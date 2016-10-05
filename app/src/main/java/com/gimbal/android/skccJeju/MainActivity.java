@@ -27,10 +27,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_app_main);
         //startActivity(new Intent(this, Splash.class));
 
-        // 최초 한번만 수행되도록, static변수로 선언한 Flag 값을 읽어서 처리함 (최준형)
-        if(FLAG.equals("FIRST")) {
-            dbHelper = new DBHelper(this.getApplicationContext(), "Gimbal.db", null, 1);
+        dbHelper = new DBHelper(this.getApplicationContext(), "Gimbal.db", null, 1);
 
+        // 최초 한번만 수행되도록, DB에 데이터가 하나도 없을때만 수행되도록 함 (최준형)
+        if(dbHelper.shopItemSelectByPlaceSeCd("1").equals("")) {
             //시연을 위한 초기 데이터 적재 (최준형)
             dbHelper.SotBeaconInfoInsertOrReplace("BC001", "1", "SK수산", 33.512871433920715, 126.52806210319818, "http://jejudongmun.modoo.at", "마라도 방어 한마리 만원", "event_img1", "02-5445-5555", "제주도 제주시 일도2동 345번지", "1");
             dbHelper.SotBeaconInfoInsertOrReplace("BC002", "1", "SK과일", 33.512849093102645, 126.52870580659532, "http://jejudongmun.modoo.at", "서귀포 한라봉 특가", "event_img2", "02-5445-5544", "제주도 제주시 일도2동 344번지", "1");
@@ -49,8 +49,6 @@ public class MainActivity extends AppCompatActivity {
             dbHelper.SotBeaconInfoItemInsertOrReplace("BC005", "BC005_01", "김떡순", "5천원", "김밥,떡볶이,순대", "오뎅 써비스~~");
             dbHelper.SotBeaconInfoItemInsertOrReplace("BC005", "BC005_02", "국물떡볶이", "3000원", "SK분식만의 궁물떡볶이", "오뎅 써비스~~");
         }
-        // 최초 한번 수행후, Flag 변수 다른 값으로 변경 (최준형)
-        FLAG = "NOT FIRST";
 
         Gimbal.setApiKey(this.getApplication(), "8cbce2c7-6e27-419c-9be1-7b01f1d990e4");
         startService(new Intent(this, AppService.class));
