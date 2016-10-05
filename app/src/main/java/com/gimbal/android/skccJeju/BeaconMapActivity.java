@@ -161,7 +161,7 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
                     dbHelper.SotBeaconInfoItemBasketY(list.get(position).get(FIRST_COLUMN), list.get(position).get(EIGHTH_COLUMN));     // DB BASKET_YN 컬럼 update
                     Log.v("tempLog  :  ", "basketYShopItemSelect : " + dbHelper.basketYShopItemSelect());
                     TextView tv = (TextView) view.findViewById(R.id.basketYn);
-                    tv.setText("Y");
+                    tv.setText("V");
                     tv.setTextColor(Color.parseColor("#EC6652"));
                     tv.setTypeface(Typeface.DEFAULT_BOLD);
                 } else {
@@ -175,7 +175,7 @@ public class BeaconMapActivity extends AppCompatActivity implements MapView.POII
                     dbHelper.SotBeaconInfoItemBasketN(list.get(position).get(FIRST_COLUMN), list.get(position).get(EIGHTH_COLUMN));     // DB BASKET_YN 컬럼 update
                     Log.v("tempLog  :  ", "basketYShopItemSelect : " + dbHelper.basketYShopItemSelect());
                     TextView tv = (TextView) view.findViewById(R.id.basketYn);
-                    tv.setText("N");
+                    tv.setText(" ");
                 }
 
                 //position은 sequence로서 0부터 시작한다.

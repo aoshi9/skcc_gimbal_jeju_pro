@@ -103,7 +103,7 @@ public class AppActivity extends AppCompatActivity {
                     intent.putExtra("strPlace", place);
                     intent.putExtra("strPlaceEvent", placeEvent);
 
-                    startActivity(intent);
+                  //  startActivity(intent);
 
 //                    Dialog dialog = new Dialog(this);
 //                    dialog.setContentView(R.layout.popup_img);

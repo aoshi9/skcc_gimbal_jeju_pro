@@ -71,10 +71,41 @@ public class PlaceDetailActivity extends AppCompatActivity {
         Log.v("tempLog  :  ", "resultString.resultString:  " + resultString);
 
         String title = resultArray[1];
+        String titleImg;
+        Log.v("hyub : ","title : "+title);
+        if(title.equalsIgnoreCase("SK기념품"))
+        {
+            titleImg = "sk_souvenior";
+        }
+        else if(title.equalsIgnoreCase("SK과일"))
+        {
+            titleImg= "sk_fruit";
+        }
+        else if(title.equalsIgnoreCase("SK건어물"))
+        {
+            titleImg= "sk_dryfish";
+        }
+        else if(title.equalsIgnoreCase("SK분식"))
+        {
+            titleImg="sk_food";
+        }
+        else if(title.equalsIgnoreCase("SK수산"))
+        {
+            titleImg="sk_fish";
+        }
+        else
+        {
+            titleImg="sk_fish";
+        }
+
+        ImageView titleImg2 = (ImageView) findViewById(R.id.titleImg);
+        titleImg2.setImageResource(getResources().getIdentifier(titleImg, "drawable", getPackageName()));
+
         URL = resultArray[4];
         String place = resultArray[1];
         String placeEvent = resultArray[5];
         String placeImg = resultArray[6];
+        Log.v("hyub : ","placeImg : "+placeImg);
         String telNo = resultArray[7];
         String addr = resultArray[8];
 
@@ -96,25 +127,6 @@ public class PlaceDetailActivity extends AppCompatActivity {
         //Log.v("HoyoungLog  :  ", "List Size : " + list.size());
         ItemList2Adapter adapter = new ItemList2Adapter(this, list,this.getApplicationContext());
         listView.setAdapter(adapter);
-
-        //font 설정
-        Typeface typeface = Typeface.createFromAsset(getAssets(),"BMJUA_ttf.ttf");
-
-//        TextView placeName = (TextView) findViewById(R.id.placeName);
-//        placeName.setText(place);
-//        placeName.setTypeface(typeface);
-
-//        TextView addrText = (TextView) findViewById(R.id.addr);
-//        addrText.setTypeface(typeface);
-//        addrText.setText("주소 "+ "\n" + addr);
-//
-//        TextView telNoText = (TextView) findViewById(R.id.telNo);
-//        telNoText.setText("전화번호 " + "\n" + telNo);
-//        telNoText.setTypeface(typeface);
-//        TextView placeEventText = (TextView) findViewById(R.id.placeEvent);
-//        placeEventText.setText("이벤트 :  "  + placeEvent);
-//        placeEventText.setTypeface(typeface);
-
 
         ImageView eventImg = (ImageView) findViewById(R.id.eventImg);
         eventImg.setImageResource(getResources().getIdentifier(placeImg, "drawable", getPackageName()));

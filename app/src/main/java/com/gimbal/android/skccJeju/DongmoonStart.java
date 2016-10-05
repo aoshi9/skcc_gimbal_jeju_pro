@@ -27,14 +27,14 @@ public class DongmoonStart extends AppCompatActivity {
         Log.v("onCreate","MainActivity");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dongmoon);
-        flipper = (ViewFlipper)findViewById(R.id.flipper);
-
-        Animation showIn = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left);
-
-        flipper.setInAnimation(showIn);
-        flipper.setOutAnimation(this, android.R.anim.slide_out_right);
-        flipper.setFlipInterval(3000);
-        flipper.startFlipping();
+//        flipper = (ViewFlipper)findViewById(R.id.flipper);
+//
+//        Animation showIn = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left);
+//
+//        flipper.setInAnimation(showIn);
+//        flipper.setOutAnimation(this, android.R.anim.slide_out_right);
+//        flipper.setFlipInterval(3000);
+//        flipper.startFlipping();
     }
 
     private void enablePlaceMonitoring() {

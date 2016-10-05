@@ -132,8 +132,14 @@ public class ItemListAdapter extends BaseAdapter {
         holder.itemNo.setTypeface(tf);
         holder.itemNo.setTextColor(Color.parseColor("#000000"));
         holder.basketYn.setTypeface(tf);
-        holder.basketYn.setTextColor(Color.parseColor("#000000"));
-
+        if(map.get(NINTH_COLUMN).equalsIgnoreCase("Y"))
+        {
+            holder.basketYn.setTextColor(Color.parseColor("#EC6652"));
+            holder.basketYn.setText("V");
+        }
+        else {
+            holder.basketYn.setText(" ");
+        }
         return convertView;
     }
 
